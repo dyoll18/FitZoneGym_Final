@@ -1,3 +1,4 @@
+
 namespace FitZoneGym.Forms
 {
     partial class MembersForm
@@ -6,16 +7,14 @@ namespace FitZoneGym.Forms
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
+            if (disposing && components != null)
                 components.Dispose();
-            }
+
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
             mainLayout = new TableLayoutPanel();
@@ -32,6 +31,7 @@ namespace FitZoneGym.Forms
             lblCount = new Label();
             btnAdd = new Button();
             contentPanel.SuspendLayout();
+            headerPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             toolbarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
@@ -43,10 +43,15 @@ namespace FitZoneGym.Forms
             contentPanel.Controls.Add(mainLayout);
             contentPanel.Size = new Size(1050, 670);
             // 
+            // headerPanel
+            // 
+            headerPanel.Size = new Size(1050, 56);
+            // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(876, 48);
+            titleLabel.Size = new Size(772, 48);
             titleLabel.Text = "Members";
+            titleLabel.Click += titleLabel_Click;
             // 
             // mainLayout
             // 
@@ -133,7 +138,7 @@ namespace FitZoneGym.Forms
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(520, 19);
+            btnSearch.Location = new Point(540, 9);
             btnSearch.Margin = new Padding(0, 0, 8, 0);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 27);
@@ -151,6 +156,7 @@ namespace FitZoneGym.Forms
             dgvMembers.RowHeadersWidth = 62;
             dgvMembers.Size = new Size(1012, 528);
             dgvMembers.TabIndex = 1;
+            dgvMembers.CellContentClick += dgvMembers_CellContentClick;
             dgvMembers.CellDoubleClick += dgvMembers_CellDoubleClick;
             dgvMembers.SelectionChanged += dgvMembers_SelectionChanged;
             // 
@@ -216,16 +222,21 @@ namespace FitZoneGym.Forms
             btnAdd.Cursor = Cursors.Hand;
             btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
             btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);   
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(0, 4);
             btnAdd.Margin = new Padding(0, 0, 8, 0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(130, 34);
+            btnAdd.Size = new Size(175, 34);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Member";
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
+            headerPanel.Controls.Add(btnAdd);
+            btnAdd.Location = new System.Drawing.Point(850, 10);
+            btnAdd.Size = new System.Drawing.Size(168, 36);
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdd.Visible = true;
             // 
             // MembersForm
             // 
@@ -235,6 +246,8 @@ namespace FitZoneGym.Forms
             PageTitle = "Members";
             Text = "FITZONE GYM - Members";
             contentPanel.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
             mainLayout.ResumeLayout(false);
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();

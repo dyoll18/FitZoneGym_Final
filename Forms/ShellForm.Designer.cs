@@ -1,3 +1,4 @@
+
 namespace FitZoneGym.Forms
 {
     partial class ShellForm
@@ -6,16 +7,14 @@ namespace FitZoneGym.Forms
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
+            if (disposing && components != null)
                 components.Dispose();
-            }
+
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
             rightPanel = new Panel();
@@ -29,14 +28,14 @@ namespace FitZoneGym.Forms
             navFlow = new FlowLayoutPanel();
             logoutButton = new Button();
             logoLabel = new Label();
+
             rightPanel.SuspendLayout();
             headerPanel.SuspendLayout();
             userStrip.SuspendLayout();
             sidebarPanel.SuspendLayout();
             SuspendLayout();
-            // 
+
             // rightPanel
-            // 
             rightPanel.Controls.Add(contentPanel);
             rightPanel.Controls.Add(headerPanel);
             rightPanel.Controls.Add(userStrip);
@@ -45,9 +44,8 @@ namespace FitZoneGym.Forms
             rightPanel.Name = "rightPanel";
             rightPanel.Size = new Size(1050, 760);
             rightPanel.TabIndex = 0;
-            // 
+
             // contentPanel
-            // 
             contentPanel.BackColor = Color.FromArgb(243, 246, 251);
             contentPanel.Dock = DockStyle.Fill;
             contentPanel.Location = new Point(0, 90);
@@ -56,9 +54,8 @@ namespace FitZoneGym.Forms
             contentPanel.Size = new Size(1050, 670);
             contentPanel.TabIndex = 0;
             contentPanel.Paint += contentPanel_Paint;
-            // 
+
             // headerPanel
-            // 
             headerPanel.BackColor = Color.White;
             headerPanel.Controls.Add(titleLabel);
             headerPanel.Controls.Add(actionsFlow);
@@ -68,33 +65,34 @@ namespace FitZoneGym.Forms
             headerPanel.Padding = new Padding(18, 4, 18, 4);
             headerPanel.Size = new Size(1050, 56);
             headerPanel.TabIndex = 1;
-            // 
+
             // titleLabel
-            // 
-            titleLabel.Dock = DockStyle.Fill;
+            titleLabel.Anchor = AnchorStyles.Top |
+                                AnchorStyles.Bottom |
+                                AnchorStyles.Left |
+                                AnchorStyles.Right;
             titleLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             titleLabel.ForeColor = Color.FromArgb(15, 35, 66);
             titleLabel.Location = new Point(18, 4);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(1014, 48);
+            titleLabel.Size = new Size(750, 48);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Title";
             titleLabel.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+
             // actionsFlow
-            // 
             actionsFlow.AutoSize = true;
             actionsFlow.BackColor = Color.White;
             actionsFlow.Dock = DockStyle.Right;
+            actionsFlow.FlowDirection = FlowDirection.LeftToRight;
             actionsFlow.Location = new Point(1032, 4);
             actionsFlow.Name = "actionsFlow";
             actionsFlow.Padding = new Padding(0, 4, 0, 0);
             actionsFlow.Size = new Size(0, 48);
             actionsFlow.TabIndex = 1;
             actionsFlow.WrapContents = false;
-            // 
+
             // userStrip
-            // 
             userStrip.BackColor = Color.FromArgb(15, 35, 66);
             userStrip.Controls.Add(whoLabel);
             userStrip.Dock = DockStyle.Top;
@@ -102,9 +100,8 @@ namespace FitZoneGym.Forms
             userStrip.Name = "userStrip";
             userStrip.Size = new Size(1050, 34);
             userStrip.TabIndex = 2;
-            // 
+
             // whoLabel
-            // 
             whoLabel.Dock = DockStyle.Right;
             whoLabel.ForeColor = Color.White;
             whoLabel.Location = new Point(490, 0);
@@ -113,9 +110,8 @@ namespace FitZoneGym.Forms
             whoLabel.Size = new Size(560, 34);
             whoLabel.TabIndex = 0;
             whoLabel.TextAlign = ContentAlignment.MiddleRight;
-            // 
+
             // sidebarPanel
-            // 
             sidebarPanel.BackColor = Color.FromArgb(15, 35, 66);
             sidebarPanel.Controls.Add(navFlow);
             sidebarPanel.Controls.Add(logoutButton);
@@ -125,9 +121,8 @@ namespace FitZoneGym.Forms
             sidebarPanel.Name = "sidebarPanel";
             sidebarPanel.Size = new Size(230, 760);
             sidebarPanel.TabIndex = 1;
-            // 
+
             // navFlow
-            // 
             navFlow.AutoScroll = true;
             navFlow.BackColor = Color.FromArgb(15, 35, 66);
             navFlow.Dock = DockStyle.Fill;
@@ -138,9 +133,8 @@ namespace FitZoneGym.Forms
             navFlow.Size = new Size(230, 650);
             navFlow.TabIndex = 0;
             navFlow.WrapContents = false;
-            // 
+
             // logoutButton
-            // 
             logoutButton.BackColor = Color.FromArgb(140, 30, 40);
             logoutButton.Cursor = Cursors.Hand;
             logoutButton.Dock = DockStyle.Bottom;
@@ -155,9 +149,8 @@ namespace FitZoneGym.Forms
             logoutButton.TextAlign = ContentAlignment.MiddleLeft;
             logoutButton.UseVisualStyleBackColor = false;
             logoutButton.Click += logoutButton_Click;
-            // 
+
             // logoLabel
-            // 
             logoLabel.BackColor = Color.FromArgb(15, 35, 66);
             logoLabel.Dock = DockStyle.Top;
             logoLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
@@ -168,9 +161,8 @@ namespace FitZoneGym.Forms
             logoLabel.TabIndex = 2;
             logoLabel.Text = "FITZONE GYM";
             logoLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+
             // ShellForm
-            // 
             AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(243, 246, 251);
@@ -181,9 +173,9 @@ namespace FitZoneGym.Forms
             MinimumSize = new Size(1150, 700);
             Name = "ShellForm";
             Text = "FITZONE GYM";
+
             rightPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
-            headerPanel.PerformLayout();
             userStrip.ResumeLayout(false);
             sidebarPanel.ResumeLayout(false);
             ResumeLayout(false);
@@ -193,7 +185,7 @@ namespace FitZoneGym.Forms
 
         private System.Windows.Forms.Panel rightPanel;
         protected System.Windows.Forms.Panel contentPanel;
-        private System.Windows.Forms.Panel headerPanel;
+        protected System.Windows.Forms.Panel headerPanel;
         protected System.Windows.Forms.Label titleLabel;
         protected System.Windows.Forms.FlowLayoutPanel actionsFlow;
         private System.Windows.Forms.Panel userStrip;
