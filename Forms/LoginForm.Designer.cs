@@ -18,223 +18,224 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.pnlBrand = new System.Windows.Forms.Panel();
-            this.lblBrand = new System.Windows.Forms.Label();
-            this.lblGym = new System.Windows.Forms.Label();
-            this.lblTagline = new System.Windows.Forms.Label();
-            this.lblLoginTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.chkShow = new System.Windows.Forms.CheckBox();
-            this.chkRemember = new System.Windows.Forms.CheckBox();
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.pnlBrand.SuspendLayout();
-            this.SuspendLayout();
+            pnlBrand = new Panel();
+            lblBrand = new Label();
+            lblGym = new Label();
+            lblTagline = new Label();
+            lblLoginTitle = new Label();
+            lblSubtitle = new Label();
+            lblUser = new Label();
+            txtUser = new TextBox();
+            lblPass = new Label();
+            txtPass = new TextBox();
+            chkShow = new CheckBox();
+            chkRemember = new CheckBox();
+            lblMessage = new Label();
+            btnLogin = new Button();
+            btnCancel = new Button();
+            pnlBrand.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlBrand
             // 
-            this.pnlBrand.Name = "pnlBrand";
-            this.pnlBrand.Location = new System.Drawing.Point(0, 0);
-            this.pnlBrand.Size = new System.Drawing.Size(340, 470);
-            this.pnlBrand.BackColor = System.Drawing.Color.FromArgb(15, 35, 66);
-            this.pnlBrand.Controls.Add(this.lblBrand);
-            this.pnlBrand.Controls.Add(this.lblGym);
-            this.pnlBrand.Controls.Add(this.lblTagline);
-            this.pnlBrand.TabIndex = 0;
+            pnlBrand.BackColor = Color.FromArgb(15, 35, 66);
+            pnlBrand.Controls.Add(lblBrand);
+            pnlBrand.Controls.Add(lblGym);
+            pnlBrand.Controls.Add(lblTagline);
+            pnlBrand.Location = new Point(0, 0);
+            pnlBrand.Name = "pnlBrand";
+            pnlBrand.Size = new Size(340, 470);
+            pnlBrand.TabIndex = 0;
             // 
             // lblBrand
             // 
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.AutoSize = false;
-            this.lblBrand.Text = "FITZONE";
-            this.lblBrand.ForeColor = System.Drawing.Color.White;
-            this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 30.0F, System.Drawing.FontStyle.Bold);
-            this.lblBrand.Size = new System.Drawing.Size(340, 60);
-            this.lblBrand.Location = new System.Drawing.Point(0, 140);
-            this.lblBrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBrand.TabIndex = 0;
+            lblBrand.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
+            lblBrand.ForeColor = Color.White;
+            lblBrand.Location = new Point(0, 140);
+            lblBrand.Name = "lblBrand";
+            lblBrand.Size = new Size(340, 60);
+            lblBrand.TabIndex = 0;
+            lblBrand.Text = "FITZONE";
+            lblBrand.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGym
             // 
-            this.lblGym.Name = "lblGym";
-            this.lblGym.AutoSize = false;
-            this.lblGym.Text = "G Y M";
-            this.lblGym.ForeColor = System.Drawing.Color.FromArgb(120, 170, 255);
-            this.lblGym.Font = new System.Drawing.Font("Segoe UI", 16.0F, System.Drawing.FontStyle.Bold);
-            this.lblGym.Size = new System.Drawing.Size(340, 34);
-            this.lblGym.Location = new System.Drawing.Point(0, 198);
-            this.lblGym.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblGym.TabIndex = 1;
+            lblGym.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblGym.ForeColor = Color.FromArgb(120, 170, 255);
+            lblGym.Location = new Point(0, 198);
+            lblGym.Name = "lblGym";
+            lblGym.Size = new Size(340, 34);
+            lblGym.TabIndex = 1;
+            lblGym.Text = "G Y M";
+            lblGym.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblTagline
             // 
-            this.lblTagline.Name = "lblTagline";
-            this.lblTagline.AutoSize = false;
-            this.lblTagline.Text = "STRONGER TODAY,\nHEALTHIER TOMORROW";
-            this.lblTagline.ForeColor = System.Drawing.Color.White;
-            this.lblTagline.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.lblTagline.Size = new System.Drawing.Size(340, 50);
-            this.lblTagline.Location = new System.Drawing.Point(0, 260);
-            this.lblTagline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTagline.TabIndex = 2;
+            lblTagline.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblTagline.ForeColor = Color.White;
+            lblTagline.Location = new Point(0, 260);
+            lblTagline.Name = "lblTagline";
+            lblTagline.Size = new Size(340, 50);
+            lblTagline.TabIndex = 2;
+            lblTagline.Text = "STRONGER TODAY,\nHEALTHIER TOMORROW";
+            lblTagline.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblLoginTitle
             // 
-            this.lblLoginTitle.Name = "lblLoginTitle";
-            this.lblLoginTitle.AutoSize = true;
-            this.lblLoginTitle.Text = "Login";
-            this.lblLoginTitle.ForeColor = System.Drawing.Color.FromArgb(15, 35, 66);
-            this.lblLoginTitle.Font = new System.Drawing.Font("Segoe UI", 20.0F, System.Drawing.FontStyle.Bold);
-            this.lblLoginTitle.Location = new System.Drawing.Point(400, 50);
-            this.lblLoginTitle.TabIndex = 1;
+            lblLoginTitle.AutoSize = true;
+            lblLoginTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblLoginTitle.ForeColor = Color.FromArgb(15, 35, 66);
+            lblLoginTitle.Location = new Point(400, 50);
+            lblLoginTitle.Name = "lblLoginTitle";
+            lblLoginTitle.Size = new Size(229, 54);
+            lblLoginTitle.TabIndex = 1;
+            lblLoginTitle.Text = "LLoyd Pogi";
             // 
             // lblSubtitle
             // 
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Text = "Welcome back! Please login to your account.";
-            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lblSubtitle.Location = new System.Drawing.Point(400, 96);
-            this.lblSubtitle.TabIndex = 2;
+            lblSubtitle.AutoSize = true;
+            lblSubtitle.Font = new Font("Segoe UI", 9.5F);
+            lblSubtitle.ForeColor = Color.FromArgb(107, 114, 128);
+            lblSubtitle.Location = new Point(400, 96);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(387, 25);
+            lblSubtitle.TabIndex = 2;
+            lblSubtitle.Text = "Welcome back! Please login to your account.";
             // 
             // lblUser
             // 
-            this.lblUser.Name = "lblUser";
-            this.lblUser.AutoSize = true;
-            this.lblUser.Text = "Username";
-            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lblUser.Location = new System.Drawing.Point(400, 140);
-            this.lblUser.TabIndex = 3;
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblUser.ForeColor = Color.FromArgb(31, 41, 55);
+            lblUser.Location = new Point(400, 140);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(101, 25);
+            lblUser.TabIndex = 3;
+            lblUser.Text = "Username";
             // 
             // txtUser
             // 
-            this.txtUser.Name = "txtUser";
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtUser.Size = new System.Drawing.Size(300, 25);
-            this.txtUser.Location = new System.Drawing.Point(400, 164);
-            this.txtUser.TabIndex = 4;
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
+            txtUser.Font = new Font("Segoe UI", 9.5F);
+            txtUser.Location = new Point(400, 164);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(300, 33);
+            txtUser.TabIndex = 4;
             // 
             // lblPass
             // 
-            this.lblPass.Name = "lblPass";
-            this.lblPass.AutoSize = true;
-            this.lblPass.Text = "Password";
-            this.lblPass.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.lblPass.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lblPass.Location = new System.Drawing.Point(400, 204);
-            this.lblPass.TabIndex = 5;
+            lblPass.AutoSize = true;
+            lblPass.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblPass.ForeColor = Color.FromArgb(31, 41, 55);
+            lblPass.Location = new Point(400, 204);
+            lblPass.Name = "lblPass";
+            lblPass.Size = new Size(97, 25);
+            lblPass.TabIndex = 5;
+            lblPass.Text = "Password";
             // 
             // txtPass
             // 
-            this.txtPass.Name = "txtPass";
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtPass.Size = new System.Drawing.Size(300, 25);
-            this.txtPass.Location = new System.Drawing.Point(400, 228);
-            this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.TabIndex = 6;
+            txtPass.BorderStyle = BorderStyle.FixedSingle;
+            txtPass.Font = new Font("Segoe UI", 9.5F);
+            txtPass.Location = new Point(400, 228);
+            txtPass.Name = "txtPass";
+            txtPass.Size = new Size(300, 33);
+            txtPass.TabIndex = 6;
+            txtPass.UseSystemPasswordChar = true;
             // 
             // chkShow
             // 
-            this.chkShow.Name = "chkShow";
-            this.chkShow.AutoSize = true;
-            this.chkShow.Text = "Show";
-            this.chkShow.Location = new System.Drawing.Point(706, 230);
-            this.chkShow.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.chkShow.TabIndex = 7;
-            this.chkShow.CheckedChanged += new System.EventHandler(this.chkShow_CheckedChanged);
+            chkShow.AutoSize = true;
+            chkShow.Font = new Font("Segoe UI", 9.5F);
+            chkShow.Location = new Point(706, 230);
+            chkShow.Name = "chkShow";
+            chkShow.Size = new Size(84, 29);
+            chkShow.TabIndex = 7;
+            chkShow.Text = "Show";
+            chkShow.CheckedChanged += chkShow_CheckedChanged;
             // 
             // chkRemember
             // 
-            this.chkRemember.Name = "chkRemember";
-            this.chkRemember.AutoSize = true;
-            this.chkRemember.Text = "Remember me";
-            this.chkRemember.Location = new System.Drawing.Point(400, 268);
-            this.chkRemember.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.chkRemember.TabIndex = 8;
+            chkRemember.AutoSize = true;
+            chkRemember.Font = new Font("Segoe UI", 9.5F);
+            chkRemember.Location = new Point(400, 268);
+            chkRemember.Name = "chkRemember";
+            chkRemember.Size = new Size(159, 29);
+            chkRemember.TabIndex = 8;
+            chkRemember.Text = "Remember me";
             // 
             // lblMessage
             // 
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.AutoSize = false;
-            this.lblMessage.Text = "";
-            this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(220, 38, 38);
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lblMessage.Size = new System.Drawing.Size(300, 36);
-            this.lblMessage.Location = new System.Drawing.Point(400, 296);
-            this.lblMessage.TabIndex = 9;
+            lblMessage.Font = new Font("Segoe UI", 9.5F);
+            lblMessage.ForeColor = Color.FromArgb(220, 38, 38);
+            lblMessage.Location = new Point(400, 296);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(300, 36);
+            lblMessage.TabIndex = 9;
             // 
             // btnLogin
             // 
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Text = "Login";
-            this.btnLogin.Size = new System.Drawing.Size(300, 40);
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnLogin.Location = new System.Drawing.Point(400, 338);
-            this.btnLogin.TabIndex = 10;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            btnLogin.BackColor = Color.FromArgb(30, 111, 240);
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(400, 338);
+            btnLogin.Margin = new Padding(0, 0, 8, 0);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(300, 40);
+            btnLogin.TabIndex = 10;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Size = new System.Drawing.Size(300, 40);
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
-            this.btnCancel.Location = new System.Drawing.Point(400, 386);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = Color.White;
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnCancel.ForeColor = Color.FromArgb(31, 41, 55);
+            btnCancel.Location = new Point(400, 386);
+            btnCancel.Margin = new Padding(0, 0, 8, 0);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(300, 40);
+            btnCancel.TabIndex = 11;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(820, 470);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.BackColor = System.Drawing.Color.White;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.Text = "FITZONE GYM - Login";
-            this.AcceptButton = this.btnLogin;
-            this.CancelButton = this.btnCancel;
-            this.Controls.Add(this.pnlBrand);
-            this.Controls.Add(this.lblLoginTitle);
-            this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.lblPass);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.chkShow);
-            this.Controls.Add(this.chkRemember);
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnCancel);
-            this.pnlBrand.ResumeLayout(false);
-            this.pnlBrand.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AcceptButton = btnLogin;
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.White;
+            CancelButton = btnCancel;
+            ClientSize = new Size(820, 470);
+            Controls.Add(pnlBrand);
+            Controls.Add(lblLoginTitle);
+            Controls.Add(lblSubtitle);
+            Controls.Add(lblUser);
+            Controls.Add(txtUser);
+            Controls.Add(lblPass);
+            Controls.Add(txtPass);
+            Controls.Add(chkShow);
+            Controls.Add(chkRemember);
+            Controls.Add(lblMessage);
+            Controls.Add(btnLogin);
+            Controls.Add(btnCancel);
+            Font = new Font("Segoe UI", 9.5F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FITZONE GYM - Login";
+            pnlBrand.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
