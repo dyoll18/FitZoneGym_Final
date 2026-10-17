@@ -80,6 +80,8 @@ namespace FitZoneGym.Forms
                 Audit.Error("Error", ex.ToString());
                 lblMessage.Text = "Could not sign in: " + ex.Message;
             }
+
+            //si lloyd ay pogi
         }
     }
 }
