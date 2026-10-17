@@ -18,224 +18,230 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.toolbarPanel = new System.Windows.Forms.Panel();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblFilter = new System.Windows.Forms.Label();
-            this.cboFilter = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dgvMembers = new System.Windows.Forms.DataGridView();
-            this.footerPanel = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnToggle = new System.Windows.Forms.Button();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.mainLayout.SuspendLayout();
-            this.toolbarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
-            this.footerPanel.SuspendLayout();
-            this.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            toolbarPanel = new Panel();
+            lblSearch = new Label();
+            txtSearch = new TextBox();
+            lblFilter = new Label();
+            cboFilter = new ComboBox();
+            btnSearch = new Button();
+            dgvMembers = new DataGridView();
+            footerPanel = new Panel();
+            btnEdit = new Button();
+            btnToggle = new Button();
+            lblCount = new Label();
+            btnAdd = new Button();
+            contentPanel.SuspendLayout();
+            mainLayout.SuspendLayout();
+            toolbarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
+            footerPanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // titleLabel
+            // 
+            titleLabel.Size = new Size(876, 48);
+            titleLabel.Text = "Members";
             // 
             // mainLayout
             // 
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.mainLayout.ColumnCount = 1;
-            this.mainLayout.RowCount = 3;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.mainLayout.Controls.Add(this.toolbarPanel, 0, 0);
-            this.mainLayout.Controls.Add(this.dgvMembers, 0, 1);
-            this.mainLayout.Controls.Add(this.footerPanel, 0, 2);
-            this.mainLayout.TabIndex = 0;
+            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.ColumnCount = 1;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            mainLayout.Controls.Add(toolbarPanel, 0, 0);
+            mainLayout.Controls.Add(dgvMembers, 0, 1);
+            mainLayout.Controls.Add(footerPanel, 0, 2);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(16, 16);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 3;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            mainLayout.Size = new Size(1018, 638);
+            mainLayout.TabIndex = 0;
             // 
             // toolbarPanel
             // 
-            this.toolbarPanel.Name = "toolbarPanel";
-            this.toolbarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolbarPanel.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.toolbarPanel.Controls.Add(this.lblSearch);
-            this.toolbarPanel.Controls.Add(this.txtSearch);
-            this.toolbarPanel.Controls.Add(this.lblFilter);
-            this.toolbarPanel.Controls.Add(this.cboFilter);
-            this.toolbarPanel.Controls.Add(this.btnSearch);
-            this.toolbarPanel.TabIndex = 0;
+            toolbarPanel.BackColor = Color.FromArgb(243, 246, 251);
+            toolbarPanel.Controls.Add(lblSearch);
+            toolbarPanel.Controls.Add(txtSearch);
+            toolbarPanel.Controls.Add(lblFilter);
+            toolbarPanel.Controls.Add(cboFilter);
+            toolbarPanel.Controls.Add(btnSearch);
+            toolbarPanel.Dock = DockStyle.Fill;
+            toolbarPanel.Location = new Point(3, 3);
+            toolbarPanel.Name = "toolbarPanel";
+            toolbarPanel.Size = new Size(1012, 48);
+            toolbarPanel.TabIndex = 0;
             // 
             // lblSearch
             // 
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Text = "Search";
-            this.lblSearch.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblSearch.Location = new System.Drawing.Point(0, 0);
-            this.lblSearch.TabIndex = 0;
+            lblSearch.AutoSize = true;
+            lblSearch.Font = new Font("Segoe UI", 8.5F);
+            lblSearch.ForeColor = Color.FromArgb(107, 114, 128);
+            lblSearch.Location = new Point(0, 0);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(61, 23);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Search";
             // 
             // txtSearch
             // 
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtSearch.Size = new System.Drawing.Size(320, 25);
-            this.txtSearch.PlaceholderText = "Search by name, member ID, or contact number";
-            this.txtSearch.Location = new System.Drawing.Point(0, 20);
-            this.txtSearch.TabIndex = 1;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Font = new Font("Segoe UI", 9.5F);
+            txtSearch.Location = new Point(0, 20);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Search by name, member ID, or contact number";
+            txtSearch.Size = new Size(320, 33);
+            txtSearch.TabIndex = 1;
+            txtSearch.KeyDown += txtSearch_KeyDown;
             // 
             // lblFilter
             // 
-            this.lblFilter.Name = "lblFilter";
-            this.lblFilter.AutoSize = true;
-            this.lblFilter.Text = "Membership status";
-            this.lblFilter.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblFilter.Location = new System.Drawing.Point(340, 0);
-            this.lblFilter.TabIndex = 2;
+            lblFilter.AutoSize = true;
+            lblFilter.Font = new Font("Segoe UI", 8.5F);
+            lblFilter.ForeColor = Color.FromArgb(107, 114, 128);
+            lblFilter.Location = new Point(340, 0);
+            lblFilter.Name = "lblFilter";
+            lblFilter.Size = new Size(155, 23);
+            lblFilter.TabIndex = 2;
+            lblFilter.Text = "Membership status";
             // 
             // cboFilter
             // 
-            this.cboFilter.Name = "cboFilter";
-            this.cboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboFilter.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.cboFilter.Size = new System.Drawing.Size(170, 25);
-            this.cboFilter.Location = new System.Drawing.Point(340, 20);
-            this.cboFilter.Items.AddRange(new object[] { "All", "Active", "Frozen", "Expired", "Pending", "No Membership", "Inactive Accounts" });
-            this.cboFilter.TabIndex = 3;
-            this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
+            cboFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboFilter.FlatStyle = FlatStyle.Flat;
+            cboFilter.Font = new Font("Segoe UI", 9.5F);
+            cboFilter.Items.AddRange(new object[] { "All", "Active", "Frozen", "Expired", "Pending", "No Membership", "Inactive Accounts" });
+            cboFilter.Location = new Point(340, 20);
+            cboFilter.Name = "cboFilter";
+            cboFilter.Size = new Size(170, 33);
+            cboFilter.TabIndex = 3;
+            cboFilter.SelectedIndexChanged += cboFilter_SelectedIndexChanged;
             // 
             // btnSearch
             // 
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Text = "Search";
-            this.btnSearch.Size = new System.Drawing.Size(100, 27);
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnSearch.Location = new System.Drawing.Point(520, 19);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            btnSearch.BackColor = Color.FromArgb(30, 111, 240);
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(520, 19);
+            btnSearch.Margin = new Padding(0, 0, 8, 0);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(100, 27);
+            btnSearch.TabIndex = 4;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // dgvMembers
             // 
-            this.dgvMembers.Name = "dgvMembers";
-            this.dgvMembers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMembers.TabIndex = 1;
-            this.dgvMembers.SelectionChanged += new System.EventHandler(this.dgvMembers_SelectionChanged);
-            this.dgvMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembers_CellDoubleClick);
+            dgvMembers.ColumnHeadersHeight = 34;
+            dgvMembers.Dock = DockStyle.Fill;
+            dgvMembers.Location = new Point(3, 57);
+            dgvMembers.Name = "dgvMembers";
+            dgvMembers.RowHeadersWidth = 62;
+            dgvMembers.Size = new Size(1012, 528);
+            dgvMembers.TabIndex = 1;
+            dgvMembers.CellDoubleClick += dgvMembers_CellDoubleClick;
+            dgvMembers.SelectionChanged += dgvMembers_SelectionChanged;
             // 
             // footerPanel
             // 
-            this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.footerPanel.Controls.Add(this.btnEdit);
-            this.footerPanel.Controls.Add(this.btnToggle);
-            this.footerPanel.Controls.Add(this.lblCount);
-            this.footerPanel.TabIndex = 2;
+            footerPanel.BackColor = Color.FromArgb(243, 246, 251);
+            footerPanel.Controls.Add(btnEdit);
+            footerPanel.Controls.Add(btnToggle);
+            footerPanel.Controls.Add(lblCount);
+            footerPanel.Dock = DockStyle.Fill;
+            footerPanel.Location = new Point(3, 591);
+            footerPanel.Name = "footerPanel";
+            footerPanel.Size = new Size(1012, 44);
+            footerPanel.TabIndex = 2;
             // 
             // btnEdit
             // 
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Text = "View / Edit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 34);
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.Location = new System.Drawing.Point(0, 8);
-            this.btnEdit.TabIndex = 0;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            btnEdit.BackColor = Color.FromArgb(30, 111, 240);
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Location = new Point(0, 8);
+            btnEdit.Margin = new Padding(0, 0, 8, 0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(120, 34);
+            btnEdit.TabIndex = 0;
+            btnEdit.Text = "View / Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnToggle
             // 
-            this.btnToggle.Name = "btnToggle";
-            this.btnToggle.Text = "Deactivate";
-            this.btnToggle.Size = new System.Drawing.Size(120, 34);
-            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToggle.BackColor = System.Drawing.Color.White;
-            this.btnToggle.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnToggle.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnToggle.UseVisualStyleBackColor = false;
-            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
-            this.btnToggle.Location = new System.Drawing.Point(130, 8);
-            this.btnToggle.TabIndex = 1;
-            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);
+            btnToggle.BackColor = Color.White;
+            btnToggle.Cursor = Cursors.Hand;
+            btnToggle.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
+            btnToggle.FlatStyle = FlatStyle.Flat;
+            btnToggle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnToggle.ForeColor = Color.FromArgb(31, 41, 55);
+            btnToggle.Location = new Point(130, 8);
+            btnToggle.Margin = new Padding(0, 0, 8, 0);
+            btnToggle.Name = "btnToggle";
+            btnToggle.Size = new Size(120, 34);
+            btnToggle.TabIndex = 1;
+            btnToggle.Text = "Deactivate";
+            btnToggle.UseVisualStyleBackColor = false;
+            btnToggle.Click += btnToggle_Click;
             // 
             // lblCount
             // 
-            this.lblCount.Name = "lblCount";
-            this.lblCount.AutoSize = true;
-            this.lblCount.Text = "";
-            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblCount.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lblCount.Location = new System.Drawing.Point(270, 16);
-            this.lblCount.TabIndex = 2;
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("Segoe UI", 9.5F);
+            lblCount.ForeColor = Color.FromArgb(107, 114, 128);
+            lblCount.Location = new Point(270, 16);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(0, 25);
+            lblCount.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Text = "+ Add Member";
-            this.btnAdd.Size = new System.Drawing.Size(130, 34);
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Text = "Export CSV";
-            this.btnExport.Size = new System.Drawing.Size(110, 34);
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.BackColor = System.Drawing.Color.White;
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            btnAdd.BackColor = Color.FromArgb(30, 111, 240);
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(0, 4);
+            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(130, 34);
+            btnAdd.TabIndex = 1;
+            btnAdd.Text = "+ Add Member";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // MembersForm
             // 
-            this.PageTitle = "Members";
-            this.ClientSize = new System.Drawing.Size(1280, 760);
-            this.contentPanel.Controls.Add(this.mainLayout);
-            this.actionsFlow.Controls.Add(this.btnAdd);
-            this.actionsFlow.Controls.Add(this.btnExport);
-            this.footerPanel.ResumeLayout(false);
-            this.footerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
-            this.toolbarPanel.ResumeLayout(false);
-            this.toolbarPanel.PerformLayout();
-            this.mainLayout.ResumeLayout(false);
-            this.mainLayout.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "MembersForm";
+            PageTitle = "Members";
+            Text = "FITZONE GYM - Members";
+            contentPanel.ResumeLayout(false);
+            mainLayout.ResumeLayout(false);
+            toolbarPanel.ResumeLayout(false);
+            toolbarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).EndInit();
+            footerPanel.ResumeLayout(false);
+            footerPanel.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -253,6 +259,5 @@ namespace FitZoneGym.Forms
         private System.Windows.Forms.Button btnToggle;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnExport;
     }
 }

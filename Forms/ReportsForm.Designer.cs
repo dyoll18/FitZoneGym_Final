@@ -18,186 +18,195 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.toolbarPanel = new System.Windows.Forms.Panel();
-            this.lblType = new System.Windows.Forms.Label();
-            this.cboType = new System.Windows.Forms.ComboBox();
-            this.lblFrom = new System.Windows.Forms.Label();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.dgvReport = new System.Windows.Forms.DataGridView();
-            this.summaryPanel = new System.Windows.Forms.Panel();
-            this.lblSummary = new System.Windows.Forms.Label();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.mainLayout.SuspendLayout();
-            this.toolbarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
-            this.summaryPanel.SuspendLayout();
-            this.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            toolbarPanel = new Panel();
+            lblType = new Label();
+            cboType = new ComboBox();
+            lblFrom = new Label();
+            dtpFrom = new DateTimePicker();
+            lblTo = new Label();
+            dtpTo = new DateTimePicker();
+            btnGenerate = new Button();
+            dgvReport = new DataGridView();
+            summaryPanel = new Panel();
+            lblSummary = new Label();
+            contentPanel.SuspendLayout();
+            mainLayout.SuspendLayout();
+            toolbarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvReport).BeginInit();
+            summaryPanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // titleLabel
+            // 
+            titleLabel.Size = new Size(1014, 48);
+            titleLabel.Text = "Reports";
+            titleLabel.Click += titleLabel_Click;
             // 
             // mainLayout
             // 
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.mainLayout.ColumnCount = 1;
-            this.mainLayout.RowCount = 3;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.mainLayout.Controls.Add(this.toolbarPanel, 0, 0);
-            this.mainLayout.Controls.Add(this.dgvReport, 0, 1);
-            this.mainLayout.Controls.Add(this.summaryPanel, 0, 2);
-            this.mainLayout.TabIndex = 0;
+            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.ColumnCount = 1;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            mainLayout.Controls.Add(toolbarPanel, 0, 0);
+            mainLayout.Controls.Add(dgvReport, 0, 1);
+            mainLayout.Controls.Add(summaryPanel, 0, 2);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(16, 16);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 3;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            mainLayout.Size = new Size(1018, 638);
+            mainLayout.TabIndex = 0;
             // 
             // toolbarPanel
             // 
-            this.toolbarPanel.Name = "toolbarPanel";
-            this.toolbarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolbarPanel.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.toolbarPanel.Controls.Add(this.lblType);
-            this.toolbarPanel.Controls.Add(this.cboType);
-            this.toolbarPanel.Controls.Add(this.lblFrom);
-            this.toolbarPanel.Controls.Add(this.dtpFrom);
-            this.toolbarPanel.Controls.Add(this.lblTo);
-            this.toolbarPanel.Controls.Add(this.dtpTo);
-            this.toolbarPanel.Controls.Add(this.btnGenerate);
-            this.toolbarPanel.TabIndex = 0;
+            toolbarPanel.BackColor = Color.FromArgb(243, 246, 251);
+            toolbarPanel.Controls.Add(lblType);
+            toolbarPanel.Controls.Add(cboType);
+            toolbarPanel.Controls.Add(lblFrom);
+            toolbarPanel.Controls.Add(dtpFrom);
+            toolbarPanel.Controls.Add(lblTo);
+            toolbarPanel.Controls.Add(dtpTo);
+            toolbarPanel.Controls.Add(btnGenerate);
+            toolbarPanel.Dock = DockStyle.Fill;
+            toolbarPanel.Location = new Point(3, 3);
+            toolbarPanel.Name = "toolbarPanel";
+            toolbarPanel.Size = new Size(1012, 48);
+            toolbarPanel.TabIndex = 0;
             // 
             // lblType
             // 
-            this.lblType.Name = "lblType";
-            this.lblType.AutoSize = true;
-            this.lblType.Text = "Report type";
-            this.lblType.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblType.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblType.Location = new System.Drawing.Point(0, 0);
-            this.lblType.TabIndex = 0;
+            lblType.AutoSize = true;
+            lblType.Font = new Font("Segoe UI", 8.5F);
+            lblType.ForeColor = Color.FromArgb(107, 114, 128);
+            lblType.Location = new Point(0, 0);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(99, 23);
+            lblType.TabIndex = 0;
+            lblType.Text = "Report type";
             // 
             // cboType
             // 
-            this.cboType.Name = "cboType";
-            this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboType.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.cboType.Size = new System.Drawing.Size(240, 25);
-            this.cboType.Location = new System.Drawing.Point(0, 20);
-            this.cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report" });
-            this.cboType.TabIndex = 1;
+            cboType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboType.FlatStyle = FlatStyle.Flat;
+            cboType.Font = new Font("Segoe UI", 9.5F);
+            cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report" });
+            cboType.Location = new Point(0, 20);
+            cboType.Name = "cboType";
+            cboType.Size = new Size(240, 33);
+            cboType.TabIndex = 1;
             // 
             // lblFrom
             // 
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Text = "From";
-            this.lblFrom.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblFrom.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblFrom.Location = new System.Drawing.Point(260, 0);
-            this.lblFrom.TabIndex = 2;
+            lblFrom.AutoSize = true;
+            lblFrom.Font = new Font("Segoe UI", 8.5F);
+            lblFrom.ForeColor = Color.FromArgb(107, 114, 128);
+            lblFrom.Location = new Point(260, 0);
+            lblFrom.Name = "lblFrom";
+            lblFrom.Size = new Size(49, 23);
+            lblFrom.TabIndex = 2;
+            lblFrom.Text = "From";
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.dtpFrom.Size = new System.Drawing.Size(140, 25);
-            this.dtpFrom.Location = new System.Drawing.Point(260, 20);
-            this.dtpFrom.TabIndex = 3;
+            dtpFrom.Font = new Font("Segoe UI", 9.5F);
+            dtpFrom.Format = DateTimePickerFormat.Short;
+            dtpFrom.Location = new Point(260, 20);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(140, 33);
+            dtpFrom.TabIndex = 3;
             // 
             // lblTo
             // 
-            this.lblTo.Name = "lblTo";
-            this.lblTo.AutoSize = true;
-            this.lblTo.Text = "To";
-            this.lblTo.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblTo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblTo.Location = new System.Drawing.Point(410, 0);
-            this.lblTo.TabIndex = 4;
+            lblTo.AutoSize = true;
+            lblTo.Font = new Font("Segoe UI", 8.5F);
+            lblTo.ForeColor = Color.FromArgb(107, 114, 128);
+            lblTo.Location = new Point(410, 0);
+            lblTo.Name = "lblTo";
+            lblTo.Size = new Size(27, 23);
+            lblTo.TabIndex = 4;
+            lblTo.Text = "To";
             // 
             // dtpTo
             // 
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.dtpTo.Size = new System.Drawing.Size(140, 25);
-            this.dtpTo.Location = new System.Drawing.Point(410, 20);
-            this.dtpTo.TabIndex = 5;
+            dtpTo.Font = new Font("Segoe UI", 9.5F);
+            dtpTo.Format = DateTimePickerFormat.Short;
+            dtpTo.Location = new Point(410, 20);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(140, 33);
+            dtpTo.TabIndex = 5;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Text = "Generate Report";
-            this.btnGenerate.Size = new System.Drawing.Size(150, 27);
-            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnGenerate.ForeColor = System.Drawing.Color.White;
-            this.btnGenerate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnGenerate.UseVisualStyleBackColor = false;
-            this.btnGenerate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnGenerate.Location = new System.Drawing.Point(560, 19);
-            this.btnGenerate.TabIndex = 6;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            btnGenerate.BackColor = Color.FromArgb(30, 111, 240);
+            btnGenerate.Cursor = Cursors.Hand;
+            btnGenerate.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnGenerate.FlatStyle = FlatStyle.Flat;
+            btnGenerate.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnGenerate.ForeColor = Color.White;
+            btnGenerate.Location = new Point(560, 19);
+            btnGenerate.Margin = new Padding(0, 0, 8, 0);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(150, 27);
+            btnGenerate.TabIndex = 6;
+            btnGenerate.Text = "Generate Report";
+            btnGenerate.UseVisualStyleBackColor = false;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // dgvReport
             // 
-            this.dgvReport.Name = "dgvReport";
-            this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReport.TabIndex = 1;
+            dgvReport.ColumnHeadersHeight = 34;
+            dgvReport.Dock = DockStyle.Fill;
+            dgvReport.Location = new Point(3, 57);
+            dgvReport.Name = "dgvReport";
+            dgvReport.RowHeadersWidth = 62;
+            dgvReport.Size = new Size(1012, 538);
+            dgvReport.TabIndex = 1;
             // 
             // summaryPanel
             // 
-            this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.summaryPanel.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.summaryPanel.Controls.Add(this.lblSummary);
-            this.summaryPanel.TabIndex = 2;
+            summaryPanel.BackColor = Color.FromArgb(243, 246, 251);
+            summaryPanel.Controls.Add(lblSummary);
+            summaryPanel.Dock = DockStyle.Fill;
+            summaryPanel.Location = new Point(3, 601);
+            summaryPanel.Name = "summaryPanel";
+            summaryPanel.Size = new Size(1012, 34);
+            summaryPanel.TabIndex = 2;
             // 
             // lblSummary
             // 
-            this.lblSummary.Name = "lblSummary";
-            this.lblSummary.AutoSize = true;
-            this.lblSummary.Text = "Choose a report and date range, then click Generate.";
-            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(15, 35, 66);
-            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 10.0F, System.Drawing.FontStyle.Bold);
-            this.lblSummary.Location = new System.Drawing.Point(0, 10);
-            this.lblSummary.TabIndex = 0;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Text = "Export CSV";
-            this.btnExport.Size = new System.Drawing.Size(110, 34);
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.BackColor = System.Drawing.Color.White;
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
-            this.btnExport.TabIndex = 1;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            lblSummary.AutoSize = true;
+            lblSummary.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSummary.ForeColor = Color.FromArgb(15, 35, 66);
+            lblSummary.Location = new Point(0, 10);
+            lblSummary.Name = "lblSummary";
+            lblSummary.Size = new Size(512, 28);
+            lblSummary.TabIndex = 0;
+            lblSummary.Text = "Choose a report and date range, then click Generate.";
             // 
             // ReportsForm
             // 
-            this.PageTitle = "Reports";
-            this.ClientSize = new System.Drawing.Size(1280, 760);
-            this.contentPanel.Controls.Add(this.mainLayout);
-            this.actionsFlow.Controls.Add(this.btnExport);
-            this.summaryPanel.ResumeLayout(false);
-            this.summaryPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
-            this.toolbarPanel.ResumeLayout(false);
-            this.toolbarPanel.PerformLayout();
-            this.mainLayout.ResumeLayout(false);
-            this.mainLayout.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "ReportsForm";
+            PageTitle = "Reports";
+            Text = "FITZONE GYM - Reports";
+            contentPanel.ResumeLayout(false);
+            mainLayout.ResumeLayout(false);
+            toolbarPanel.ResumeLayout(false);
+            toolbarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvReport).EndInit();
+            summaryPanel.ResumeLayout(false);
+            summaryPanel.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -214,6 +223,5 @@ namespace FitZoneGym.Forms
         private System.Windows.Forms.DataGridView dgvReport;
         private System.Windows.Forms.Panel summaryPanel;
         private System.Windows.Forms.Label lblSummary;
-        private System.Windows.Forms.Button btnExport;
     }
 }

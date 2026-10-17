@@ -30,7 +30,12 @@ namespace FitZoneGym.Forms
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Ui.ExportCsv(dgvReport, ((string)cboType.SelectedItem).Replace(' ', '_'));
+            
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
