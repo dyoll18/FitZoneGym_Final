@@ -15,242 +15,205 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.formLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.lblSpacer1 = new System.Windows.Forms.Label();
-            this.lblHint = new System.Windows.Forms.Label();
-            this.lblSpacer2 = new System.Windows.Forms.Label();
-            this.chkActive = new System.Windows.Forms.CheckBox();
-            this.buttonFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.formLayout.SuspendLayout();
-            this.buttonFlow.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // formLayout
-            // 
-            this.formLayout.ColumnCount = 2;
-            this.formLayout.RowCount = 6;
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 330F));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.Controls.Add(this.lblUser, 0, 0);
-            this.formLayout.Controls.Add(this.txtUser, 1, 0);
-            this.formLayout.Controls.Add(this.lblName, 0, 1);
-            this.formLayout.Controls.Add(this.txtName, 1, 1);
-            this.formLayout.Controls.Add(this.lblPass, 0, 2);
-            this.formLayout.Controls.Add(this.txtPass, 1, 2);
-            this.formLayout.Controls.Add(this.lblSpacer1, 0, 3);
-            this.formLayout.Controls.Add(this.lblHint, 1, 3);
-            this.formLayout.Controls.Add(this.lblSpacer2, 0, 4);
-            this.formLayout.Controls.Add(this.chkActive, 1, 4);
-            this.formLayout.Controls.Add(this.buttonFlow, 0, 5);
-            this.formLayout.SetColumnSpan(this.buttonFlow, 2);
-            this.formLayout.Name = "formLayout";
-            this.formLayout.Dock = System.Windows.Forms.DockStyle.None;
-            this.formLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.formLayout.Padding = new System.Windows.Forms.Padding(28, 24, 28, 22);
-            this.formLayout.AutoSize = true;
-            this.formLayout.BackColor = System.Drawing.Color.Transparent;
+            lblUser = new Label();
+            txtUser = new TextBox();
+            lblName = new Label();
+            txtName = new TextBox();
+            lblRole = new Label();
+            cboRole = new ComboBox();
+            lblPass = new Label();
+            txtPass = new TextBox();
+            lblHint = new Label();
+            chkActive = new CheckBox();
+            btnSave = new Button();
+            btnCancel = new Button();
+            SuspendLayout();
             // 
             // lblUser
             // 
-            this.lblUser.Name = "lblUser";
-            this.lblUser.AutoSize = true;
-            this.lblUser.Text = "Username *";
-            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblUser.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 9.5F);
+            lblUser.ForeColor = Color.FromArgb(31, 41, 55);
+            lblUser.Location = new Point(20, 24);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(110, 25);
+            lblUser.TabIndex = 0;
+            lblUser.Text = "Username *";
             // 
             // txtUser
             // 
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtUser.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
+            txtUser.Font = new Font("Segoe UI", 9.5F);
+            txtUser.Location = new Point(160, 20);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(260, 33);
+            txtUser.TabIndex = 1;
             // 
             // lblName
             // 
-            this.lblName.Name = "lblName";
-            this.lblName.AutoSize = true;
-            this.lblName.Text = "Full name *";
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblName.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 9.5F);
+            lblName.ForeColor = Color.FromArgb(31, 41, 55);
+            lblName.Location = new Point(20, 62);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(107, 25);
+            lblName.TabIndex = 2;
+            lblName.Text = "Full name *";
             // 
             // txtName
             // 
-            this.txtName.Name = "txtName";
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtName.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtName.Font = new Font("Segoe UI", 9.5F);
+            txtName.Location = new Point(160, 58);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(260, 33);
+            txtName.TabIndex = 3;
+            // 
+            // lblRole
+            // 
+            lblRole.AutoSize = true;
+            lblRole.Font = new Font("Segoe UI", 9.5F);
+            lblRole.ForeColor = Color.FromArgb(31, 41, 55);
+            lblRole.Location = new Point(20, 100);
+            lblRole.Name = "lblRole";
+            lblRole.Size = new Size(100, 23);
+            lblRole.TabIndex = 4;
+            lblRole.Text = "Role *";
+            // 
+            // cboRole
+            // 
+            cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRole.FlatStyle = FlatStyle.Flat;
+            cboRole.Font = new Font("Segoe UI", 9.5F);
+            cboRole.Items.AddRange(new object[] { "Administrator", "Staff", "Cashier" });
+            cboRole.Location = new Point(160, 96);
+            cboRole.Name = "cboRole";
+            cboRole.Size = new Size(220, 33);
+            cboRole.TabIndex = 5;
             // 
             // lblPass
             // 
-            this.lblPass.Name = "lblPass";
-            this.lblPass.AutoSize = true;
-            this.lblPass.Text = "Password *";
-            this.lblPass.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPass.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblPass.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblPass.AutoSize = true;
+            lblPass.Font = new Font("Segoe UI", 9.5F);
+            lblPass.ForeColor = Color.FromArgb(31, 41, 55);
+            lblPass.Location = new Point(20, 100);
+            lblPass.Name = "lblPass";
+            lblPass.Size = new Size(104, 25);
+            lblPass.TabIndex = 6;
+            lblPass.Text = "Password *";
             // 
             // txtPass
             // 
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtPass.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            // 
-            // lblSpacer1
-            // 
-            this.lblSpacer1.Name = "lblSpacer1";
-            this.lblSpacer1.AutoSize = true;
-            this.lblSpacer1.Text = "";
-            this.lblSpacer1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.lblSpacer1.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            txtPass.BorderStyle = BorderStyle.FixedSingle;
+            txtPass.Font = new Font("Segoe UI", 9.5F);
+            txtPass.Location = new Point(160, 96);
+            txtPass.Name = "txtPass";
+            txtPass.Size = new Size(260, 33);
+            txtPass.TabIndex = 7;
+            txtPass.UseSystemPasswordChar = true;
             // 
             // lblHint
             // 
-            this.lblHint.Name = "lblHint";
-            this.lblHint.AutoSize = true;
-            this.lblHint.Text = "Min. 8 characters, with letters and numbers.";
-            this.lblHint.Tag = "muted";
-            this.lblHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHint.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
-            this.lblHint.MaximumSize = new System.Drawing.Size(330, 0);
-            this.lblHint.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // lblSpacer2
-            // 
-            this.lblSpacer2.Name = "lblSpacer2";
-            this.lblSpacer2.AutoSize = true;
-            this.lblSpacer2.Text = "";
-            this.lblSpacer2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.lblSpacer2.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblHint.AutoSize = true;
+            lblHint.Font = new Font("Segoe UI", 9F);
+            lblHint.ForeColor = Color.FromArgb(107, 114, 128);
+            lblHint.Location = new Point(160, 130);
+            lblHint.Name = "lblHint";
+            lblHint.Size = new Size(354, 25);
+            lblHint.TabIndex = 8;
+            lblHint.Text = "Min. 8 characters, with letters and numbers.";
             // 
             // chkActive
             // 
-            this.chkActive.Name = "chkActive";
-            this.chkActive.AutoSize = true;
-            this.chkActive.Checked = true;
-            this.chkActive.Text = "Account is active";
-            this.chkActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkActive.Margin = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.chkActive.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            // 
-            // buttonFlow
-            // 
-            this.buttonFlow.Controls.Add(this.btnCancel);
-            this.buttonFlow.Controls.Add(this.btnSave);
-            this.buttonFlow.Name = "buttonFlow";
-            this.buttonFlow.AutoSize = true;
-            this.buttonFlow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonFlow.WrapContents = false;
-            this.buttonFlow.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.buttonFlow.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.buttonFlow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonFlow.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Size = new System.Drawing.Size(116, 38);
-            this.btnCancel.Tag = "secondary";
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.FlatAppearance.BorderSize = 1;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(54, 54, 63);
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(50, 50, 59);
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(28, 28, 34);
+            chkActive.AutoSize = true;
+            chkActive.Checked = true;
+            chkActive.CheckState = CheckState.Checked;
+            chkActive.Font = new Font("Segoe UI", 9.5F);
+            chkActive.Location = new Point(160, 158);
+            chkActive.Name = "chkActive";
+            chkActive.Size = new Size(179, 29);
+            chkActive.TabIndex = 9;
+            chkActive.Text = "Account is active";
             // 
             // btnSave
             // 
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Text = "Save";
-            this.btnSave.Size = new System.Drawing.Size(116, 38);
-            this.btnSave.Tag = "primary";
-            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnSave.FlatAppearance.BorderSize = 1;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(205, 60, 8);
-            this.btnSave.Click += this.btnSave_Click;
+            btnSave.BackColor = Color.FromArgb(30, 111, 240);
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(160, 205);
+            btnSave.Margin = new Padding(0, 0, 8, 0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(110, 34);
+            btnSave.TabIndex = 10;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.White;
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnCancel.ForeColor = Color.FromArgb(31, 41, 55);
+            btnCancel.Location = new Point(310, 205);
+            btnCancel.Margin = new Padding(0, 0, 8, 0);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(110, 34);
+            btnCancel.TabIndex = 11;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
             // 
             // StaffEditForm
             // 
-            this.Controls.Add(this.formLayout);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Name = "StaffEditForm";
-            this.Text = "Add Staff";
-            this.AcceptButton = this.btnSave;
-            this.CancelButton = this.btnCancel;
-            this.buttonFlow.ResumeLayout(false);
-            this.buttonFlow.PerformLayout();
-            this.formLayout.ResumeLayout(false);
-            this.formLayout.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AcceptButton = btnSave;
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.White;
+            CancelButton = btnCancel;
+            ClientSize = new Size(528, 271);
+            Controls.Add(lblUser);
+            Controls.Add(txtUser);
+            Controls.Add(lblName);
+            Controls.Add(txtName);
+            Controls.Add(lblPass);
+            Controls.Add(txtPass);
+            Controls.Add(lblHint);
+            Controls.Add(chkActive);
+            Controls.Add(btnSave);
+            Controls.Add(btnCancel);
+            Font = new Font("Segoe UI", 9.5F);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "StaffEditForm";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Add Staff";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel formLayout;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.ComboBox cboRole;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label lblSpacer1;
         private System.Windows.Forms.Label lblHint;
-        private System.Windows.Forms.Label lblSpacer2;
         private System.Windows.Forms.CheckBox chkActive;
-        private System.Windows.Forms.FlowLayoutPanel buttonFlow;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

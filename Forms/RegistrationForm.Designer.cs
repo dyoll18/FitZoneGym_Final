@@ -15,23 +15,21 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.bodyLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.topLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.modeFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.rbNew = new System.Windows.Forms.RadioButton();
-            this.rbRenew = new System.Windows.Forms.RadioButton();
-            this.lblMemberSearch = new System.Windows.Forms.Label();
-            this.memberPicker = new FitZoneGym.Controls.MemberPicker();
-            this.mainRow = new System.Windows.Forms.TableLayoutPanel();
-            this.leftCard = new FitZoneGym.Controls.CardPanel();
-            this.formLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.cardHistory = new System.Windows.Forms.Panel();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.lblHistoryTitle = new System.Windows.Forms.Label();
+            this.pnlGap = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.lblPlan = new System.Windows.Forms.Label();
             this.cboPlan = new System.Windows.Forms.ComboBox();
             this.lblDateCaption = new System.Windows.Forms.Label();
-            this.dateRow = new System.Windows.Forms.TableLayoutPanel();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDateHint = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
@@ -44,526 +42,389 @@ namespace FitZoneGym.Forms
             this.txtRef = new System.Windows.Forms.TextBox();
             this.lblSummary = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
-            this.rightColumn = new System.Windows.Forms.TableLayoutPanel();
-            this.infoCard = new FitZoneGym.Controls.CardPanel();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.historyCard = new FitZoneGym.Controls.CardPanel();
-            this.dgvHistory = new System.Windows.Forms.DataGridView();
-            this.lblHistoryTitle = new System.Windows.Forms.Label();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.rbNew = new System.Windows.Forms.RadioButton();
+            this.rbRenew = new System.Windows.Forms.RadioButton();
+            this.lblMemberSearch = new System.Windows.Forms.Label();
+            this.memberPicker = new FitZoneGym.Controls.MemberPicker();
+            this.pnlBody.SuspendLayout();
+            this.pnlRight.SuspendLayout();
+            this.cardHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
-            this.bodyLayout.SuspendLayout();
-            this.topLayout.SuspendLayout();
-            this.modeFlow.SuspendLayout();
-            this.mainRow.SuspendLayout();
-            this.leftCard.SuspendLayout();
-            this.formLayout.SuspendLayout();
-            this.dateRow.SuspendLayout();
-            this.rightColumn.SuspendLayout();
-            this.infoCard.SuspendLayout();
-            this.historyCard.SuspendLayout();
+            this.pnlGap.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
-            this.contentPanel.SuspendLayout();
             // 
-            // bodyLayout
+            // pnlBody
             // 
-            this.bodyLayout.ColumnCount = 1;
-            this.bodyLayout.RowCount = 2;
-            this.bodyLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.bodyLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.bodyLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.bodyLayout.Controls.Add(this.topLayout, 0, 0);
-            this.bodyLayout.Controls.Add(this.mainRow, 0, 1);
-            this.bodyLayout.Name = "bodyLayout";
-            this.bodyLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.bodyLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.bodyLayout.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
+            this.pnlBody.Controls.Add(this.pnlRight);
+            this.pnlBody.Controls.Add(this.pnlLeft);
+            this.pnlBody.TabIndex = 0;
             // 
-            // topLayout
+            // pnlRight
             // 
-            this.topLayout.ColumnCount = 1;
-            this.topLayout.RowCount = 3;
-            this.topLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.topLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.topLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.topLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.topLayout.Controls.Add(this.modeFlow, 0, 0);
-            this.topLayout.Controls.Add(this.lblMemberSearch, 0, 1);
-            this.topLayout.Controls.Add(this.memberPicker, 0, 2);
-            this.topLayout.Name = "topLayout";
-            this.topLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 14);
-            this.topLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.topLayout.AutoSize = true;
-            this.topLayout.BackColor = System.Drawing.Color.Transparent;
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
+            this.pnlRight.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.pnlRight.Controls.Add(this.cardHistory);
+            this.pnlRight.Controls.Add(this.pnlGap);
+            this.pnlRight.Controls.Add(this.pnlInfo);
+            this.pnlRight.TabIndex = 0;
             // 
-            // modeFlow
+            // cardHistory
             // 
-            this.modeFlow.Controls.Add(this.rbNew);
-            this.modeFlow.Controls.Add(this.rbRenew);
-            this.modeFlow.Name = "modeFlow";
-            this.modeFlow.AutoSize = true;
-            this.modeFlow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.modeFlow.WrapContents = false;
-            this.modeFlow.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
-            this.modeFlow.Margin = new System.Windows.Forms.Padding(0, 0, 0, 14);
-            this.modeFlow.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.modeFlow.BackColor = System.Drawing.Color.Transparent;
+            this.cardHistory.Name = "cardHistory";
+            this.cardHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardHistory.BackColor = System.Drawing.Color.White;
+            this.cardHistory.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardHistory.Controls.Add(this.dgvHistory);
+            this.cardHistory.Controls.Add(this.lblHistoryTitle);
+            this.cardHistory.TabIndex = 0;
             // 
-            // rbNew
+            // dgvHistory
             // 
-            this.rbNew.Name = "rbNew";
-            this.rbNew.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbNew.AutoSize = false;
-            this.rbNew.Size = new System.Drawing.Size(180, 38);
-            this.rbNew.Text = "New Registration";
-            this.rbNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbNew.TabStop = true;
-            this.rbNew.Checked = true;
-            this.rbNew.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.rbNew.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            this.rbNew.BackColor = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.rbNew.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.rbNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(54, 54, 63);
-            this.rbNew.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.rbNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(50, 50, 59);
-            this.rbNew.CheckedChanged += this.rbMode_CheckedChanged;
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHistory.TabIndex = 0;
             // 
-            // rbRenew
+            // lblHistoryTitle
             // 
-            this.rbRenew.Name = "rbRenew";
-            this.rbRenew.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbRenew.AutoSize = false;
-            this.rbRenew.Size = new System.Drawing.Size(180, 38);
-            this.rbRenew.Text = "Renew Membership";
-            this.rbRenew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbRenew.TabStop = true;
-            this.rbRenew.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.rbRenew.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            this.rbRenew.BackColor = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.rbRenew.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.rbRenew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbRenew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(54, 54, 63);
-            this.rbRenew.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.rbRenew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(50, 50, 59);
-            this.rbRenew.CheckedChanged += this.rbMode_CheckedChanged;
+            this.lblHistoryTitle.Name = "lblHistoryTitle";
+            this.lblHistoryTitle.AutoSize = false;
+            this.lblHistoryTitle.Text = "Renewal History";
+            this.lblHistoryTitle.ForeColor = System.Drawing.Color.FromArgb(15, 35, 66);
+            this.lblHistoryTitle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lblHistoryTitle.Size = new System.Drawing.Size(100, 30);
+            this.lblHistoryTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblHistoryTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblHistoryTitle.TabIndex = 1;
             // 
-            // lblMemberSearch
+            // pnlGap
             // 
-            this.lblMemberSearch.Name = "lblMemberSearch";
-            this.lblMemberSearch.AutoSize = true;
-            this.lblMemberSearch.Text = "MEMBER SEARCH";
-            this.lblMemberSearch.Tag = "caption";
-            this.lblMemberSearch.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblMemberSearch.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblMemberSearch.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblMemberSearch.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            this.pnlGap.Name = "pnlGap";
+            this.pnlGap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGap.Height = 12;
+            this.pnlGap.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
+            this.pnlGap.TabIndex = 1;
             // 
-            // memberPicker
+            // pnlInfo
             // 
-            this.memberPicker.Name = "memberPicker";
-            this.memberPicker.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.memberPicker.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.memberPicker.MemberChanged += this.memberPicker_MemberChanged;
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInfo.Height = 70;
+            this.pnlInfo.BackColor = System.Drawing.Color.White;
+            this.pnlInfo.Padding = new System.Windows.Forms.Padding(14, 8, 14, 4);
+            this.pnlInfo.Controls.Add(this.lblInfo);
+            this.pnlInfo.TabIndex = 2;
             // 
-            // mainRow
+            // lblInfo
             // 
-            this.mainRow.ColumnCount = 2;
-            this.mainRow.RowCount = 1;
-            this.mainRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 510F));
-            this.mainRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainRow.Controls.Add(this.leftCard, 0, 0);
-            this.mainRow.Controls.Add(this.rightColumn, 1, 0);
-            this.mainRow.Name = "mainRow";
-            this.mainRow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainRow.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainRow.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainRow.BackColor = System.Drawing.Color.Transparent;
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.AutoSize = false;
+            this.lblInfo.Text = "Search and select a member to begin.";
+            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
+            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblInfo.Size = new System.Drawing.Size(470, 50);
+            this.lblInfo.Location = new System.Drawing.Point(0, 0);
+            this.lblInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblInfo.TabIndex = 0;
             // 
-            // leftCard
+            // pnlLeft
             // 
-            this.leftCard.Controls.Add(this.formLayout);
-            this.leftCard.Name = "leftCard";
-            this.leftCard.Tag = "card";
-            this.leftCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftCard.Padding = new System.Windows.Forms.Padding(22, 18, 22, 18);
-            this.leftCard.Margin = new System.Windows.Forms.Padding(0, 0, 14, 0);
-            this.leftCard.AutoScroll = true;
-            this.leftCard.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            // 
-            // formLayout
-            // 
-            this.formLayout.ColumnCount = 2;
-            this.formLayout.RowCount = 8;
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.Controls.Add(this.lblPlan, 0, 0);
-            this.formLayout.Controls.Add(this.cboPlan, 1, 0);
-            this.formLayout.Controls.Add(this.lblDateCaption, 0, 1);
-            this.formLayout.Controls.Add(this.dateRow, 1, 1);
-            this.formLayout.Controls.Add(this.lblDiscount, 0, 2);
-            this.formLayout.Controls.Add(this.numDiscount, 1, 2);
-            this.formLayout.Controls.Add(this.lblPay, 0, 3);
-            this.formLayout.Controls.Add(this.numPay, 1, 3);
-            this.formLayout.Controls.Add(this.lblMethod, 0, 4);
-            this.formLayout.Controls.Add(this.cboMethod, 1, 4);
-            this.formLayout.Controls.Add(this.lblRef, 0, 5);
-            this.formLayout.Controls.Add(this.txtRef, 1, 5);
-            this.formLayout.Controls.Add(this.lblSummary, 0, 6);
-            this.formLayout.SetColumnSpan(this.lblSummary, 2);
-            this.formLayout.Controls.Add(this.btnGo, 0, 7);
-            this.formLayout.SetColumnSpan(this.btnGo, 2);
-            this.formLayout.Name = "formLayout";
-            this.formLayout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.formLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.formLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.formLayout.AutoSize = true;
-            this.formLayout.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Width = 480;
+            this.pnlLeft.BackColor = System.Drawing.Color.White;
+            this.pnlLeft.Controls.Add(this.lblPlan);
+            this.pnlLeft.Controls.Add(this.cboPlan);
+            this.pnlLeft.Controls.Add(this.lblDateCaption);
+            this.pnlLeft.Controls.Add(this.dtpDate);
+            this.pnlLeft.Controls.Add(this.lblDateHint);
+            this.pnlLeft.Controls.Add(this.lblDiscount);
+            this.pnlLeft.Controls.Add(this.numDiscount);
+            this.pnlLeft.Controls.Add(this.lblPay);
+            this.pnlLeft.Controls.Add(this.numPay);
+            this.pnlLeft.Controls.Add(this.lblMethod);
+            this.pnlLeft.Controls.Add(this.cboMethod);
+            this.pnlLeft.Controls.Add(this.lblRef);
+            this.pnlLeft.Controls.Add(this.txtRef);
+            this.pnlLeft.Controls.Add(this.lblSummary);
+            this.pnlLeft.Controls.Add(this.btnGo);
+            this.pnlLeft.TabIndex = 1;
             // 
             // lblPlan
             // 
             this.lblPlan.Name = "lblPlan";
             this.lblPlan.AutoSize = true;
             this.lblPlan.Text = "Plan";
-            this.lblPlan.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPlan.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblPlan.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblPlan.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblPlan.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblPlan.Location = new System.Drawing.Point(14, 20);
+            this.lblPlan.TabIndex = 0;
             // 
             // cboPlan
             // 
             this.cboPlan.Name = "cboPlan";
             this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPlan.FormattingEnabled = true;
-            this.cboPlan.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.cboPlan.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.cboPlan.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.cboPlan.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
             this.cboPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboPlan.SelectedIndexChanged += this.Preview_Changed;
+            this.cboPlan.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.cboPlan.Size = new System.Drawing.Size(280, 25);
+            this.cboPlan.Location = new System.Drawing.Point(170, 16);
+            this.cboPlan.TabIndex = 1;
+            this.cboPlan.SelectedIndexChanged += new System.EventHandler(this.Preview_Changed);
             // 
             // lblDateCaption
             // 
             this.lblDateCaption.Name = "lblDateCaption";
             this.lblDateCaption.AutoSize = true;
             this.lblDateCaption.Text = "Start date";
-            this.lblDateCaption.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDateCaption.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblDateCaption.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            // 
-            // dateRow
-            // 
-            this.dateRow.ColumnCount = 2;
-            this.dateRow.RowCount = 1;
-            this.dateRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dateRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.dateRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.dateRow.Controls.Add(this.dtpDate, 0, 0);
-            this.dateRow.Controls.Add(this.lblDateHint, 1, 0);
-            this.dateRow.Name = "dateRow";
-            this.dateRow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateRow.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.dateRow.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.dateRow.AutoSize = true;
-            this.dateRow.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateCaption.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblDateCaption.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblDateCaption.Location = new System.Drawing.Point(14, 58);
+            this.lblDateCaption.TabIndex = 2;
             // 
             // dtpDate
             // 
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Size = new System.Drawing.Size(160, 27);
-            this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(0, 5, 10, 5);
-            this.dtpDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.dtpDate.CalendarForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.dtpDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.dtpDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dtpDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            this.dtpDate.ValueChanged += this.Preview_Changed;
+            this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.dtpDate.Size = new System.Drawing.Size(140, 25);
+            this.dtpDate.Location = new System.Drawing.Point(170, 54);
+            this.dtpDate.TabIndex = 3;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.Preview_Changed);
             // 
             // lblDateHint
             // 
             this.lblDateHint.Name = "lblDateHint";
             this.lblDateHint.AutoSize = true;
             this.lblDateHint.Text = "(start date)";
-            this.lblDateHint.Tag = "muted";
-            this.lblDateHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDateHint.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.lblDateHint.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            this.lblDateHint.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
+            this.lblDateHint.Font = new System.Drawing.Font("Segoe UI", 9.0F);
+            this.lblDateHint.Location = new System.Drawing.Point(320, 60);
+            this.lblDateHint.TabIndex = 4;
             // 
             // lblDiscount
             // 
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Text = "Discount (%)";
-            this.lblDiscount.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDiscount.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblDiscount.Location = new System.Drawing.Point(14, 96);
+            this.lblDiscount.TabIndex = 5;
             // 
             // numDiscount
             // 
             this.numDiscount.Name = "numDiscount";
-            this.numDiscount.Minimum = 0M;
-            this.numDiscount.Maximum = 100M;
+            this.numDiscount.Minimum = new decimal(new int[] {0, 0, 0, 0});
+            this.numDiscount.Maximum = new decimal(new int[] {100, 0, 0, 0});
+            this.numDiscount.Value = new decimal(new int[] {0, 0, 0, 0});
             this.numDiscount.DecimalPlaces = 0;
             this.numDiscount.ThousandsSeparator = true;
-            this.numDiscount.Size = new System.Drawing.Size(150, 27);
-            this.numDiscount.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.numDiscount.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.numDiscount.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.numDiscount.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.numDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numDiscount.ValueChanged += this.Preview_Changed;
+            this.numDiscount.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.numDiscount.Size = new System.Drawing.Size(90, 25);
+            this.numDiscount.Location = new System.Drawing.Point(170, 92);
+            this.numDiscount.TabIndex = 6;
+            this.numDiscount.ValueChanged += new System.EventHandler(this.Preview_Changed);
             // 
             // lblPay
             // 
             this.lblPay.Name = "lblPay";
             this.lblPay.AutoSize = true;
             this.lblPay.Text = "Initial payment";
-            this.lblPay.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPay.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblPay.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblPay.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblPay.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblPay.Location = new System.Drawing.Point(14, 134);
+            this.lblPay.TabIndex = 7;
             // 
             // numPay
             // 
             this.numPay.Name = "numPay";
-            this.numPay.Minimum = 0M;
-            this.numPay.Maximum = 10000000M;
+            this.numPay.Minimum = new decimal(new int[] {0, 0, 0, 0});
+            this.numPay.Maximum = new decimal(new int[] {10000000, 0, 0, 0});
+            this.numPay.Value = new decimal(new int[] {0, 0, 0, 0});
             this.numPay.DecimalPlaces = 2;
             this.numPay.ThousandsSeparator = true;
-            this.numPay.Size = new System.Drawing.Size(150, 27);
-            this.numPay.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.numPay.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.numPay.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.numPay.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.numPay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPay.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.numPay.Size = new System.Drawing.Size(140, 25);
+            this.numPay.Location = new System.Drawing.Point(170, 130);
+            this.numPay.TabIndex = 8;
             // 
             // lblMethod
             // 
             this.lblMethod.Name = "lblMethod";
             this.lblMethod.AutoSize = true;
             this.lblMethod.Text = "Payment method";
-            this.lblMethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMethod.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblMethod.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblMethod.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblMethod.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblMethod.Location = new System.Drawing.Point(14, 172);
+            this.lblMethod.TabIndex = 9;
             // 
             // cboMethod
             // 
             this.cboMethod.Name = "cboMethod";
             this.cboMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMethod.FormattingEnabled = true;
-            this.cboMethod.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.cboMethod.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.cboMethod.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.cboMethod.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
             this.cboMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboMethod.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.cboMethod.Size = new System.Drawing.Size(160, 25);
+            this.cboMethod.Location = new System.Drawing.Point(170, 168);
             this.cboMethod.Items.AddRange(new object[] { "Cash", "GCash", "Card", "Bank Transfer", "Other" });
+            this.cboMethod.TabIndex = 10;
             // 
             // lblRef
             // 
             this.lblRef.Name = "lblRef";
             this.lblRef.AutoSize = true;
             this.lblRef.Text = "Reference no.";
-            this.lblRef.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRef.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblRef.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblRef.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblRef.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblRef.Location = new System.Drawing.Point(14, 210);
+            this.lblRef.TabIndex = 11;
             // 
             // txtRef
             // 
             this.txtRef.Name = "txtRef";
-            this.txtRef.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtRef.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtRef.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtRef.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
             this.txtRef.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRef.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.txtRef.Size = new System.Drawing.Size(160, 25);
+            this.txtRef.Location = new System.Drawing.Point(170, 206);
+            this.txtRef.TabIndex = 12;
             // 
             // lblSummary
             // 
             this.lblSummary.Name = "lblSummary";
             this.lblSummary.AutoSize = false;
-            this.lblSummary.Size = new System.Drawing.Size(100, 92);
             this.lblSummary.Text = "";
-            this.lblSummary.Tag = "summary";
-            this.lblSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSummary.Margin = new System.Windows.Forms.Padding(0, 12, 0, 8);
-            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(15, 35, 66);
+            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 10.0F, System.Drawing.FontStyle.Bold);
+            this.lblSummary.Size = new System.Drawing.Size(440, 76);
+            this.lblSummary.Location = new System.Drawing.Point(14, 252);
+            this.lblSummary.TabIndex = 13;
             // 
             // btnGo
             // 
             this.btnGo.Name = "btnGo";
             this.btnGo.Text = "Register Membership";
-            this.btnGo.Size = new System.Drawing.Size(100, 44);
-            this.btnGo.Tag = "success";
-            this.btnGo.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.btnGo.UseVisualStyleBackColor = false;
-            this.btnGo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnGo.BackColor = System.Drawing.Color.FromArgb(22, 163, 74);
-            this.btnGo.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
+            this.btnGo.Size = new System.Drawing.Size(220, 40);
             this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGo.BackColor = System.Drawing.Color.FromArgb(22, 163, 74);
+            this.btnGo.ForeColor = System.Drawing.Color.White;
             this.btnGo.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnGo.FlatAppearance.BorderSize = 1;
+            this.btnGo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGo.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnGo.UseVisualStyleBackColor = false;
             this.btnGo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(22, 163, 74);
-            this.btnGo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(34, 197, 94);
-            this.btnGo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(21, 128, 61);
-            this.btnGo.Click += this.btnGo_Click;
+            this.btnGo.Location = new System.Drawing.Point(14, 336);
+            this.btnGo.TabIndex = 14;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
-            // rightColumn
+            // pnlTop
             // 
-            this.rightColumn.ColumnCount = 1;
-            this.rightColumn.RowCount = 2;
-            this.rightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.rightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.rightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.rightColumn.Controls.Add(this.infoCard, 0, 0);
-            this.rightColumn.Controls.Add(this.historyCard, 0, 1);
-            this.rightColumn.Name = "rightColumn";
-            this.rightColumn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightColumn.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.rightColumn.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.rightColumn.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Height = 104;
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
+            this.pnlTop.Controls.Add(this.rbNew);
+            this.pnlTop.Controls.Add(this.rbRenew);
+            this.pnlTop.Controls.Add(this.lblMemberSearch);
+            this.pnlTop.Controls.Add(this.memberPicker);
+            this.pnlTop.TabIndex = 1;
             // 
-            // infoCard
+            // rbNew
             // 
-            this.infoCard.Controls.Add(this.lblInfo);
-            this.infoCard.Name = "infoCard";
-            this.infoCard.Tag = "card";
-            this.infoCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoCard.Padding = new System.Windows.Forms.Padding(18, 10, 18, 10);
-            this.infoCard.Margin = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.infoCard.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            this.rbNew.Name = "rbNew";
+            this.rbNew.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbNew.AutoSize = false;
+            this.rbNew.Size = new System.Drawing.Size(160, 32);
+            this.rbNew.Location = new System.Drawing.Point(0, 0);
+            this.rbNew.Text = "New Registration";
+            this.rbNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbNew.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.rbNew.TabStop = true;
+            this.rbNew.Checked = true;
+            this.rbNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
+            this.rbNew.TabIndex = 0;
+            this.rbNew.CheckedChanged += new System.EventHandler(this.rbMode_CheckedChanged);
             // 
-            // lblInfo
+            // rbRenew
             // 
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.AutoSize = false;
-            this.lblInfo.Size = new System.Drawing.Size(100, 40);
-            this.lblInfo.Text = "Search and select a member to begin.";
-            this.lblInfo.Tag = "muted";
-            this.lblInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            this.rbRenew.Name = "rbRenew";
+            this.rbRenew.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbRenew.AutoSize = false;
+            this.rbRenew.Size = new System.Drawing.Size(160, 32);
+            this.rbRenew.Location = new System.Drawing.Point(170, 0);
+            this.rbRenew.Text = "Renew Membership";
+            this.rbRenew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbRenew.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.rbRenew.TabStop = true;
+            this.rbRenew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
+            this.rbRenew.TabIndex = 1;
+            this.rbRenew.CheckedChanged += new System.EventHandler(this.rbMode_CheckedChanged);
             // 
-            // historyCard
+            // lblMemberSearch
             // 
-            this.historyCard.Controls.Add(this.dgvHistory);
-            this.historyCard.Controls.Add(this.lblHistoryTitle);
-            this.historyCard.Name = "historyCard";
-            this.historyCard.Tag = "card";
-            this.historyCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historyCard.Padding = new System.Windows.Forms.Padding(18, 14, 18, 14);
-            this.historyCard.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            this.lblMemberSearch.Name = "lblMemberSearch";
+            this.lblMemberSearch.AutoSize = true;
+            this.lblMemberSearch.Text = "Member search";
+            this.lblMemberSearch.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
+            this.lblMemberSearch.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            this.lblMemberSearch.Location = new System.Drawing.Point(0, 44);
+            this.lblMemberSearch.TabIndex = 2;
             // 
-            // dgvHistory
+            // memberPicker
             // 
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            System.Windows.Forms.DataGridViewCellStyle dgvHistoryHead = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvHistoryHead.BackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvHistoryHead.ForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvHistoryHead.SelectionBackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvHistoryHead.SelectionForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvHistoryHead.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dgvHistoryHead.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            System.Windows.Forms.DataGridViewCellStyle dgvHistoryCell = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvHistoryCell.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            dgvHistoryCell.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvHistoryCell.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvHistoryCell.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            System.Windows.Forms.DataGridViewCellStyle dgvHistoryAlt = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvHistoryAlt.BackColor = System.Drawing.Color.FromArgb(29, 29, 35);
-            dgvHistoryAlt.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvHistoryAlt.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvHistoryAlt.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dgvHistory.EnableHeadersVisualStyles = false;
-            this.dgvHistory.ColumnHeadersDefaultCellStyle = dgvHistoryHead;
-            this.dgvHistory.DefaultCellStyle = dgvHistoryCell;
-            this.dgvHistory.AlternatingRowsDefaultCellStyle = dgvHistoryAlt;
-            this.dgvHistory.BackgroundColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.dgvHistory.GridColor = System.Drawing.Color.FromArgb(44, 44, 52);
-            this.dgvHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvHistory.RowHeadersVisible = false;
-            this.dgvHistory.AllowUserToAddRows = false;
-            this.dgvHistory.AllowUserToDeleteRows = false;
-            this.dgvHistory.ReadOnly = true;
-            this.dgvHistory.MultiSelect = false;
-            this.dgvHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            // 
-            // lblHistoryTitle
-            // 
-            this.lblHistoryTitle.Name = "lblHistoryTitle";
-            this.lblHistoryTitle.AutoSize = false;
-            this.lblHistoryTitle.Size = new System.Drawing.Size(100, 32);
-            this.lblHistoryTitle.Text = "Renewal History";
-            this.lblHistoryTitle.Tag = "h2";
-            this.lblHistoryTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblHistoryTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblHistoryTitle.Font = new System.Drawing.Font("Bahnschrift", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lblHistoryTitle.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.memberPicker.Name = "memberPicker";
+            this.memberPicker.Location = new System.Drawing.Point(0, 62);
+            this.memberPicker.TabIndex = 3;
+            this.memberPicker.MemberChanged += new System.EventHandler(this.memberPicker_MemberChanged);
             // 
             // RegistrationForm
             // 
-            this.contentPanel.Controls.Add(this.bodyLayout);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.BackColor = System.Drawing.Color.FromArgb(14, 14, 17);
-            this.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.ClientSize = new System.Drawing.Size(1200, 740);
-            this.Name = "RegistrationForm";
             this.PageTitle = "Registration & Renewal";
-            this.Text = "FITZONE GYM - Registration & Renewal";
+            this.ClientSize = new System.Drawing.Size(1280, 760);
+            this.contentPanel.Controls.Add(this.pnlBody);
+            this.contentPanel.Controls.Add(this.pnlTop);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeft.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            this.pnlGap.ResumeLayout(false);
+            this.pnlGap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
-            this.historyCard.ResumeLayout(false);
-            this.infoCard.ResumeLayout(false);
-            this.rightColumn.ResumeLayout(false);
-            this.dateRow.ResumeLayout(false);
-            this.dateRow.PerformLayout();
-            this.formLayout.ResumeLayout(false);
-            this.formLayout.PerformLayout();
-            this.leftCard.ResumeLayout(false);
-            this.mainRow.ResumeLayout(false);
-            this.modeFlow.ResumeLayout(false);
-            this.modeFlow.PerformLayout();
-            this.topLayout.ResumeLayout(false);
-            this.topLayout.PerformLayout();
-            this.bodyLayout.ResumeLayout(false);
-            this.contentPanel.ResumeLayout(false);
+            this.cardHistory.ResumeLayout(false);
+            this.cardHistory.PerformLayout();
+            this.pnlRight.ResumeLayout(false);
+            this.pnlRight.PerformLayout();
+            this.pnlBody.ResumeLayout(false);
+            this.pnlBody.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel bodyLayout;
-        private System.Windows.Forms.TableLayoutPanel topLayout;
-        private System.Windows.Forms.FlowLayoutPanel modeFlow;
-        private System.Windows.Forms.RadioButton rbNew;
-        private System.Windows.Forms.RadioButton rbRenew;
-        private System.Windows.Forms.Label lblMemberSearch;
-        private FitZoneGym.Controls.MemberPicker memberPicker;
-        private System.Windows.Forms.TableLayoutPanel mainRow;
-        private FitZoneGym.Controls.CardPanel leftCard;
-        private System.Windows.Forms.TableLayoutPanel formLayout;
+        private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Panel pnlRight;
+        private System.Windows.Forms.Panel cardHistory;
+        private System.Windows.Forms.DataGridView dgvHistory;
+        private System.Windows.Forms.Label lblHistoryTitle;
+        private System.Windows.Forms.Panel pnlGap;
+        private System.Windows.Forms.Panel pnlInfo;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Panel pnlLeft;
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.ComboBox cboPlan;
         private System.Windows.Forms.Label lblDateCaption;
-        private System.Windows.Forms.TableLayoutPanel dateRow;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lblDateHint;
         private System.Windows.Forms.Label lblDiscount;
@@ -576,11 +437,10 @@ namespace FitZoneGym.Forms
         private System.Windows.Forms.TextBox txtRef;
         private System.Windows.Forms.Label lblSummary;
         private System.Windows.Forms.Button btnGo;
-        private System.Windows.Forms.TableLayoutPanel rightColumn;
-        private FitZoneGym.Controls.CardPanel infoCard;
-        private System.Windows.Forms.Label lblInfo;
-        private FitZoneGym.Controls.CardPanel historyCard;
-        private System.Windows.Forms.DataGridView dgvHistory;
-        private System.Windows.Forms.Label lblHistoryTitle;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.RadioButton rbNew;
+        private System.Windows.Forms.RadioButton rbRenew;
+        private System.Windows.Forms.Label lblMemberSearch;
+        private FitZoneGym.Controls.MemberPicker memberPicker;
     }
 }

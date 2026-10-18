@@ -2,22 +2,10 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Controls\CardPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="Controls\DonutChart.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Controls\GradientPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="Controls\LogoMark.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="Controls\MemberPicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="Controls\NavButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="Forms\DashboardForm.cs">

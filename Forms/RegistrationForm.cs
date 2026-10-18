@@ -17,14 +17,6 @@ namespace FitZoneGym.Forms
             InitializeComponent();
             cboMethod.SelectedIndex = 0;
             Ui.StyleGrid(dgvHistory);
-            foreach (var rb in new[] { rbNew, rbRenew })
-            {
-                rb.FlatAppearance.BorderColor = Ui.Border;
-                rb.FlatAppearance.CheckedBackColor = Ui.Accent;
-                rb.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 59);
-                rb.Cursor = Cursors.Hand;
-                rb.Font = Ui.Bold(9.5f);
-            }
             if (Ui.IsDesignTime) return;
 
             _canPay = Session.Current.Can(Perm.RecordPayments);
@@ -48,10 +40,10 @@ namespace FitZoneGym.Forms
 
         private void ModeChanged()
         {
-            rbNew.BackColor = rbNew.Checked ? Ui.Accent : Ui.Surface2;
-            rbNew.ForeColor = rbNew.Checked ? Color.White : Ui.Muted;
-            rbRenew.BackColor = rbRenew.Checked ? Ui.Accent : Ui.Surface2;
-            rbRenew.ForeColor = rbRenew.Checked ? Color.White : Ui.Muted;
+            rbNew.BackColor = rbNew.Checked ? Ui.Blue : Color.White;
+            rbNew.ForeColor = rbNew.Checked ? Color.White : Ui.Text;
+            rbRenew.BackColor = rbRenew.Checked ? Ui.Blue : Color.White;
+            rbRenew.ForeColor = rbRenew.Checked ? Color.White : Ui.Text;
             btnGo.Text = IsRenew ? "Process Renewal" : "Register Membership";
             lblDateCaption.Text = IsRenew ? "Renewal date" : "Start date";
             lblDateHint.Text = IsRenew ? "(renewal date)" : "(start date)";

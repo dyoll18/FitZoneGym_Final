@@ -12,7 +12,6 @@ namespace FitZoneGym.Forms
         public PlanEditForm(MembershipPlan plan)
         {
             InitializeComponent();
-            Theme.Apply(this, true);
             _plan = plan ?? new MembershipPlan();
             if (Ui.IsDesignTime) return;
 

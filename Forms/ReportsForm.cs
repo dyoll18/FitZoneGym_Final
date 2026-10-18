@@ -30,7 +30,7 @@ namespace FitZoneGym.Forms
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Ui.ExportCsv(dgvReport, "report");
+            
         }
 
         private void titleLabel_Click(object sender, EventArgs e)

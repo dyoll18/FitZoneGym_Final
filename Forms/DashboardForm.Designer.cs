@@ -15,541 +15,402 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.cardsLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlTotal = new FitZoneGym.Controls.CardPanel();
-            this.contentTotal = new System.Windows.Forms.Panel();
-            this.lblTotalValue = new System.Windows.Forms.Label();
-            this.lblTotalCaption = new System.Windows.Forms.Label();
-            this.stripeTotal = new System.Windows.Forms.Panel();
-            this.pnlActive = new FitZoneGym.Controls.CardPanel();
-            this.contentActive = new System.Windows.Forms.Panel();
-            this.lblActiveValue = new System.Windows.Forms.Label();
-            this.lblActiveCaption = new System.Windows.Forms.Label();
-            this.stripeActive = new System.Windows.Forms.Panel();
-            this.pnlFrozen = new FitZoneGym.Controls.CardPanel();
-            this.contentFrozen = new System.Windows.Forms.Panel();
-            this.lblFrozenValue = new System.Windows.Forms.Label();
-            this.lblFrozenCaption = new System.Windows.Forms.Label();
-            this.stripeFrozen = new System.Windows.Forms.Panel();
-            this.pnlExpired = new FitZoneGym.Controls.CardPanel();
-            this.contentExpired = new System.Windows.Forms.Panel();
-            this.lblExpiredValue = new System.Windows.Forms.Label();
-            this.lblExpiredCaption = new System.Windows.Forms.Label();
-            this.stripeExpired = new System.Windows.Forms.Panel();
-            this.cardChart = new FitZoneGym.Controls.CardPanel();
-            this.donutChart = new FitZoneGym.Controls.DonutChart();
-            this.lblChartTitle = new System.Windows.Forms.Label();
-            this.cardExpiring = new FitZoneGym.Controls.CardPanel();
-            this.dgvExpiring = new System.Windows.Forms.DataGridView();
-            this.lnkViewAll = new System.Windows.Forms.LinkLabel();
-            this.lblExpiringTitle = new System.Windows.Forms.Label();
-            this.cardActivity = new FitZoneGym.Controls.CardPanel();
-            this.dgvActivity = new System.Windows.Forms.DataGridView();
-            this.lblActivityTitle = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExpiring)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).BeginInit();
-            this.mainLayout.SuspendLayout();
-            this.cardsLayout.SuspendLayout();
-            this.pnlTotal.SuspendLayout();
-            this.contentTotal.SuspendLayout();
-            this.stripeTotal.SuspendLayout();
-            this.pnlActive.SuspendLayout();
-            this.contentActive.SuspendLayout();
-            this.stripeActive.SuspendLayout();
-            this.pnlFrozen.SuspendLayout();
-            this.contentFrozen.SuspendLayout();
-            this.stripeFrozen.SuspendLayout();
-            this.pnlExpired.SuspendLayout();
-            this.contentExpired.SuspendLayout();
-            this.stripeExpired.SuspendLayout();
-            this.cardChart.SuspendLayout();
-            this.cardExpiring.SuspendLayout();
-            this.cardActivity.SuspendLayout();
-            this.SuspendLayout();
-            this.contentPanel.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            cardsLayout = new TableLayoutPanel();
+            pnlTotal = new Panel();
+            lblTotalValue = new Label();
+            lblTotalCaption = new Label();
+            pnlActive = new Panel();
+            lblActiveValue = new Label();
+            lblActiveCaption = new Label();
+            pnlFrozen = new Panel();
+            lblFrozenValue = new Label();
+            lblFrozenCaption = new Label();
+            pnlExpired = new Panel();
+            lblExpiredValue = new Label();
+            lblExpiredCaption = new Label();
+            cardChart = new Panel();
+            donutChart = new FitZoneGym.Controls.DonutChart();
+            lblChartTitle = new Label();
+            cardExpiring = new Panel();
+            dgvExpiring = new DataGridView();
+            lnkViewAll = new LinkLabel();
+            lblExpiringTitle = new Label();
+            cardActivity = new Panel();
+            dgvActivity = new DataGridView();
+            lblActivityTitle = new Label();
+            contentPanel.SuspendLayout();
+            mainLayout.SuspendLayout();
+            cardsLayout.SuspendLayout();
+            pnlTotal.SuspendLayout();
+            pnlActive.SuspendLayout();
+            pnlFrozen.SuspendLayout();
+            pnlExpired.SuspendLayout();
+            cardChart.SuspendLayout();
+            cardExpiring.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExpiring).BeginInit();
+            cardActivity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActivity).BeginInit();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(mainLayout);
+            // 
+            // titleLabel
+            // 
+            titleLabel.Text = "Dashboard";
             // 
             // mainLayout
             // 
-            this.mainLayout.ColumnCount = 2;
-            this.mainLayout.RowCount = 3;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.mainLayout.Controls.Add(this.cardsLayout, 0, 0);
-            this.mainLayout.SetColumnSpan(this.cardsLayout, 2);
-            this.mainLayout.Controls.Add(this.cardChart, 0, 1);
-            this.mainLayout.Controls.Add(this.cardExpiring, 1, 1);
-            this.mainLayout.Controls.Add(this.cardActivity, 0, 2);
-            this.mainLayout.SetColumnSpan(this.cardActivity, 2);
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainLayout.BackColor = System.Drawing.Color.Transparent;
+            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.ColumnCount = 2;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62F));
+            mainLayout.Controls.Add(cardsLayout, 0, 0);
+            mainLayout.Controls.Add(cardChart, 0, 1);
+            mainLayout.Controls.Add(cardExpiring, 1, 1);
+            mainLayout.Controls.Add(cardActivity, 0, 2);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(16, 16);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 3;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 112F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 55F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 45F));
+            mainLayout.Size = new Size(1018, 638);
+            mainLayout.TabIndex = 0;
             // 
             // cardsLayout
             // 
-            this.cardsLayout.ColumnCount = 4;
-            this.cardsLayout.RowCount = 1;
-            this.cardsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.cardsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.cardsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.cardsLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.cardsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.cardsLayout.Controls.Add(this.pnlTotal, 0, 0);
-            this.cardsLayout.Controls.Add(this.pnlActive, 1, 0);
-            this.cardsLayout.Controls.Add(this.pnlFrozen, 2, 0);
-            this.cardsLayout.Controls.Add(this.pnlExpired, 3, 0);
-            this.cardsLayout.Name = "cardsLayout";
-            this.cardsLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardsLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cardsLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cardsLayout.BackColor = System.Drawing.Color.Transparent;
+            cardsLayout.BackColor = Color.FromArgb(243, 246, 251);
+            cardsLayout.ColumnCount = 4;
+            mainLayout.SetColumnSpan(cardsLayout, 2);
+            cardsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            cardsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            cardsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            cardsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            cardsLayout.Controls.Add(pnlTotal, 0, 0);
+            cardsLayout.Controls.Add(pnlActive, 1, 0);
+            cardsLayout.Controls.Add(pnlFrozen, 2, 0);
+            cardsLayout.Controls.Add(pnlExpired, 3, 0);
+            cardsLayout.Dock = DockStyle.Fill;
+            cardsLayout.Location = new Point(0, 0);
+            cardsLayout.Margin = new Padding(0, 0, 0, 12);
+            cardsLayout.Name = "cardsLayout";
+            cardsLayout.RowCount = 1;
+            cardsLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            cardsLayout.Size = new Size(1018, 100);
+            cardsLayout.TabIndex = 0;
             // 
             // pnlTotal
             // 
-            this.pnlTotal.Controls.Add(this.contentTotal);
-            this.pnlTotal.Controls.Add(this.stripeTotal);
-            this.pnlTotal.Name = "pnlTotal";
-            this.pnlTotal.Tag = "stat";
-            this.pnlTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTotal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pnlTotal.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            // 
-            // contentTotal
-            // 
-            this.contentTotal.Controls.Add(this.lblTotalValue);
-            this.contentTotal.Controls.Add(this.lblTotalCaption);
-            this.contentTotal.Name = "contentTotal";
-            this.contentTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentTotal.Padding = new System.Windows.Forms.Padding(18, 12, 10, 8);
-            this.contentTotal.BackColor = System.Drawing.Color.Transparent;
+            pnlTotal.BackColor = Color.FromArgb(30, 111, 240);
+            pnlTotal.Controls.Add(lblTotalValue);
+            pnlTotal.Controls.Add(lblTotalCaption);
+            pnlTotal.Dock = DockStyle.Fill;
+            pnlTotal.Location = new Point(0, 0);
+            pnlTotal.Margin = new Padding(0, 0, 12, 0);
+            pnlTotal.Name = "pnlTotal";
+            pnlTotal.Padding = new Padding(16, 12, 8, 8);
+            pnlTotal.Size = new Size(242, 100);
+            pnlTotal.TabIndex = 0;
             // 
             // lblTotalValue
             // 
-            this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.AutoSize = false;
-            this.lblTotalValue.Text = "0";
-            this.lblTotalValue.Tag = "value";
-            this.lblTotalValue.Size = new System.Drawing.Size(100, 40);
-            this.lblTotalValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalValue.Font = new System.Drawing.Font("Bahnschrift", 30F, System.Drawing.FontStyle.Bold);
-            this.lblTotalValue.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblTotalValue.Dock = DockStyle.Fill;
+            lblTotalValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalValue.ForeColor = Color.White;
+            lblTotalValue.Location = new Point(16, 36);
+            lblTotalValue.Name = "lblTotalValue";
+            lblTotalValue.Size = new Size(218, 56);
+            lblTotalValue.TabIndex = 0;
+            lblTotalValue.Text = "0";
+            lblTotalValue.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblTotalCaption
             // 
-            this.lblTotalCaption.Name = "lblTotalCaption";
-            this.lblTotalCaption.AutoSize = false;
-            this.lblTotalCaption.Size = new System.Drawing.Size(100, 22);
-            this.lblTotalCaption.Text = "TOTAL MEMBERS";
-            this.lblTotalCaption.Tag = "caption";
-            this.lblTotalCaption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTotalCaption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalCaption.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblTotalCaption.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // stripeTotal
-            // 
-            this.stripeTotal.Name = "stripeTotal";
-            this.stripeTotal.Tag = "stripe";
-            this.stripeTotal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.stripeTotal.Size = new System.Drawing.Size(6, 10);
-            this.stripeTotal.BackColor = System.Drawing.Color.FromArgb(255, 94, 26);
+            lblTotalCaption.Dock = DockStyle.Top;
+            lblTotalCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblTotalCaption.ForeColor = Color.White;
+            lblTotalCaption.Location = new Point(16, 12);
+            lblTotalCaption.Name = "lblTotalCaption";
+            lblTotalCaption.Size = new Size(218, 24);
+            lblTotalCaption.TabIndex = 1;
+            lblTotalCaption.Text = "Total Members";
             // 
             // pnlActive
             // 
-            this.pnlActive.Controls.Add(this.contentActive);
-            this.pnlActive.Controls.Add(this.stripeActive);
-            this.pnlActive.Name = "pnlActive";
-            this.pnlActive.Tag = "stat";
-            this.pnlActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlActive.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pnlActive.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            // 
-            // contentActive
-            // 
-            this.contentActive.Controls.Add(this.lblActiveValue);
-            this.contentActive.Controls.Add(this.lblActiveCaption);
-            this.contentActive.Name = "contentActive";
-            this.contentActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentActive.Padding = new System.Windows.Forms.Padding(18, 12, 10, 8);
-            this.contentActive.BackColor = System.Drawing.Color.Transparent;
+            pnlActive.BackColor = Color.FromArgb(22, 163, 74);
+            pnlActive.Controls.Add(lblActiveValue);
+            pnlActive.Controls.Add(lblActiveCaption);
+            pnlActive.Dock = DockStyle.Fill;
+            pnlActive.Location = new Point(254, 0);
+            pnlActive.Margin = new Padding(0, 0, 12, 0);
+            pnlActive.Name = "pnlActive";
+            pnlActive.Padding = new Padding(16, 12, 8, 8);
+            pnlActive.Size = new Size(242, 100);
+            pnlActive.TabIndex = 1;
             // 
             // lblActiveValue
             // 
-            this.lblActiveValue.Name = "lblActiveValue";
-            this.lblActiveValue.AutoSize = false;
-            this.lblActiveValue.Text = "0";
-            this.lblActiveValue.Tag = "value";
-            this.lblActiveValue.Size = new System.Drawing.Size(100, 40);
-            this.lblActiveValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblActiveValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblActiveValue.Font = new System.Drawing.Font("Bahnschrift", 30F, System.Drawing.FontStyle.Bold);
-            this.lblActiveValue.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblActiveValue.Dock = DockStyle.Fill;
+            lblActiveValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblActiveValue.ForeColor = Color.White;
+            lblActiveValue.Location = new Point(16, 36);
+            lblActiveValue.Name = "lblActiveValue";
+            lblActiveValue.Size = new Size(218, 56);
+            lblActiveValue.TabIndex = 0;
+            lblActiveValue.Text = "0";
+            lblActiveValue.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblActiveCaption
             // 
-            this.lblActiveCaption.Name = "lblActiveCaption";
-            this.lblActiveCaption.AutoSize = false;
-            this.lblActiveCaption.Size = new System.Drawing.Size(100, 22);
-            this.lblActiveCaption.Text = "ACTIVE";
-            this.lblActiveCaption.Tag = "caption";
-            this.lblActiveCaption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblActiveCaption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblActiveCaption.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblActiveCaption.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // stripeActive
-            // 
-            this.stripeActive.Name = "stripeActive";
-            this.stripeActive.Tag = "stripe";
-            this.stripeActive.Dock = System.Windows.Forms.DockStyle.Left;
-            this.stripeActive.Size = new System.Drawing.Size(6, 10);
-            this.stripeActive.BackColor = System.Drawing.Color.FromArgb(34, 197, 94);
+            lblActiveCaption.Dock = DockStyle.Top;
+            lblActiveCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblActiveCaption.ForeColor = Color.White;
+            lblActiveCaption.Location = new Point(16, 12);
+            lblActiveCaption.Name = "lblActiveCaption";
+            lblActiveCaption.Size = new Size(218, 24);
+            lblActiveCaption.TabIndex = 1;
+            lblActiveCaption.Text = "Active";
             // 
             // pnlFrozen
             // 
-            this.pnlFrozen.Controls.Add(this.contentFrozen);
-            this.pnlFrozen.Controls.Add(this.stripeFrozen);
-            this.pnlFrozen.Name = "pnlFrozen";
-            this.pnlFrozen.Tag = "stat";
-            this.pnlFrozen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFrozen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pnlFrozen.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            // 
-            // contentFrozen
-            // 
-            this.contentFrozen.Controls.Add(this.lblFrozenValue);
-            this.contentFrozen.Controls.Add(this.lblFrozenCaption);
-            this.contentFrozen.Name = "contentFrozen";
-            this.contentFrozen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentFrozen.Padding = new System.Windows.Forms.Padding(18, 12, 10, 8);
-            this.contentFrozen.BackColor = System.Drawing.Color.Transparent;
+            pnlFrozen.BackColor = Color.FromArgb(245, 158, 11);
+            pnlFrozen.Controls.Add(lblFrozenValue);
+            pnlFrozen.Controls.Add(lblFrozenCaption);
+            pnlFrozen.Dock = DockStyle.Fill;
+            pnlFrozen.Location = new Point(508, 0);
+            pnlFrozen.Margin = new Padding(0, 0, 12, 0);
+            pnlFrozen.Name = "pnlFrozen";
+            pnlFrozen.Padding = new Padding(16, 12, 8, 8);
+            pnlFrozen.Size = new Size(242, 100);
+            pnlFrozen.TabIndex = 2;
             // 
             // lblFrozenValue
             // 
-            this.lblFrozenValue.Name = "lblFrozenValue";
-            this.lblFrozenValue.AutoSize = false;
-            this.lblFrozenValue.Text = "0";
-            this.lblFrozenValue.Tag = "value";
-            this.lblFrozenValue.Size = new System.Drawing.Size(100, 40);
-            this.lblFrozenValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFrozenValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblFrozenValue.Font = new System.Drawing.Font("Bahnschrift", 30F, System.Drawing.FontStyle.Bold);
-            this.lblFrozenValue.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblFrozenValue.Dock = DockStyle.Fill;
+            lblFrozenValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFrozenValue.ForeColor = Color.White;
+            lblFrozenValue.Location = new Point(16, 36);
+            lblFrozenValue.Name = "lblFrozenValue";
+            lblFrozenValue.Size = new Size(218, 56);
+            lblFrozenValue.TabIndex = 0;
+            lblFrozenValue.Text = "0";
+            lblFrozenValue.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblFrozenCaption
             // 
-            this.lblFrozenCaption.Name = "lblFrozenCaption";
-            this.lblFrozenCaption.AutoSize = false;
-            this.lblFrozenCaption.Size = new System.Drawing.Size(100, 22);
-            this.lblFrozenCaption.Text = "FROZEN";
-            this.lblFrozenCaption.Tag = "caption";
-            this.lblFrozenCaption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFrozenCaption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblFrozenCaption.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblFrozenCaption.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // stripeFrozen
-            // 
-            this.stripeFrozen.Name = "stripeFrozen";
-            this.stripeFrozen.Tag = "stripe";
-            this.stripeFrozen.Dock = System.Windows.Forms.DockStyle.Left;
-            this.stripeFrozen.Size = new System.Drawing.Size(6, 10);
-            this.stripeFrozen.BackColor = System.Drawing.Color.FromArgb(251, 176, 36);
+            lblFrozenCaption.Dock = DockStyle.Top;
+            lblFrozenCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblFrozenCaption.ForeColor = Color.White;
+            lblFrozenCaption.Location = new Point(16, 12);
+            lblFrozenCaption.Name = "lblFrozenCaption";
+            lblFrozenCaption.Size = new Size(218, 24);
+            lblFrozenCaption.TabIndex = 1;
+            lblFrozenCaption.Text = "Frozen";
             // 
             // pnlExpired
             // 
-            this.pnlExpired.Controls.Add(this.contentExpired);
-            this.pnlExpired.Controls.Add(this.stripeExpired);
-            this.pnlExpired.Name = "pnlExpired";
-            this.pnlExpired.Tag = "stat";
-            this.pnlExpired.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlExpired.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pnlExpired.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            // 
-            // contentExpired
-            // 
-            this.contentExpired.Controls.Add(this.lblExpiredValue);
-            this.contentExpired.Controls.Add(this.lblExpiredCaption);
-            this.contentExpired.Name = "contentExpired";
-            this.contentExpired.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentExpired.Padding = new System.Windows.Forms.Padding(18, 12, 10, 8);
-            this.contentExpired.BackColor = System.Drawing.Color.Transparent;
+            pnlExpired.BackColor = Color.FromArgb(220, 38, 38);
+            pnlExpired.Controls.Add(lblExpiredValue);
+            pnlExpired.Controls.Add(lblExpiredCaption);
+            pnlExpired.Dock = DockStyle.Fill;
+            pnlExpired.Location = new Point(762, 0);
+            pnlExpired.Margin = new Padding(0, 0, 12, 0);
+            pnlExpired.Name = "pnlExpired";
+            pnlExpired.Padding = new Padding(16, 12, 8, 8);
+            pnlExpired.Size = new Size(244, 100);
+            pnlExpired.TabIndex = 3;
             // 
             // lblExpiredValue
             // 
-            this.lblExpiredValue.Name = "lblExpiredValue";
-            this.lblExpiredValue.AutoSize = false;
-            this.lblExpiredValue.Text = "0";
-            this.lblExpiredValue.Tag = "value";
-            this.lblExpiredValue.Size = new System.Drawing.Size(100, 40);
-            this.lblExpiredValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblExpiredValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblExpiredValue.Font = new System.Drawing.Font("Bahnschrift", 30F, System.Drawing.FontStyle.Bold);
-            this.lblExpiredValue.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblExpiredValue.Dock = DockStyle.Fill;
+            lblExpiredValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpiredValue.ForeColor = Color.White;
+            lblExpiredValue.Location = new Point(16, 36);
+            lblExpiredValue.Name = "lblExpiredValue";
+            lblExpiredValue.Size = new Size(220, 56);
+            lblExpiredValue.TabIndex = 0;
+            lblExpiredValue.Text = "0";
+            lblExpiredValue.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblExpiredCaption
             // 
-            this.lblExpiredCaption.Name = "lblExpiredCaption";
-            this.lblExpiredCaption.AutoSize = false;
-            this.lblExpiredCaption.Size = new System.Drawing.Size(100, 22);
-            this.lblExpiredCaption.Text = "EXPIRED";
-            this.lblExpiredCaption.Tag = "caption";
-            this.lblExpiredCaption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblExpiredCaption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblExpiredCaption.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblExpiredCaption.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // stripeExpired
-            // 
-            this.stripeExpired.Name = "stripeExpired";
-            this.stripeExpired.Tag = "stripe";
-            this.stripeExpired.Dock = System.Windows.Forms.DockStyle.Left;
-            this.stripeExpired.Size = new System.Drawing.Size(6, 10);
-            this.stripeExpired.BackColor = System.Drawing.Color.FromArgb(244, 76, 76);
+            lblExpiredCaption.Dock = DockStyle.Top;
+            lblExpiredCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblExpiredCaption.ForeColor = Color.White;
+            lblExpiredCaption.Location = new Point(16, 12);
+            lblExpiredCaption.Name = "lblExpiredCaption";
+            lblExpiredCaption.Size = new Size(220, 24);
+            lblExpiredCaption.TabIndex = 1;
+            lblExpiredCaption.Text = "Expired";
             // 
             // cardChart
             // 
-            this.cardChart.Controls.Add(this.donutChart);
-            this.cardChart.Controls.Add(this.lblChartTitle);
-            this.cardChart.Name = "cardChart";
-            this.cardChart.Tag = "card";
-            this.cardChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardChart.Padding = new System.Windows.Forms.Padding(18, 14, 18, 14);
-            this.cardChart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.cardChart.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            cardChart.BackColor = Color.White;
+            cardChart.Controls.Add(donutChart);
+            cardChart.Controls.Add(lblChartTitle);
+            cardChart.Dock = DockStyle.Fill;
+            cardChart.Location = new Point(0, 112);
+            cardChart.Margin = new Padding(0, 0, 12, 12);
+            cardChart.Name = "cardChart";
+            cardChart.Padding = new Padding(14);
+            cardChart.Size = new Size(374, 277);
+            cardChart.TabIndex = 1;
             // 
             // donutChart
             // 
-            this.donutChart.Name = "donutChart";
-            this.donutChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            donutChart.BackColor = Color.White;
+            donutChart.Dock = DockStyle.Fill;
+            donutChart.Location = new Point(14, 44);
+            donutChart.Name = "donutChart";
+            donutChart.Size = new Size(346, 219);
+            donutChart.TabIndex = 0;
             // 
             // lblChartTitle
             // 
-            this.lblChartTitle.Name = "lblChartTitle";
-            this.lblChartTitle.AutoSize = false;
-            this.lblChartTitle.Size = new System.Drawing.Size(100, 32);
-            this.lblChartTitle.Text = "Membership Status";
-            this.lblChartTitle.Tag = "h2";
-            this.lblChartTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblChartTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblChartTitle.Font = new System.Drawing.Font("Bahnschrift", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lblChartTitle.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblChartTitle.Dock = DockStyle.Top;
+            lblChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblChartTitle.ForeColor = Color.FromArgb(15, 35, 66);
+            lblChartTitle.Location = new Point(14, 14);
+            lblChartTitle.Name = "lblChartTitle";
+            lblChartTitle.Size = new Size(346, 30);
+            lblChartTitle.TabIndex = 1;
+            lblChartTitle.Text = "Membership Status";
             // 
             // cardExpiring
             // 
-            this.cardExpiring.Controls.Add(this.dgvExpiring);
-            this.cardExpiring.Controls.Add(this.lnkViewAll);
-            this.cardExpiring.Controls.Add(this.lblExpiringTitle);
-            this.cardExpiring.Name = "cardExpiring";
-            this.cardExpiring.Tag = "card";
-            this.cardExpiring.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardExpiring.Padding = new System.Windows.Forms.Padding(18, 14, 18, 14);
-            this.cardExpiring.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.cardExpiring.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            cardExpiring.BackColor = Color.White;
+            cardExpiring.Controls.Add(dgvExpiring);
+            cardExpiring.Controls.Add(lnkViewAll);
+            cardExpiring.Controls.Add(lblExpiringTitle);
+            cardExpiring.Dock = DockStyle.Fill;
+            cardExpiring.Location = new Point(386, 112);
+            cardExpiring.Margin = new Padding(0, 0, 12, 12);
+            cardExpiring.Name = "cardExpiring";
+            cardExpiring.Padding = new Padding(14);
+            cardExpiring.Size = new Size(620, 277);
+            cardExpiring.TabIndex = 2;
             // 
             // dgvExpiring
             // 
-            this.dgvExpiring.Name = "dgvExpiring";
-            this.dgvExpiring.Dock = System.Windows.Forms.DockStyle.Fill;
-            System.Windows.Forms.DataGridViewCellStyle dgvExpiringHead = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvExpiringHead.BackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvExpiringHead.ForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvExpiringHead.SelectionBackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvExpiringHead.SelectionForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvExpiringHead.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dgvExpiringHead.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            System.Windows.Forms.DataGridViewCellStyle dgvExpiringCell = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvExpiringCell.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            dgvExpiringCell.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvExpiringCell.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvExpiringCell.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            System.Windows.Forms.DataGridViewCellStyle dgvExpiringAlt = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvExpiringAlt.BackColor = System.Drawing.Color.FromArgb(29, 29, 35);
-            dgvExpiringAlt.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvExpiringAlt.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvExpiringAlt.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dgvExpiring.EnableHeadersVisualStyles = false;
-            this.dgvExpiring.ColumnHeadersDefaultCellStyle = dgvExpiringHead;
-            this.dgvExpiring.DefaultCellStyle = dgvExpiringCell;
-            this.dgvExpiring.AlternatingRowsDefaultCellStyle = dgvExpiringAlt;
-            this.dgvExpiring.BackgroundColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.dgvExpiring.GridColor = System.Drawing.Color.FromArgb(44, 44, 52);
-            this.dgvExpiring.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvExpiring.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvExpiring.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvExpiring.RowHeadersVisible = false;
-            this.dgvExpiring.AllowUserToAddRows = false;
-            this.dgvExpiring.AllowUserToDeleteRows = false;
-            this.dgvExpiring.ReadOnly = true;
-            this.dgvExpiring.MultiSelect = false;
-            this.dgvExpiring.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExpiring.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvExpiring.ColumnHeadersHeight = 34;
+            dgvExpiring.Dock = DockStyle.Fill;
+            dgvExpiring.Location = new Point(14, 44);
+            dgvExpiring.Name = "dgvExpiring";
+            dgvExpiring.RowHeadersWidth = 62;
+            dgvExpiring.Size = new Size(592, 197);
+            dgvExpiring.TabIndex = 0;
             // 
             // lnkViewAll
             // 
-            this.lnkViewAll.Name = "lnkViewAll";
-            this.lnkViewAll.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lnkViewAll.Size = new System.Drawing.Size(100, 28);
-            this.lnkViewAll.TabStop = true;
-            this.lnkViewAll.Text = "View all members";
-            this.lnkViewAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lnkViewAll.LinkColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            this.lnkViewAll.ActiveLinkColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.lnkViewAll.VisitedLinkColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            this.lnkViewAll.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lnkViewAll.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkViewAll.LinkClicked += this.lnkViewAll_LinkClicked;
+            lnkViewAll.Dock = DockStyle.Bottom;
+            lnkViewAll.Location = new Point(14, 241);
+            lnkViewAll.Name = "lnkViewAll";
+            lnkViewAll.Size = new Size(592, 22);
+            lnkViewAll.TabIndex = 1;
+            lnkViewAll.TabStop = true;
+            lnkViewAll.Text = "View all members";
+            lnkViewAll.TextAlign = ContentAlignment.MiddleRight;
+            lnkViewAll.LinkClicked += lnkViewAll_LinkClicked;
             // 
             // lblExpiringTitle
             // 
-            this.lblExpiringTitle.Name = "lblExpiringTitle";
-            this.lblExpiringTitle.AutoSize = false;
-            this.lblExpiringTitle.Size = new System.Drawing.Size(100, 32);
-            this.lblExpiringTitle.Text = "Upcoming Expirations";
-            this.lblExpiringTitle.Tag = "h2";
-            this.lblExpiringTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblExpiringTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblExpiringTitle.Font = new System.Drawing.Font("Bahnschrift", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lblExpiringTitle.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblExpiringTitle.Dock = DockStyle.Top;
+            lblExpiringTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblExpiringTitle.ForeColor = Color.FromArgb(15, 35, 66);
+            lblExpiringTitle.Location = new Point(14, 14);
+            lblExpiringTitle.Name = "lblExpiringTitle";
+            lblExpiringTitle.Size = new Size(592, 30);
+            lblExpiringTitle.TabIndex = 2;
+            lblExpiringTitle.Text = "Upcoming Expirations";
             // 
             // cardActivity
             // 
-            this.cardActivity.Controls.Add(this.dgvActivity);
-            this.cardActivity.Controls.Add(this.lblActivityTitle);
-            this.cardActivity.Name = "cardActivity";
-            this.cardActivity.Tag = "card";
-            this.cardActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardActivity.Padding = new System.Windows.Forms.Padding(18, 14, 18, 14);
-            this.cardActivity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.cardActivity.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            cardActivity.BackColor = Color.White;
+            mainLayout.SetColumnSpan(cardActivity, 2);
+            cardActivity.Controls.Add(dgvActivity);
+            cardActivity.Controls.Add(lblActivityTitle);
+            cardActivity.Dock = DockStyle.Fill;
+            cardActivity.Location = new Point(0, 401);
+            cardActivity.Margin = new Padding(0, 0, 12, 12);
+            cardActivity.Name = "cardActivity";
+            cardActivity.Padding = new Padding(14);
+            cardActivity.Size = new Size(1006, 225);
+            cardActivity.TabIndex = 3;
             // 
             // dgvActivity
             // 
-            this.dgvActivity.Name = "dgvActivity";
-            this.dgvActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            System.Windows.Forms.DataGridViewCellStyle dgvActivityHead = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvActivityHead.BackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvActivityHead.ForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvActivityHead.SelectionBackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvActivityHead.SelectionForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvActivityHead.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dgvActivityHead.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            System.Windows.Forms.DataGridViewCellStyle dgvActivityCell = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvActivityCell.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            dgvActivityCell.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvActivityCell.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvActivityCell.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            System.Windows.Forms.DataGridViewCellStyle dgvActivityAlt = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvActivityAlt.BackColor = System.Drawing.Color.FromArgb(29, 29, 35);
-            dgvActivityAlt.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvActivityAlt.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvActivityAlt.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dgvActivity.EnableHeadersVisualStyles = false;
-            this.dgvActivity.ColumnHeadersDefaultCellStyle = dgvActivityHead;
-            this.dgvActivity.DefaultCellStyle = dgvActivityCell;
-            this.dgvActivity.AlternatingRowsDefaultCellStyle = dgvActivityAlt;
-            this.dgvActivity.BackgroundColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.dgvActivity.GridColor = System.Drawing.Color.FromArgb(44, 44, 52);
-            this.dgvActivity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvActivity.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvActivity.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvActivity.RowHeadersVisible = false;
-            this.dgvActivity.AllowUserToAddRows = false;
-            this.dgvActivity.AllowUserToDeleteRows = false;
-            this.dgvActivity.ReadOnly = true;
-            this.dgvActivity.MultiSelect = false;
-            this.dgvActivity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvActivity.ColumnHeadersHeight = 34;
+            dgvActivity.Dock = DockStyle.Fill;
+            dgvActivity.Location = new Point(14, 44);
+            dgvActivity.Name = "dgvActivity";
+            dgvActivity.RowHeadersWidth = 62;
+            dgvActivity.Size = new Size(978, 167);
+            dgvActivity.TabIndex = 0;
             // 
             // lblActivityTitle
             // 
-            this.lblActivityTitle.Name = "lblActivityTitle";
-            this.lblActivityTitle.AutoSize = false;
-            this.lblActivityTitle.Size = new System.Drawing.Size(100, 32);
-            this.lblActivityTitle.Text = "Recent Activity";
-            this.lblActivityTitle.Tag = "h2";
-            this.lblActivityTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblActivityTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblActivityTitle.Font = new System.Drawing.Font("Bahnschrift", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lblActivityTitle.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblActivityTitle.Dock = DockStyle.Top;
+            lblActivityTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblActivityTitle.ForeColor = Color.FromArgb(15, 35, 66);
+            lblActivityTitle.Location = new Point(14, 14);
+            lblActivityTitle.Name = "lblActivityTitle";
+            lblActivityTitle.Size = new Size(978, 30);
+            lblActivityTitle.TabIndex = 1;
+            lblActivityTitle.Text = "Recent Activity";
             // 
             // DashboardForm
             // 
-            this.contentPanel.Controls.Add(this.mainLayout);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.BackColor = System.Drawing.Color.FromArgb(14, 14, 17);
-            this.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.ClientSize = new System.Drawing.Size(1200, 740);
-            this.Name = "DashboardForm";
-            this.PageTitle = "Dashboard";
-            this.Text = "FITZONE GYM - Dashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExpiring)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).EndInit();
-            this.cardActivity.ResumeLayout(false);
-            this.cardExpiring.ResumeLayout(false);
-            this.cardChart.ResumeLayout(false);
-            this.stripeExpired.ResumeLayout(false);
-            this.contentExpired.ResumeLayout(false);
-            this.pnlExpired.ResumeLayout(false);
-            this.stripeFrozen.ResumeLayout(false);
-            this.contentFrozen.ResumeLayout(false);
-            this.pnlFrozen.ResumeLayout(false);
-            this.stripeActive.ResumeLayout(false);
-            this.contentActive.ResumeLayout(false);
-            this.pnlActive.ResumeLayout(false);
-            this.stripeTotal.ResumeLayout(false);
-            this.contentTotal.ResumeLayout(false);
-            this.pnlTotal.ResumeLayout(false);
-            this.cardsLayout.ResumeLayout(false);
-            this.mainLayout.ResumeLayout(false);
-            this.contentPanel.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "DashboardForm";
+            PageTitle = "Dashboard";
+            Text = "FITZONE GYM - Dashboard";
+            contentPanel.ResumeLayout(false);
+            mainLayout.ResumeLayout(false);
+            cardsLayout.ResumeLayout(false);
+            pnlTotal.ResumeLayout(false);
+            pnlActive.ResumeLayout(false);
+            pnlFrozen.ResumeLayout(false);
+            pnlExpired.ResumeLayout(false);
+            cardChart.ResumeLayout(false);
+            cardExpiring.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvExpiring).EndInit();
+            cardActivity.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvActivity).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainLayout;
         private System.Windows.Forms.TableLayoutPanel cardsLayout;
-        private FitZoneGym.Controls.CardPanel pnlTotal;
-        private System.Windows.Forms.Panel contentTotal;
+        private System.Windows.Forms.Panel pnlTotal;
         private System.Windows.Forms.Label lblTotalValue;
         private System.Windows.Forms.Label lblTotalCaption;
-        private System.Windows.Forms.Panel stripeTotal;
-        private FitZoneGym.Controls.CardPanel pnlActive;
-        private System.Windows.Forms.Panel contentActive;
+        private System.Windows.Forms.Panel pnlActive;
         private System.Windows.Forms.Label lblActiveValue;
         private System.Windows.Forms.Label lblActiveCaption;
-        private System.Windows.Forms.Panel stripeActive;
-        private FitZoneGym.Controls.CardPanel pnlFrozen;
-        private System.Windows.Forms.Panel contentFrozen;
+        private System.Windows.Forms.Panel pnlFrozen;
         private System.Windows.Forms.Label lblFrozenValue;
         private System.Windows.Forms.Label lblFrozenCaption;
-        private System.Windows.Forms.Panel stripeFrozen;
-        private FitZoneGym.Controls.CardPanel pnlExpired;
-        private System.Windows.Forms.Panel contentExpired;
+        private System.Windows.Forms.Panel pnlExpired;
         private System.Windows.Forms.Label lblExpiredValue;
         private System.Windows.Forms.Label lblExpiredCaption;
-        private System.Windows.Forms.Panel stripeExpired;
-        private FitZoneGym.Controls.CardPanel cardChart;
+        private System.Windows.Forms.Panel cardChart;
         private FitZoneGym.Controls.DonutChart donutChart;
         private System.Windows.Forms.Label lblChartTitle;
-        private FitZoneGym.Controls.CardPanel cardExpiring;
+        private System.Windows.Forms.Panel cardExpiring;
         private System.Windows.Forms.DataGridView dgvExpiring;
         private System.Windows.Forms.LinkLabel lnkViewAll;
         private System.Windows.Forms.Label lblExpiringTitle;
-        private FitZoneGym.Controls.CardPanel cardActivity;
+        private System.Windows.Forms.Panel cardActivity;
         private System.Windows.Forms.DataGridView dgvActivity;
         private System.Windows.Forms.Label lblActivityTitle;
     }

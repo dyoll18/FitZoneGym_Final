@@ -7,8 +7,8 @@ namespace FitZoneGym.Controls
     /// <summary>Search box + results drop-down that lets the user pick one member by name, ID or contact number.</summary>
     public class MemberPicker : FlowLayoutPanel
     {
-        private readonly TextBox _text = Ui.Input(200);
-        private readonly ComboBox _results = Ui.Combo(340);
+        private readonly TextBox _text = Ui.Input(220);
+        private readonly ComboBox _results = Ui.Combo(380);
         private DataTable _table = new DataTable();
 
         public event EventHandler MemberChanged;
@@ -20,7 +20,7 @@ namespace FitZoneGym.Controls
             _text.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) { e.SuppressKeyPress = true; Search(); } };
             _results.SelectedIndexChanged += (s, e) => MemberChanged?.Invoke(this, EventArgs.Empty);
             Controls.Add(_text);
-            Controls.Add(Ui.Primary("Search", (s, e) => Search(), 96));
+            Controls.Add(Ui.Primary("Search", (s, e) => Search(), 90));
             Controls.Add(_results);
         }
 

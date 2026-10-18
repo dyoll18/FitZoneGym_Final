@@ -36,13 +36,3 @@ These are demo credentials; change them before using real data.
 
 ## Basic edition modules
 This edition includes Dashboard, Members, Membership Plans, Registration & Renewal, Payments, Reports Generation (CSV export), and User Management (accounts, roles/permissions, activity log). Advanced modules such as freeze management, reactivation, prorated billing, invoices, settings, and backup screens are excluded from navigation and the project files.
-
-
-## UI theme (dark "gym" edition)
-- All colours/fonts live in `Helpers/Ui.cs`; `Helpers/Theme.cs` styles every control from its `Tag`
-  (`card`, `primary`, `secondary`, `success`, `danger`, `h1`, `h2`, `caption`, ...).
-- Screens are built with Dock / TableLayoutPanel / FlowLayoutPanel only (no absolute pixel positions), so nothing overlaps
-  at any Windows display scaling.
-- The logo is drawn in code (`Controls/LogoMark.cs`) - no image files needed. It is used on the login screen, the sidebar
-  and as the window icon.
-- Pop-ups (`Ui.Info/Warn/Error/Confirm`) use a themed dialog instead of the grey system MessageBox.

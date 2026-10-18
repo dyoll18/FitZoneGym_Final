@@ -16,7 +16,6 @@ namespace FitZoneGym.Forms
         public MemberEditForm(string memberId)
         {
             InitializeComponent();
-            Theme.Apply(this, true);
             _memberId = memberId;
             cboGender.SelectedIndex = 0;
             cboStatus.SelectedIndex = 0;
@@ -101,11 +100,6 @@ namespace FitZoneGym.Forms
                 }
             });
             if (saved) { DialogResult = DialogResult.OK; Close(); }
-        }
-
-        private void formLayout_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

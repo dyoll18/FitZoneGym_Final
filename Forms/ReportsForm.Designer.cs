@@ -15,279 +15,211 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.toolbarLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.lblType = new System.Windows.Forms.Label();
-            this.lblFrom = new System.Windows.Forms.Label();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.cboType = new System.Windows.Forms.ComboBox();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.cardGrid = new FitZoneGym.Controls.CardPanel();
-            this.dgvReport = new System.Windows.Forms.DataGridView();
-            this.lblSummary = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
-            this.mainLayout.SuspendLayout();
-            this.toolbarLayout.SuspendLayout();
-            this.cardGrid.SuspendLayout();
-            this.SuspendLayout();
-            this.contentPanel.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            toolbarPanel = new Panel();
+            lblType = new Label();
+            cboType = new ComboBox();
+            lblFrom = new Label();
+            dtpFrom = new DateTimePicker();
+            lblTo = new Label();
+            dtpTo = new DateTimePicker();
+            btnGenerate = new Button();
+            dgvReport = new DataGridView();
+            summaryPanel = new Panel();
+            lblSummary = new Label();
+            contentPanel.SuspendLayout();
+            mainLayout.SuspendLayout();
+            toolbarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvReport).BeginInit();
+            summaryPanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(mainLayout);
+            // 
+            // titleLabel
+            // 
+            titleLabel.Text = "Reports";
+            titleLabel.Click += titleLabel_Click;
             // 
             // mainLayout
             // 
-            this.mainLayout.ColumnCount = 1;
-            this.mainLayout.RowCount = 3;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.mainLayout.Controls.Add(this.toolbarLayout, 0, 0);
-            this.mainLayout.Controls.Add(this.cardGrid, 0, 1);
-            this.mainLayout.Controls.Add(this.lblSummary, 0, 2);
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.mainLayout.BackColor = System.Drawing.Color.Transparent;
+            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.ColumnCount = 1;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            mainLayout.Controls.Add(toolbarPanel, 0, 0);
+            mainLayout.Controls.Add(dgvReport, 0, 1);
+            mainLayout.Controls.Add(summaryPanel, 0, 2);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(16, 16);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 3;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            mainLayout.Size = new Size(1018, 638);
+            mainLayout.TabIndex = 0;
             // 
-            // toolbarLayout
+            // toolbarPanel
             // 
-            this.toolbarLayout.ColumnCount = 6;
-            this.toolbarLayout.RowCount = 2;
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.toolbarLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.toolbarLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.toolbarLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.toolbarLayout.Controls.Add(this.lblType, 0, 0);
-            this.toolbarLayout.Controls.Add(this.lblFrom, 1, 0);
-            this.toolbarLayout.Controls.Add(this.lblTo, 2, 0);
-            this.toolbarLayout.Controls.Add(this.cboType, 0, 1);
-            this.toolbarLayout.Controls.Add(this.dtpFrom, 1, 1);
-            this.toolbarLayout.Controls.Add(this.dtpTo, 2, 1);
-            this.toolbarLayout.Controls.Add(this.btnGenerate, 3, 1);
-            this.toolbarLayout.Controls.Add(this.btnExport, 4, 1);
-            this.toolbarLayout.Name = "toolbarLayout";
-            this.toolbarLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolbarLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.toolbarLayout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.toolbarLayout.AutoSize = true;
-            this.toolbarLayout.BackColor = System.Drawing.Color.Transparent;
+            toolbarPanel.BackColor = Color.FromArgb(243, 246, 251);
+            toolbarPanel.Controls.Add(lblType);
+            toolbarPanel.Controls.Add(cboType);
+            toolbarPanel.Controls.Add(lblFrom);
+            toolbarPanel.Controls.Add(dtpFrom);
+            toolbarPanel.Controls.Add(lblTo);
+            toolbarPanel.Controls.Add(dtpTo);
+            toolbarPanel.Controls.Add(btnGenerate);
+            toolbarPanel.Dock = DockStyle.Fill;
+            toolbarPanel.Location = new Point(3, 3);
+            toolbarPanel.Name = "toolbarPanel";
+            toolbarPanel.Size = new Size(1012, 48);
+            toolbarPanel.TabIndex = 0;
             // 
             // lblType
             // 
-            this.lblType.Name = "lblType";
-            this.lblType.AutoSize = true;
-            this.lblType.Text = "REPORT TYPE";
-            this.lblType.Tag = "caption";
-            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblType.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblType.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblType.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // lblFrom
-            // 
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Text = "FROM";
-            this.lblFrom.Tag = "caption";
-            this.lblFrom.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblFrom.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblFrom.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblFrom.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
-            // 
-            // lblTo
-            // 
-            this.lblTo.Name = "lblTo";
-            this.lblTo.AutoSize = true;
-            this.lblTo.Text = "TO";
-            this.lblTo.Tag = "caption";
-            this.lblTo.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblTo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblTo.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblTo.ForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            lblType.AutoSize = true;
+            lblType.Font = new Font("Segoe UI", 8.5F);
+            lblType.ForeColor = Color.FromArgb(107, 114, 128);
+            lblType.Location = new Point(0, 0);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(99, 23);
+            lblType.TabIndex = 0;
+            lblType.Text = "Report type";
             // 
             // cboType
             // 
-            this.cboType.Name = "cboType";
-            this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboType.FormattingEnabled = true;
-            this.cboType.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.cboType.Margin = new System.Windows.Forms.Padding(0, 0, 14, 0);
-            this.cboType.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.cboType.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.cboType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report" });
+            cboType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboType.FlatStyle = FlatStyle.Flat;
+            cboType.Font = new Font("Segoe UI", 9.5F);
+            cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report" });
+            cboType.Location = new Point(0, 20);
+            cboType.Name = "cboType";
+            cboType.Size = new Size(240, 33);
+            cboType.TabIndex = 1;
+            // 
+            // lblFrom
+            // 
+            lblFrom.AutoSize = true;
+            lblFrom.Font = new Font("Segoe UI", 8.5F);
+            lblFrom.ForeColor = Color.FromArgb(107, 114, 128);
+            lblFrom.Location = new Point(260, 0);
+            lblFrom.Name = "lblFrom";
+            lblFrom.Size = new Size(49, 23);
+            lblFrom.TabIndex = 2;
+            lblFrom.Text = "From";
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Size = new System.Drawing.Size(140, 27);
-            this.dtpFrom.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtpFrom.Margin = new System.Windows.Forms.Padding(0, 0, 14, 0);
-            this.dtpFrom.CalendarMonthBackground = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.dtpFrom.CalendarForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.dtpFrom.CalendarTitleBackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.dtpFrom.CalendarTitleForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dtpFrom.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            dtpFrom.Font = new Font("Segoe UI", 9.5F);
+            dtpFrom.Format = DateTimePickerFormat.Short;
+            dtpFrom.Location = new Point(260, 20);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(140, 33);
+            dtpFrom.TabIndex = 3;
+            // 
+            // lblTo
+            // 
+            lblTo.AutoSize = true;
+            lblTo.Font = new Font("Segoe UI", 8.5F);
+            lblTo.ForeColor = Color.FromArgb(107, 114, 128);
+            lblTo.Location = new Point(410, 0);
+            lblTo.Name = "lblTo";
+            lblTo.Size = new Size(27, 23);
+            lblTo.TabIndex = 4;
+            lblTo.Text = "To";
             // 
             // dtpTo
             // 
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Size = new System.Drawing.Size(140, 27);
-            this.dtpTo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtpTo.Margin = new System.Windows.Forms.Padding(0, 0, 14, 0);
-            this.dtpTo.CalendarMonthBackground = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.dtpTo.CalendarForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.dtpTo.CalendarTitleBackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.dtpTo.CalendarTitleForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dtpTo.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(156, 156, 170);
+            dtpTo.Font = new Font("Segoe UI", 9.5F);
+            dtpTo.Format = DateTimePickerFormat.Short;
+            dtpTo.Location = new Point(410, 20);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(140, 33);
+            dtpTo.TabIndex = 5;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Text = "Generate Report";
-            this.btnGenerate.Size = new System.Drawing.Size(160, 34);
-            this.btnGenerate.Tag = "primary";
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnGenerate.UseVisualStyleBackColor = false;
-            this.btnGenerate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnGenerate.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnGenerate.FlatAppearance.BorderSize = 1;
-            this.btnGenerate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            this.btnGenerate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(205, 60, 8);
-            this.btnGenerate.Click += this.btnGenerate_Click;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Text = "Export CSV";
-            this.btnExport.Size = new System.Drawing.Size(120, 34);
-            this.btnExport.Tag = "secondary";
-            this.btnExport.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnExport.FlatAppearance.BorderSize = 1;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(54, 54, 63);
-            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(50, 50, 59);
-            this.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(28, 28, 34);
-            this.btnExport.Click += this.btnExport_Click;
-            // 
-            // cardGrid
-            // 
-            this.cardGrid.Controls.Add(this.dgvReport);
-            this.cardGrid.Name = "cardGrid";
-            this.cardGrid.Tag = "card";
-            this.cardGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardGrid.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.cardGrid.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cardGrid.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
+            btnGenerate.BackColor = Color.FromArgb(30, 111, 240);
+            btnGenerate.Cursor = Cursors.Hand;
+            btnGenerate.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnGenerate.FlatStyle = FlatStyle.Flat;
+            btnGenerate.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnGenerate.ForeColor = Color.White;
+            btnGenerate.Location = new Point(560, 19);
+            btnGenerate.Margin = new Padding(0, 0, 8, 0);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(150, 27);
+            btnGenerate.TabIndex = 6;
+            btnGenerate.Text = "Generate Report";
+            btnGenerate.UseVisualStyleBackColor = false;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // dgvReport
             // 
-            this.dgvReport.Name = "dgvReport";
-            this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            System.Windows.Forms.DataGridViewCellStyle dgvReportHead = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvReportHead.BackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvReportHead.ForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvReportHead.SelectionBackColor = System.Drawing.Color.FromArgb(9, 9, 11);
-            dgvReportHead.SelectionForeColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            dgvReportHead.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dgvReportHead.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            System.Windows.Forms.DataGridViewCellStyle dgvReportCell = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvReportCell.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            dgvReportCell.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvReportCell.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvReportCell.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            System.Windows.Forms.DataGridViewCellStyle dgvReportAlt = new System.Windows.Forms.DataGridViewCellStyle();
-            dgvReportAlt.BackColor = System.Drawing.Color.FromArgb(29, 29, 35);
-            dgvReportAlt.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            dgvReportAlt.SelectionBackColor = System.Drawing.Color.FromArgb(88, 42, 20);
-            dgvReportAlt.SelectionForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-            this.dgvReport.EnableHeadersVisualStyles = false;
-            this.dgvReport.ColumnHeadersDefaultCellStyle = dgvReportHead;
-            this.dgvReport.DefaultCellStyle = dgvReportCell;
-            this.dgvReport.AlternatingRowsDefaultCellStyle = dgvReportAlt;
-            this.dgvReport.BackgroundColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.dgvReport.GridColor = System.Drawing.Color.FromArgb(44, 44, 52);
-            this.dgvReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvReport.RowHeadersVisible = false;
-            this.dgvReport.AllowUserToAddRows = false;
-            this.dgvReport.AllowUserToDeleteRows = false;
-            this.dgvReport.ReadOnly = true;
-            this.dgvReport.MultiSelect = false;
-            this.dgvReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvReport.ColumnHeadersHeight = 34;
+            dgvReport.Dock = DockStyle.Fill;
+            dgvReport.Location = new Point(3, 57);
+            dgvReport.Name = "dgvReport";
+            dgvReport.RowHeadersWidth = 62;
+            dgvReport.Size = new Size(1012, 538);
+            dgvReport.TabIndex = 1;
+            // 
+            // summaryPanel
+            // 
+            summaryPanel.BackColor = Color.FromArgb(243, 246, 251);
+            summaryPanel.Controls.Add(lblSummary);
+            summaryPanel.Dock = DockStyle.Fill;
+            summaryPanel.Location = new Point(3, 601);
+            summaryPanel.Name = "summaryPanel";
+            summaryPanel.Size = new Size(1012, 34);
+            summaryPanel.TabIndex = 2;
             // 
             // lblSummary
             // 
-            this.lblSummary.Name = "lblSummary";
-            this.lblSummary.AutoSize = true;
-            this.lblSummary.Text = "Choose a report and date range, then click Generate.";
-            this.lblSummary.Tag = "summary";
-            this.lblSummary.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSummary.Margin = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            lblSummary.AutoSize = true;
+            lblSummary.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSummary.ForeColor = Color.FromArgb(15, 35, 66);
+            lblSummary.Location = new Point(0, 10);
+            lblSummary.Name = "lblSummary";
+            lblSummary.Size = new Size(512, 28);
+            lblSummary.TabIndex = 0;
+            lblSummary.Text = "Choose a report and date range, then click Generate.";
             // 
             // ReportsForm
             // 
-            this.contentPanel.Controls.Add(this.mainLayout);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.BackColor = System.Drawing.Color.FromArgb(14, 14, 17);
-            this.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.ClientSize = new System.Drawing.Size(1200, 740);
-            this.Name = "ReportsForm";
-            this.PageTitle = "Reports";
-            this.Text = "FITZONE GYM - Reports";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
-            this.cardGrid.ResumeLayout(false);
-            this.toolbarLayout.ResumeLayout(false);
-            this.toolbarLayout.PerformLayout();
-            this.mainLayout.ResumeLayout(false);
-            this.contentPanel.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "ReportsForm";
+            PageTitle = "Reports";
+            Text = "FITZONE GYM - Reports";
+            contentPanel.ResumeLayout(false);
+            mainLayout.ResumeLayout(false);
+            toolbarPanel.ResumeLayout(false);
+            toolbarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvReport).EndInit();
+            summaryPanel.ResumeLayout(false);
+            summaryPanel.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainLayout;
-        private System.Windows.Forms.TableLayoutPanel toolbarLayout;
+        private System.Windows.Forms.Panel toolbarPanel;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.Label lblFrom;
-        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.ComboBox cboType;
+        private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Button btnExport;
-        private FitZoneGym.Controls.CardPanel cardGrid;
         private System.Windows.Forms.DataGridView dgvReport;
+        private System.Windows.Forms.Panel summaryPanel;
         private System.Windows.Forms.Label lblSummary;
     }
 }

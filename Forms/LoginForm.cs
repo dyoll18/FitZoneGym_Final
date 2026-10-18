@@ -22,7 +22,6 @@ namespace FitZoneGym.Forms
         {
             InitializeComponent();
             if (Ui.IsDesignTime) return;
-            Theme.Apply(this, true);
 
             _lock.Tick += (s, e) =>
             {
@@ -81,6 +80,15 @@ namespace FitZoneGym.Forms
                 Audit.Error("Error", ex.ToString());
                 lblMessage.Text = "Could not sign in: " + ex.Message;
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void lblTagline_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

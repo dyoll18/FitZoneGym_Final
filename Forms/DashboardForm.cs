@@ -15,10 +15,6 @@ namespace FitZoneGym.Forms
             InitializeComponent();
             Ui.StyleGrid(dgvExpiring);
             Ui.StyleGrid(dgvActivity);
-            stripeTotal.BackColor = Ui.Accent;
-            stripeActive.BackColor = Ui.Green;
-            stripeFrozen.BackColor = Ui.Orange;
-            stripeExpired.BackColor = Ui.Red;
         }
 
         protected override void OnLoad(EventArgs e)

@@ -32,13 +32,10 @@ namespace FitZoneGym.Forms
         public static void Run(Form first)
         {
             LoggedOut = false;
-            var area = Screen.PrimaryScreen.WorkingArea;
             first.WindowState = FormWindowState.Normal;
             first.StartPosition = FormStartPosition.CenterScreen;
             first.FormBorderStyle = FormBorderStyle.Sizable;
-            // Not full screen: 1180x720 at 100% scaling (scaled with the display DPI), at most ~80% of the usable screen
-            first.Size = new Size(Math.Min(first.LogicalToDeviceUnits(1180), (int)(area.Width * 0.80)),
-                                  Math.Min(first.LogicalToDeviceUnits(720), (int)(area.Height * 0.82)));
+            first.Size = new Size(1280, 760);
 
             Context = new ApplicationContext(first);
             Application.Run(Context);

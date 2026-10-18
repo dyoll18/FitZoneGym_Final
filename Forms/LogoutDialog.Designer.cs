@@ -15,138 +15,97 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            rootLayout = new TableLayoutPanel();
-            lblTitle = new Label();
-            lblMessage = new Label();
-            btnYes = new Button();
-            btnNo = new Button();
-            rootLayout.SuspendLayout();
-            SuspendLayout();
-            // 
-            // rootLayout
-            // 
-            rootLayout.AutoSize = true;
-            rootLayout.BackColor = Color.Transparent;
-            rootLayout.ColumnCount = 2;
-            rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 160F));
-            rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 160F));
-            rootLayout.Controls.Add(lblTitle, 0, 0);
-            rootLayout.Controls.Add(lblMessage, 0, 1);
-            rootLayout.Controls.Add(btnYes, 0, 2);
-            rootLayout.Controls.Add(btnNo, 1, 2);
-            rootLayout.Location = new Point(0, 0);
-            rootLayout.Margin = new Padding(0);
-            rootLayout.Name = "rootLayout";
-            rootLayout.Padding = new Padding(34, 30, 34, 26);
-            rootLayout.RowCount = 3;
-            rootLayout.RowStyles.Add(new RowStyle());
-            rootLayout.RowStyles.Add(new RowStyle());
-            rootLayout.RowStyles.Add(new RowStyle());
-            rootLayout.Size = new Size(388, 259);
-            rootLayout.TabIndex = 0;
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.btnYes = new System.Windows.Forms.Button();
+            this.btnNo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // lblTitle
             // 
-            lblTitle.Anchor = AnchorStyles.None;
-            lblTitle.AutoSize = true;
-            rootLayout.SetColumnSpan(lblTitle, 2);
-            lblTitle.Font = new Font("Bahnschrift", 22F, FontStyle.Bold);
-            lblTitle.ForeColor = Color.FromArgb(244, 244, 246);
-            lblTitle.Location = new Point(97, 30);
-            lblTitle.Margin = new Padding(0, 0, 0, 6);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(194, 106);
-            lblTitle.TabIndex = 0;
-            lblTitle.Tag = "h1";
-            lblTitle.Text = "Confirm Logout";
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.AutoSize = false;
+            this.lblTitle.Text = "Confirm Logout";
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(15, 35, 66);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15.0F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Size = new System.Drawing.Size(380, 36);
+            this.lblTitle.Location = new System.Drawing.Point(0, 30);
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.TabIndex = 0;
             // 
             // lblMessage
             // 
-            lblMessage.Anchor = AnchorStyles.None;
-            lblMessage.AutoSize = true;
-            rootLayout.SetColumnSpan(lblMessage, 2);
-            lblMessage.ForeColor = Color.FromArgb(156, 156, 170);
-            lblMessage.Location = new Point(46, 142);
-            lblMessage.Margin = new Padding(0, 0, 0, 24);
-            lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(296, 25);
-            lblMessage.TabIndex = 1;
-            lblMessage.Tag = "muted";
-            lblMessage.Text = "Are you sure you want to log out?";
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.AutoSize = false;
+            this.lblMessage.Text = "Are you sure you want to logout?";
+            this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblMessage.Size = new System.Drawing.Size(380, 28);
+            this.lblMessage.Location = new System.Drawing.Point(0, 76);
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMessage.TabIndex = 1;
             // 
             // btnYes
             // 
-            btnYes.BackColor = Color.FromArgb(255, 94, 26);
-            btnYes.Cursor = Cursors.Hand;
-            btnYes.DialogResult = DialogResult.Yes;
-            btnYes.Dock = DockStyle.Fill;
-            btnYes.FlatAppearance.BorderColor = Color.FromArgb(255, 94, 26);
-            btnYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(205, 60, 8);
-            btnYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 140, 66);
-            btnYes.FlatStyle = FlatStyle.Flat;
-            btnYes.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnYes.ForeColor = Color.FromArgb(255, 255, 255);
-            btnYes.Location = new Point(34, 191);
-            btnYes.Margin = new Padding(0, 0, 6, 0);
-            btnYes.Name = "btnYes";
-            btnYes.Size = new Size(154, 42);
-            btnYes.TabIndex = 2;
-            btnYes.Tag = "primary";
-            btnYes.Text = "Yes, log out";
-            btnYes.UseVisualStyleBackColor = false;
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Text = "Yes";
+            this.btnYes.Size = new System.Drawing.Size(130, 40);
+            this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYes.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
+            this.btnYes.ForeColor = System.Drawing.Color.White;
+            this.btnYes.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnYes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnYes.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnYes.UseVisualStyleBackColor = false;
+            this.btnYes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
+            this.btnYes.Location = new System.Drawing.Point(50, 130);
+            this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnYes.TabIndex = 2;
             // 
             // btnNo
             // 
-            btnNo.BackColor = Color.FromArgb(36, 36, 43);
-            btnNo.Cursor = Cursors.Hand;
-            btnNo.DialogResult = DialogResult.No;
-            btnNo.Dock = DockStyle.Fill;
-            btnNo.FlatAppearance.BorderColor = Color.FromArgb(54, 54, 63);
-            btnNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 28, 34);
-            btnNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 50, 59);
-            btnNo.FlatStyle = FlatStyle.Flat;
-            btnNo.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnNo.ForeColor = Color.FromArgb(244, 244, 246);
-            btnNo.Location = new Point(200, 191);
-            btnNo.Margin = new Padding(6, 0, 0, 0);
-            btnNo.Name = "btnNo";
-            btnNo.Size = new Size(154, 42);
-            btnNo.TabIndex = 3;
-            btnNo.Tag = "secondary";
-            btnNo.Text = "No, stay";
-            btnNo.UseVisualStyleBackColor = false;
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Text = "No";
+            this.btnNo.Size = new System.Drawing.Size(130, 40);
+            this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNo.BackColor = System.Drawing.Color.White;
+            this.btnNo.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.btnNo.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNo.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnNo.UseVisualStyleBackColor = false;
+            this.btnNo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
+            this.btnNo.Location = new System.Drawing.Point(200, 130);
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnNo.TabIndex = 3;
             // 
             // LogoutDialog
             // 
-            AcceptButton = btnYes;
-            AutoScaleDimensions = new SizeF(144F, 144F);
-            AutoScaleMode = AutoScaleMode.Dpi;
-            AutoSize = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.FromArgb(24, 24, 29);
-            CancelButton = btnNo;
-            ClientSize = new Size(406, 257);
-            Controls.Add(rootLayout);
-            Font = new Font("Segoe UI", 9.5F);
-            ForeColor = Color.FromArgb(244, 244, 246);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "LogoutDialog";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Confirm Logout";
-            rootLayout.ResumeLayout(false);
-            rootLayout.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(380, 210);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.BackColor = System.Drawing.Color.White;
+            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.Text = "Confirm Logout";
+            this.AcceptButton = this.btnYes;
+            this.CancelButton = this.btnNo;
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.btnYes);
+            this.Controls.Add(this.btnNo);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel rootLayout;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Button btnYes;

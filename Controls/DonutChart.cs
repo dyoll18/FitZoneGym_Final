@@ -1,9 +1,6 @@
 namespace FitZoneGym.Controls
 {
-    /// <summary>
-    /// Simple GDI+ donut chart (no external chart library needed). The legend sits to the right of the ring when
-    /// there is room and drops underneath it when the card is narrow, so nothing is ever clipped or overlapped.
-    /// </summary>
+    /// <summary>Simple GDI+ donut chart (no external chart library needed).</summary>
     public class DonutChart : Control
     {
         [System.ComponentModel.Browsable(false), System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
@@ -11,90 +8,43 @@ namespace FitZoneGym.Controls
         [System.ComponentModel.Browsable(false), System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public (string Label, int Value, Color Color)[] Slices { get; set; } = Array.Empty<(string, int, Color)>();
 
-        public DonutChart()
-        {
-            DoubleBuffered = true;
-            ResizeRedraw = true;
-            BackColor = Ui.Surface;
-        }
+        public DonutChart() { DoubleBuffered = true; BackColor = Color.White; }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             var g = e.Graphics;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            float s = DeviceDpi / 96f;
-
-            var labels = new string[Slices.Length];
-            float legendW = 0f;
-            for (int i = 0; i < Slices.Length; i++)
-            {
-                var sl = Slices[i];
-                labels[i] = sl.Label + "   " + sl.Value + (Total > 0 ? "  (" + (100 * sl.Value / Total) + "%)" : "");
-                legendW = Math.Max(legendW, g.MeasureString(labels[i], Font).Width);
-            }
-            legendW += 24f * s;
-            float lineH = 26f * s;
-            float legendH = Slices.Length * lineH;
-            float gap = 18f * s;
-            float avail = Width - legendW - gap - 8f * s;
-
-            float size, ringX, ringY, lx, ly;
-            if (avail >= 96f * s)
-            {
-                size = Math.Min(Height - 16f * s, avail);
-                ringX = 8f * s;
-                ringY = (Height - size) / 2f;
-                lx = ringX + size + gap;
-                ly = (Height - legendH) / 2f;
-            }
-            else
-            {
-                size = Math.Min(Width - 16f * s, Height - legendH - 20f * s);
-                ringX = (Width - size) / 2f;
-                ringY = 8f * s;
-                lx = Math.Max(8f * s, (Width - legendW) / 2f);
-                ly = ringY + size + 10f * s;
-            }
-            if (size < 48f * s) return;
-
-            float thick = Math.Max(10f, size * 0.13f);
-            var rect = new RectangleF(ringX + thick / 2f, ringY + thick / 2f, size - thick, size - thick);
-            int sum = Slices.Sum(x => x.Value);
+            int size = Math.Min(Width, Height) - 20;
+            if (size < 40) return;
+            var rect = new Rectangle(10, (Height - size) / 2, size, size);
+            int sum = Slices.Sum(s => s.Value);
             float start = -90f;
-
-            using (var track = new Pen(Ui.Surface2, thick))
-                g.DrawEllipse(track, rect);
+            using (var track = new Pen(Color.FromArgb(230, 234, 242), 22))
+                g.DrawEllipse(track, rect.X + 11, rect.Y + 11, rect.Width - 22, rect.Height - 22);
             if (sum > 0)
-                foreach (var sl in Slices)
+                foreach (var s in Slices)
                 {
-                    if (sl.Value <= 0) continue;
-                    float sweep = 360f * sl.Value / sum;
-                    using (var pen = new Pen(sl.Color, thick))
-                        g.DrawArc(pen, rect, start, Math.Max(sweep - 1.5f, 0.5f));
+                    if (s.Value <= 0) continue;
+                    float sweep = 360f * s.Value / sum;
+                    using var pen = new Pen(s.Color, 22);
+                    g.DrawArc(pen, rect.X + 11, rect.Y + 11, rect.Width - 22, rect.Height - 22, start, Math.Max(sweep - 1.5f, 0.5f));
                     start += sweep;
                 }
-
+            using var big = new Font("Segoe UI", 20f, FontStyle.Bold);
+            using var small = new Font("Segoe UI", 8.5f);
             var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
-            using (var big = Ui.Display(Math.Min(30f, Math.Max(16f, size / (7f * s)))))
-            using (var small = new Font("Segoe UI", 8.5f))
-            using (var white = new SolidBrush(Ui.Text))
-            using (var muted = new SolidBrush(Ui.Muted))
-            {
-                float cy = ringY + size / 2f;
-                g.DrawString(Total.ToString(), big, white, new RectangleF(ringX, cy - 26f * s, size, 36f * s), sf);
-                g.DrawString("MEMBERS", small, muted, new RectangleF(ringX, cy + 8f * s, size, 20f * s), sf);
-            }
-            sf.Dispose();
+            g.DrawString(Total.ToString(), big, new SolidBrush(Ui.Navy), new RectangleF(rect.X, rect.Y + rect.Height / 2f - 20, rect.Width, 30), sf);
+            g.DrawString("Total Members", small, new SolidBrush(Ui.Muted), new RectangleF(rect.X, rect.Y + rect.Height / 2f + 8, rect.Width, 20), sf);
 
-            using (var txt = new SolidBrush(Ui.Text))
-                for (int i = 0; i < Slices.Length; i++)
-                {
-                    float y = ly + i * lineH;
-                    using (var br = new SolidBrush(Slices[i].Color))
-                        g.FillEllipse(br, lx, y + 5f * s, 11f * s, 11f * s);
-                    g.DrawString(labels[i], Font, txt, lx + 19f * s, y);
-                }
+            // legend
+            int lx = rect.Right + 20, ly = rect.Y + 20;
+            foreach (var s in Slices)
+            {
+                using (var br = new SolidBrush(s.Color)) g.FillEllipse(br, lx, ly + 3, 10, 10);
+                g.DrawString(s.Label + ": " + s.Value + (Total > 0 ? " (" + (100 * s.Value / Total) + "%)" : ""), Font, new SolidBrush(Ui.Text), lx + 16, ly);
+                ly += 26;
+            }
         }
     }
 }

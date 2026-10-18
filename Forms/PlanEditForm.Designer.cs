@@ -15,10 +15,9 @@ namespace FitZoneGym.Forms
 
         #region Windows Form Designer generated code
 
-        /// <summary>Designer generated.</summary>
+        /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.formLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblMonths = new System.Windows.Forms.Label();
@@ -27,206 +26,159 @@ namespace FitZoneGym.Forms
             this.numFee = new System.Windows.Forms.NumericUpDown();
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.buttonFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.formLayout.SuspendLayout();
-            this.buttonFlow.SuspendLayout();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // formLayout
-            // 
-            this.formLayout.ColumnCount = 2;
-            this.formLayout.RowCount = 5;
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 330F));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
-            this.formLayout.Controls.Add(this.lblName, 0, 0);
-            this.formLayout.Controls.Add(this.txtName, 1, 0);
-            this.formLayout.Controls.Add(this.lblMonths, 0, 1);
-            this.formLayout.Controls.Add(this.numMonths, 1, 1);
-            this.formLayout.Controls.Add(this.lblFee, 0, 2);
-            this.formLayout.Controls.Add(this.numFee, 1, 2);
-            this.formLayout.Controls.Add(this.lblDesc, 0, 3);
-            this.formLayout.Controls.Add(this.txtDesc, 1, 3);
-            this.formLayout.Controls.Add(this.buttonFlow, 0, 4);
-            this.formLayout.SetColumnSpan(this.buttonFlow, 2);
-            this.formLayout.Name = "formLayout";
-            this.formLayout.Dock = System.Windows.Forms.DockStyle.None;
-            this.formLayout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.formLayout.Padding = new System.Windows.Forms.Padding(28, 24, 28, 22);
-            this.formLayout.AutoSize = true;
-            this.formLayout.BackColor = System.Drawing.Color.Transparent;
             // 
             // lblName
             // 
             this.lblName.Name = "lblName";
             this.lblName.AutoSize = true;
             this.lblName.Text = "Plan name *";
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblName.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblName.Location = new System.Drawing.Point(20, 22);
+            this.lblName.TabIndex = 0;
             // 
             // txtName
             // 
             this.txtName.Name = "txtName";
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtName.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.txtName.Size = new System.Drawing.Size(280, 25);
+            this.txtName.Location = new System.Drawing.Point(160, 18);
+            this.txtName.TabIndex = 1;
             // 
             // lblMonths
             // 
             this.lblMonths.Name = "lblMonths";
             this.lblMonths.AutoSize = true;
             this.lblMonths.Text = "Duration (months) *";
-            this.lblMonths.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMonths.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblMonths.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblMonths.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblMonths.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblMonths.Location = new System.Drawing.Point(20, 62);
+            this.lblMonths.TabIndex = 2;
             // 
             // numMonths
             // 
             this.numMonths.Name = "numMonths";
-            this.numMonths.Minimum = 1M;
-            this.numMonths.Maximum = 60M;
+            this.numMonths.Minimum = new decimal(new int[] {1, 0, 0, 0});
+            this.numMonths.Maximum = new decimal(new int[] {60, 0, 0, 0});
+            this.numMonths.Value = new decimal(new int[] {1, 0, 0, 0});
             this.numMonths.DecimalPlaces = 0;
             this.numMonths.ThousandsSeparator = true;
-            this.numMonths.Size = new System.Drawing.Size(150, 27);
-            this.numMonths.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.numMonths.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.numMonths.Value = 1M;
-            this.numMonths.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.numMonths.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.numMonths.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numMonths.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.numMonths.Size = new System.Drawing.Size(120, 25);
+            this.numMonths.Location = new System.Drawing.Point(160, 58);
+            this.numMonths.TabIndex = 3;
             // 
             // lblFee
             // 
             this.lblFee.Name = "lblFee";
             this.lblFee.AutoSize = true;
             this.lblFee.Text = "Fee *";
-            this.lblFee.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblFee.Margin = new System.Windows.Forms.Padding(0, 7, 14, 7);
-            this.lblFee.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblFee.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblFee.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblFee.Location = new System.Drawing.Point(20, 102);
+            this.lblFee.TabIndex = 4;
             // 
             // numFee
             // 
             this.numFee.Name = "numFee";
-            this.numFee.Minimum = 0M;
-            this.numFee.Maximum = 1000000M;
+            this.numFee.Minimum = new decimal(new int[] {0, 0, 0, 0});
+            this.numFee.Maximum = new decimal(new int[] {1000000, 0, 0, 0});
+            this.numFee.Value = new decimal(new int[] {0, 0, 0, 0});
             this.numFee.DecimalPlaces = 2;
             this.numFee.ThousandsSeparator = true;
-            this.numFee.Size = new System.Drawing.Size(150, 27);
-            this.numFee.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.numFee.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.numFee.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.numFee.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.numFee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numFee.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.numFee.Size = new System.Drawing.Size(160, 25);
+            this.numFee.Location = new System.Drawing.Point(160, 98);
+            this.numFee.TabIndex = 5;
             // 
             // lblDesc
             // 
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.AutoSize = true;
             this.lblDesc.Text = "Description";
-            this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Top;
-            this.lblDesc.Margin = new System.Windows.Forms.Padding(0, 12, 14, 7);
-            this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
+            this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblDesc.Location = new System.Drawing.Point(20, 142);
+            this.lblDesc.TabIndex = 6;
             // 
             // txtDesc
             // 
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.txtDesc.Multiline = true;
-            this.txtDesc.Size = new System.Drawing.Size(100, 72);
-            this.txtDesc.BackColor = System.Drawing.Color.FromArgb(42, 42, 50);
-            this.txtDesc.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
             this.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            // 
-            // buttonFlow
-            // 
-            this.buttonFlow.Controls.Add(this.btnCancel);
-            this.buttonFlow.Controls.Add(this.btnSave);
-            this.buttonFlow.Name = "buttonFlow";
-            this.buttonFlow.AutoSize = true;
-            this.buttonFlow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonFlow.WrapContents = false;
-            this.buttonFlow.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.buttonFlow.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.buttonFlow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonFlow.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Size = new System.Drawing.Size(116, 38);
-            this.btnCancel.Tag = "secondary";
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(36, 36, 43);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.FlatAppearance.BorderSize = 1;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(54, 54, 63);
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(50, 50, 59);
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(28, 28, 34);
+            this.txtDesc.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.txtDesc.Size = new System.Drawing.Size(280, 60);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Location = new System.Drawing.Point(160, 138);
+            this.txtDesc.TabIndex = 7;
             // 
             // btnSave
             // 
             this.btnSave.Name = "btnSave";
             this.btnSave.Text = "Save";
-            this.btnSave.Size = new System.Drawing.Size(116, 38);
-            this.btnSave.Tag = "primary";
-            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
+            this.btnSave.Size = new System.Drawing.Size(110, 34);
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnSave.FlatAppearance.BorderSize = 1;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(255, 94, 26);
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(255, 140, 66);
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(205, 60, 8);
-            this.btnSave.Click += this.btnSave_Click;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
+            this.btnSave.Location = new System.Drawing.Point(220, 216);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Size = new System.Drawing.Size(110, 34);
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
+            this.btnCancel.Location = new System.Drawing.Point(340, 216);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.TabIndex = 9;
             // 
             // PlanEditForm
             // 
-            this.Controls.Add(this.formLayout);
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.BackColor = System.Drawing.Color.FromArgb(24, 24, 29);
-            this.ForeColor = System.Drawing.Color.FromArgb(244, 244, 246);
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(460, 270);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Name = "PlanEditForm";
+            this.BackColor = System.Drawing.Color.White;
+            this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.Text = "Add Plan";
             this.AcceptButton = this.btnSave;
             this.CancelButton = this.btnCancel;
-            this.buttonFlow.ResumeLayout(false);
-            this.buttonFlow.PerformLayout();
-            this.formLayout.ResumeLayout(false);
-            this.formLayout.PerformLayout();
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblMonths);
+            this.Controls.Add(this.numMonths);
+            this.Controls.Add(this.lblFee);
+            this.Controls.Add(this.numFee);
+            this.Controls.Add(this.lblDesc);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel formLayout;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblMonths;
@@ -235,8 +187,7 @@ namespace FitZoneGym.Forms
         private System.Windows.Forms.NumericUpDown numFee;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.FlowLayoutPanel buttonFlow;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

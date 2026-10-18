@@ -11,7 +11,6 @@ namespace FitZoneGym.Forms
         public StaffEditForm()
         {
             InitializeComponent();
-            Theme.Apply(this, true);
             Text = "Add Staff";
         }
 
@@ -22,8 +21,6 @@ namespace FitZoneGym.Forms
             Text = "Edit Staff";
             txtUser.Text = username;
             txtUser.ReadOnly = true;
-            txtUser.BackColor = Ui.Surface2;
-            txtUser.ForeColor = Ui.Muted;
             txtName.Text = fullName;
             chkActive.Checked = active;
             lblPass.Text = "New password";

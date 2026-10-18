@@ -6,57 +6,22 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym
 {
-    /// <summary>
-    /// FITZONE "iron & fire" theme (near-black surfaces, ember-orange accent), control factories and common dialogs,
-    /// so every screen looks and behaves the same. Colours live only here - change them once, the whole app follows.
-    /// </summary>
+    /// <summary>Theme, control factories and common dialogs so every screen looks and behaves the same.</summary>
     public static class Ui
     {
-        // ---- palette ------------------------------------------------------------------------
-        public static readonly Color Bg = Color.FromArgb(14, 14, 17);          // page background
-        public static readonly Color Navy = Color.FromArgb(9, 9, 11);          // sidebar / darkest (name kept for compatibility)
-        public static readonly Color NavyLight = Color.FromArgb(32, 32, 38);   // hover
-        public static readonly Color Surface = Color.FromArgb(24, 24, 29);     // cards & dialogs
-        public static readonly Color Surface2 = Color.FromArgb(36, 36, 43);    // raised elements
-        public static readonly Color InputBg = Color.FromArgb(42, 42, 50);     // text boxes
-        public static readonly Color Accent = Color.FromArgb(255, 94, 26);     // ember orange
-        public static readonly Color AccentSoft = Color.FromArgb(255, 140, 66);
-        public static readonly Color AccentDark = Color.FromArgb(205, 60, 8);
-        public static readonly Color Gold = Color.FromArgb(255, 184, 28);
-        public static readonly Color Blue = Accent;                            // legacy alias (primary colour)
-        public static readonly Color Text = Color.FromArgb(244, 244, 246);
-        public static readonly Color Muted = Color.FromArgb(156, 156, 170);
-        public static readonly Color Green = Color.FromArgb(34, 197, 94);
-        public static readonly Color Orange = Color.FromArgb(251, 176, 36);
-        public static readonly Color Red = Color.FromArgb(244, 76, 76);
-        public static readonly Color Border = Color.FromArgb(54, 54, 63);
+        public static readonly Color Navy = Color.FromArgb(15, 35, 66);
+        public static readonly Color NavyLight = Color.FromArgb(27, 58, 102);
+        public static readonly Color Blue = Color.FromArgb(30, 111, 240);
+        public static readonly Color Bg = Color.FromArgb(243, 246, 251);
+        public static readonly Color Text = Color.FromArgb(31, 41, 55);
+        public static readonly Color Muted = Color.FromArgb(107, 114, 128);
+        public static readonly Color Green = Color.FromArgb(22, 163, 74);
+        public static readonly Color Orange = Color.FromArgb(245, 158, 11);
+        public static readonly Color Red = Color.FromArgb(220, 38, 38);
+        public static readonly Color Border = Color.FromArgb(214, 221, 232);
 
-        // ---- fonts --------------------------------------------------------------------------
         public static Font Base => new Font("Segoe UI", 9.5f);
         public static Font Bold(float size = 9.5f) => new Font("Segoe UI", size, FontStyle.Bold);
-
-        private static string _displayFamily;
-
-        /// <summary>Condensed "athletic" heading font (Bahnschrift ships with Windows 10+); falls back to Segoe UI.</summary>
-        public static string DisplayFamily
-        {
-            get
-            {
-                if (_displayFamily == null)
-                {
-                    _displayFamily = "Segoe UI";
-                    try
-                    {
-                        foreach (var f in FontFamily.Families)
-                            if (f.Name == "Bahnschrift") { _displayFamily = "Bahnschrift"; break; }
-                    }
-                    catch { }
-                }
-                return _displayFamily;
-            }
-        }
-
-        public static Font Display(float size, FontStyle style = FontStyle.Bold) => new Font(DisplayFamily, size, style);
 
         public static string Money(decimal v) => "₱" + v.ToString("N2", CultureInfo.InvariantCulture);
         public static string Date(DateTime d) => d.ToString("MMM d, yyyy", CultureInfo.InvariantCulture);
@@ -76,35 +41,39 @@ namespace FitZoneGym
             };
         }
 
-        /// <param name="kind">"primary", "secondary", "success", "danger" or "logout" (see Theme.StyleButton).</param>
-        public static Button Button(string text, string kind, EventHandler onClick, int width = 120)
+        public static Button Button(string text, Color back, EventHandler onClick, int width = 120)
         {
             var b = new Button
             {
                 Text = text,
                 Width = width,
                 Height = 34,
-                Tag = kind,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = back,
+                ForeColor = back == Color.White ? Text : Color.White,
+                Font = Bold(9.5f),
+                Cursor = Cursors.Hand,
                 Margin = new Padding(0, 0, 8, 0),
+                UseVisualStyleBackColor = false,
             };
-            Theme.StyleButton(b, kind);
+            b.FlatAppearance.BorderColor = back == Color.White ? Border : back;
             if (onClick != null) b.Click += onClick;
             return b;
         }
 
-        public static Button Primary(string text, EventHandler click, int width = 120) => Button(text, "primary", click, width);
-        public static Button Secondary(string text, EventHandler click, int width = 120) => Button(text, "secondary", click, width);
-        public static Button Success(string text, EventHandler click, int width = 120) => Button(text, "success", click, width);
-        public static Button Danger(string text, EventHandler click, int width = 120) => Button(text, "danger", click, width);
+        public static Button Primary(string text, EventHandler click, int width = 120) => Button(text, Blue, click, width);
+        public static Button Secondary(string text, EventHandler click, int width = 120) => Button(text, Color.White, click, width);
+        public static Button Success(string text, EventHandler click, int width = 120) => Button(text, Green, click, width);
+        public static Button Danger(string text, EventHandler click, int width = 120) => Button(text, Red, click, width);
 
         public static TextBox Input(int width = 220)
         {
-            return new TextBox { Width = width, Font = Base, BorderStyle = BorderStyle.FixedSingle, BackColor = InputBg, ForeColor = Text, Margin = new Padding(0, 3, 8, 3) };
+            return new TextBox { Width = width, Font = Base, BorderStyle = BorderStyle.FixedSingle, Margin = new Padding(0, 3, 8, 3) };
         }
 
         public static ComboBox Combo(int width = 220, params string[] items)
         {
-            var c = new ComboBox { Width = width, Font = Base, DropDownStyle = ComboBoxStyle.DropDownList, FlatStyle = FlatStyle.Flat, BackColor = InputBg, ForeColor = Text, Margin = new Padding(0, 3, 8, 3) };
+            var c = new ComboBox { Width = width, Font = Base, DropDownStyle = ComboBoxStyle.DropDownList, FlatStyle = FlatStyle.Flat, Margin = new Padding(0, 3, 8, 3) };
             if (items.Length > 0) { c.Items.AddRange(items); c.SelectedIndex = 0; }
             return c;
         }
@@ -120,12 +89,12 @@ namespace FitZoneGym
 
         public static NumericUpDown Number(decimal min, decimal max, decimal value, int decimals = 0, int width = 120)
         {
-            return new NumericUpDown { Minimum = min, Maximum = max, Value = value, DecimalPlaces = decimals, Width = width, Font = Base, ThousandsSeparator = true, BackColor = InputBg, ForeColor = Text, Margin = new Padding(0, 3, 8, 3) };
+            return new NumericUpDown { Minimum = min, Maximum = max, Value = value, DecimalPlaces = decimals, Width = width, Font = Base, ThousandsSeparator = true, Margin = new Padding(0, 3, 8, 3) };
         }
 
         public static Panel Card(int padding = 14)
         {
-            return new Panel { BackColor = Surface, Tag = "card", Padding = new Padding(padding), Dock = DockStyle.Fill, Margin = new Padding(0, 0, 10, 10) };
+            return new Panel { BackColor = Color.White, Padding = new Padding(padding), Dock = DockStyle.Fill, Margin = new Padding(0, 0, 10, 10) };
         }
 
         public static FlowLayoutPanel Row(params Control[] controls)
@@ -165,9 +134,6 @@ namespace FitZoneGym
         /// <summary>Applies the standard FITZONE table look to a DataGridView created in the Designer.</summary>
         public static void StyleGrid(DataGridView g)
         {
-            float k = g.DeviceDpi / 96f;
-            int pad = (int)Math.Round(8 * k);
-
             g.ReadOnly = true;
             g.AllowUserToAddRows = false;
             g.AllowUserToDeleteRows = false;
@@ -175,40 +141,23 @@ namespace FitZoneGym
             g.RowHeadersVisible = false;
             g.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             g.MultiSelect = false;
-            g.BackgroundColor = Surface;
+            g.BackgroundColor = Color.White;
             g.BorderStyle = BorderStyle.None;
             g.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            g.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            g.GridColor = Color.FromArgb(44, 44, 52);
+            g.GridColor = Color.FromArgb(230, 234, 242);
             g.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             g.EnableHeadersVisualStyles = false;
             g.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            g.ColumnHeadersHeight = (int)Math.Round(38 * k);
+            g.ColumnHeadersHeight = 34;
             g.Font = Base;
-
-            var head = g.ColumnHeadersDefaultCellStyle;
-            head.BackColor = Navy;
-            head.ForeColor = AccentSoft;
-            head.Font = Bold(9f);
-            head.SelectionBackColor = Navy;
-            head.SelectionForeColor = AccentSoft;
-            head.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            head.Padding = new Padding(pad, 0, pad, 0);
-
-            var cell = g.DefaultCellStyle;
-            cell.BackColor = Surface;
-            cell.ForeColor = Text;
-            cell.SelectionBackColor = Color.FromArgb(88, 42, 20);
-            cell.SelectionForeColor = Color.White;
-            cell.Padding = new Padding(pad, 0, pad, 0);
-
-            var alt = g.AlternatingRowsDefaultCellStyle;
-            alt.BackColor = Color.FromArgb(29, 29, 35);
-            alt.ForeColor = Text;
-            alt.SelectionBackColor = Color.FromArgb(88, 42, 20);
-            alt.SelectionForeColor = Color.White;
-
-            g.RowTemplate.Height = (int)Math.Round(34 * k);
+            g.ColumnHeadersDefaultCellStyle.BackColor = Navy;
+            g.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            g.ColumnHeadersDefaultCellStyle.Font = Bold(9f);
+            g.ColumnHeadersDefaultCellStyle.SelectionBackColor = Navy;
+            g.DefaultCellStyle.SelectionBackColor = Color.FromArgb(219, 234, 254);
+            g.DefaultCellStyle.SelectionForeColor = Text;
+            g.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(247, 249, 253);
+            g.RowTemplate.Height = 30;
             g.CellFormatting -= StatusColors;
             g.CellFormatting += StatusColors;
         }
@@ -219,18 +168,11 @@ namespace FitZoneGym
             if (e.ColumnIndex < 0 || e.RowIndex < 0 || e.Value == null) return;
             string name = g.Columns[e.ColumnIndex].Name;
             if (name != "Status" && name != "MembershipStatus" && name != "AccountStatus") return;
-            Color? c = null;
             switch (Convert.ToString(e.Value))
             {
-                case "Active": case "Paid": case "Approved": case "Completed": c = Green; break;
-                case "Frozen": case "Partially Paid": case "Pending": c = Orange; break;
-                case "Expired": case "Unpaid": case "Rejected": case "Inactive": case "Voided": c = Red; break;
-            }
-            if (c.HasValue)
-            {
-                e.CellStyle.ForeColor = c.Value;
-                e.CellStyle.SelectionForeColor = c.Value;
-                e.CellStyle.Font = Bold(9.5f);
+                case "Active": case "Paid": case "Approved": case "Completed": e.CellStyle.ForeColor = Green; break;
+                case "Frozen": case "Partially Paid": case "Pending": e.CellStyle.ForeColor = Orange; break;
+                case "Expired": case "Unpaid": case "Rejected": case "Inactive": case "Voided": e.CellStyle.ForeColor = Red; break;
             }
         }
 
@@ -265,11 +207,11 @@ namespace FitZoneGym
         }
 
         // ---- dialogs and safe execution -----------------------------------------------------
-        public static void Info(string msg, string title = "FITZONE GYM") => MessageDialog.Show(msg, title, false, "info");
-        public static void Warn(string msg, string title = "Please check") => MessageDialog.Show(msg, title, false, "warn");
-        public static void Error(string msg, string title = "Error") => MessageDialog.Show(msg, title, false, "error");
+        public static void Info(string msg, string title = "FITZONE GYM") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        public static void Warn(string msg, string title = "Please check") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        public static void Error(string msg, string title = "Error") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         public static bool Confirm(string msg, string title = "Please confirm") =>
-            MessageDialog.Show(msg, title, true, "question") == DialogResult.Yes;
+            MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
 
         /// <summary>Runs an action and converts validation, permission and database errors into friendly messages. Returns true on success.</summary>
         public static bool Run(Action action)
@@ -285,7 +227,26 @@ namespace FitZoneGym
             return false;
         }
 
-        public static string Prompt(string title, string message, bool required = true) => MessageDialog.Prompt(title, message, required);
+        public static string Prompt(string title, string message, bool required = true)
+        {
+            using var f = new Form
+            {
+                Text = title, StartPosition = FormStartPosition.CenterParent, FormBorderStyle = FormBorderStyle.FixedDialog,
+                MaximizeBox = false, MinimizeBox = false, ClientSize = new Size(420, 170), Font = Base, BackColor = Color.White,
+            };
+            var lbl = new Label { Text = message, Left = 16, Top = 14, Width = 388, Height = 36 };
+            var txt = new TextBox { Left = 16, Top = 54, Width = 388, Multiline = true, Height = 56, BorderStyle = BorderStyle.FixedSingle };
+            var ok = Primary("OK", null, 90); ok.Left = 224; ok.Top = 122; ok.DialogResult = DialogResult.OK;
+            var cancel = Secondary("Cancel", null, 90); cancel.Left = 320; cancel.Top = 122; cancel.DialogResult = DialogResult.Cancel;
+            f.Controls.AddRange(new Control[] { lbl, txt, ok, cancel });
+            f.AcceptButton = ok; f.CancelButton = cancel;
+            while (true)
+            {
+                if (f.ShowDialog() != DialogResult.OK) return null;
+                if (!required || txt.Text.Trim().Length > 0) return txt.Text.Trim();
+                Warn("This field is required.");
+            }
+        }
 
         // ---- export -------------------------------------------------------------------------
         public static void ExportCsv(DataGridView g, string defaultName)

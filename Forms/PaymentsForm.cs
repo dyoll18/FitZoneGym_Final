@@ -78,7 +78,7 @@ namespace FitZoneGym.Forms
             if (Current == null) return;
             decimal after = Balance - numAmount.Value;
             lblAfter.Text = after < 0 ? "Exceeds balance!" : Ui.Money(after);
-            lblAfter.ForeColor = after < 0 ? Ui.Red : Ui.Accent;
+            lblAfter.ForeColor = after < 0 ? Ui.Red : Ui.Blue;
         }
 
         private void btnPay_Click(object sender, EventArgs e)
