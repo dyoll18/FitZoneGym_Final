@@ -48,3 +48,8 @@ C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Deb
 C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.StaffForm.resources
 C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.MemberEditForm.resources
 C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Properties.Resources.resources
+C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.LogoutDialog.resources
+C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.PaymentsForm.resources
+C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.PlanEditForm.resources
+C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.PlansForm.resources
+C:\Users\Administrator\Downloads\FitZoneGym_Final(2)\FitZoneGym_Designer\obj\Debug\net8.0-windows\FitZoneGym.Forms.RegistrationForm.resources

@@ -43,6 +43,7 @@ namespace FitZoneGym.Forms
             dgvActivity = new DataGridView();
             lblActivityTitle = new Label();
             contentPanel.SuspendLayout();
+            headerPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             cardsLayout.SuspendLayout();
             pnlTotal.SuspendLayout();
@@ -59,9 +60,15 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // headerPanel
+            // 
+            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
+            titleLabel.Size = new Size(750, 48);
             titleLabel.Text = "Dashboard";
             // 
             // mainLayout
@@ -371,8 +378,10 @@ namespace FitZoneGym.Forms
             ClientSize = new Size(1280, 760);
             Name = "DashboardForm";
             PageTitle = "Dashboard";
-            Text = "FITZONE GYM - Dashboard";
+            Text = "GYMORA - Dashboard";
             contentPanel.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
             mainLayout.ResumeLayout(false);
             cardsLayout.ResumeLayout(false);
             pnlTotal.ResumeLayout(false);

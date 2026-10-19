@@ -75,6 +75,7 @@ namespace FitZoneGym.Forms
             // lblLoginTitle
             // 
             lblLoginTitle.AutoSize = true;
+            lblLoginTitle.BackColor = Color.FromArgb(255, 128, 0);
             lblLoginTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblLoginTitle.ForeColor = Color.White;
             lblLoginTitle.Location = new Point(378, 42);
@@ -108,12 +109,15 @@ namespace FitZoneGym.Forms
             // txtUser
             // 
             txtUser.BackColor = SystemColors.WindowFrame;
-            txtUser.BorderStyle = BorderStyle.FixedSingle;
-            txtUser.Font = new Font("Segoe UI", 9.5F);
+            txtUser.Font = new Font("Arial Narrow", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUser.ForeColor = Color.White;
             txtUser.Location = new Point(378, 164);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(390, 33);
+            txtUser.RightToLeft = RightToLeft.Yes;
+            txtUser.Size = new Size(406, 30);
             txtUser.TabIndex = 4;
+            txtUser.TextAlign = HorizontalAlignment.Right;
+            txtUser.TextChanged += txtUser_TextChanged;
             // 
             // lblPass
             // 
@@ -129,11 +133,11 @@ namespace FitZoneGym.Forms
             // txtPass
             // 
             txtPass.BackColor = SystemColors.WindowFrame;
-            txtPass.BorderStyle = BorderStyle.FixedSingle;
             txtPass.Font = new Font("Segoe UI", 9.5F);
-            txtPass.Location = new Point(378, 228);
+            txtPass.ForeColor = Color.White;
+            txtPass.Location = new Point(378, 229);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(300, 33);
+            txtPass.Size = new Size(316, 33);
             txtPass.TabIndex = 6;
             txtPass.UseSystemPasswordChar = true;
             // 
@@ -142,7 +146,7 @@ namespace FitZoneGym.Forms
             chkShow.AutoSize = true;
             chkShow.Font = new Font("Segoe UI", 9.5F);
             chkShow.ForeColor = Color.White;
-            chkShow.Location = new Point(684, 230);
+            chkShow.Location = new Point(700, 229);
             chkShow.Name = "chkShow";
             chkShow.Size = new Size(84, 29);
             chkShow.TabIndex = 7;
@@ -166,7 +170,7 @@ namespace FitZoneGym.Forms
             lblMessage.ForeColor = Color.FromArgb(220, 38, 38);
             lblMessage.Location = new Point(378, 296);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(300, 36);
+            lblMessage.Size = new Size(316, 36);
             lblMessage.TabIndex = 9;
             // 
             // btnLogin
@@ -180,7 +184,7 @@ namespace FitZoneGym.Forms
             btnLogin.Location = new Point(378, 332);
             btnLogin.Margin = new Padding(0, 0, 8, 0);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(390, 40);
+            btnLogin.Size = new Size(406, 40);
             btnLogin.TabIndex = 10;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -197,7 +201,7 @@ namespace FitZoneGym.Forms
             btnCancel.Location = new Point(378, 386);
             btnCancel.Margin = new Padding(0, 0, 8, 0);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(390, 40);
+            btnCancel.Size = new Size(406, 40);
             btnCancel.TabIndex = 11;
             btnCancel.Text = "Exit";
             btnCancel.UseVisualStyleBackColor = false;
@@ -210,7 +214,7 @@ namespace FitZoneGym.Forms
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Black;
             CancelButton = btnCancel;
-            ClientSize = new Size(820, 470);
+            ClientSize = new Size(812, 470);
             Controls.Add(pnlBrand);
             Controls.Add(lblLoginTitle);
             Controls.Add(lblSubtitle);
@@ -223,12 +227,12 @@ namespace FitZoneGym.Forms
             Controls.Add(lblMessage);
             Controls.Add(btnLogin);
             Controls.Add(btnCancel);
-            Font = new Font("Segoe UI", 9.5F);
+            Font = new Font("Showcard Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FITZONE GYM - Login";
+            Text = "GYMMORA - Login";
             Load += LoginForm_Load;
             pnlBrand.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

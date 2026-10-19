@@ -101,5 +101,10 @@ namespace FitZoneGym.Forms
             });
             if (saved) { DialogResult = DialogResult.OK; Close(); }
         }
+
+        private void MemberEditForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

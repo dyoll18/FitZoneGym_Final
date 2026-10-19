@@ -31,6 +31,7 @@ namespace FitZoneGym.Forms
             summaryPanel = new Panel();
             lblSummary = new Label();
             contentPanel.SuspendLayout();
+            headerPanel.SuspendLayout();
             mainLayout.SuspendLayout();
             toolbarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReport).BeginInit();
@@ -40,9 +41,15 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // headerPanel
+            // 
+            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
+            titleLabel.Size = new Size(772, 48);
             titleLabel.Text = "Reports";
             titleLabel.Click += titleLabel_Click;
             // 
@@ -117,7 +124,7 @@ namespace FitZoneGym.Forms
             // 
             dtpFrom.Font = new Font("Segoe UI", 9.5F);
             dtpFrom.Format = DateTimePickerFormat.Short;
-            dtpFrom.Location = new Point(260, 20);
+            dtpFrom.Location = new Point(264, 20);
             dtpFrom.Name = "dtpFrom";
             dtpFrom.Size = new Size(140, 33);
             dtpFrom.TabIndex = 3;
@@ -125,6 +132,7 @@ namespace FitZoneGym.Forms
             // lblTo
             // 
             lblTo.AutoSize = true;
+            lblTo.BackColor = Color.Transparent;
             lblTo.Font = new Font("Segoe UI", 8.5F);
             lblTo.ForeColor = Color.FromArgb(107, 114, 128);
             lblTo.Location = new Point(410, 0);
@@ -137,7 +145,7 @@ namespace FitZoneGym.Forms
             // 
             dtpTo.Font = new Font("Segoe UI", 9.5F);
             dtpTo.Format = DateTimePickerFormat.Short;
-            dtpTo.Location = new Point(410, 20);
+            dtpTo.Location = new Point(410, 15);
             dtpTo.Name = "dtpTo";
             dtpTo.Size = new Size(140, 33);
             dtpTo.TabIndex = 5;
@@ -150,10 +158,10 @@ namespace FitZoneGym.Forms
             btnGenerate.FlatStyle = FlatStyle.Flat;
             btnGenerate.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnGenerate.ForeColor = Color.White;
-            btnGenerate.Location = new Point(560, 19);
+            btnGenerate.Location = new Point(563, 5);
             btnGenerate.Margin = new Padding(0, 0, 8, 0);
             btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(150, 27);
+            btnGenerate.Size = new Size(135, 40);
             btnGenerate.TabIndex = 6;
             btnGenerate.Text = "Generate Report";
             btnGenerate.UseVisualStyleBackColor = false;
@@ -196,8 +204,11 @@ namespace FitZoneGym.Forms
             ClientSize = new Size(1280, 760);
             Name = "ReportsForm";
             PageTitle = "Reports";
-            Text = "FITZONE GYM - Reports";
+            Text = "GYMORA - Reports";
+            Load += ReportsForm_Load;
             contentPanel.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
             mainLayout.ResumeLayout(false);
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();

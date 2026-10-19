@@ -18,123 +18,151 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.mainLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvPlans = new System.Windows.Forms.DataGridView();
-            this.footerPanel = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnToggle = new System.Windows.Forms.Button();
-            this.lblNote = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.mainLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlans)).BeginInit();
-            this.footerPanel.SuspendLayout();
-            this.SuspendLayout();
+            mainLayout = new TableLayoutPanel();
+            dgvPlans = new DataGridView();
+            footerPanel = new Panel();
+            btnEdit = new Button();
+            btnToggle = new Button();
+            lblNote = new Label();
+            btnAdd = new Button();
+            contentPanel.SuspendLayout();
+            headerPanel.SuspendLayout();
+            mainLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPlans).BeginInit();
+            footerPanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // headerPanel
+            // 
+            headerPanel.Size = new Size(1050, 56);
+            // 
+            // titleLabel
+            // 
+            titleLabel.Size = new Size(750, 48);
+            titleLabel.Text = "Membership Plans";
             // 
             // mainLayout
             // 
-            this.mainLayout.Name = "mainLayout";
-            this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainLayout.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.mainLayout.ColumnCount = 1;
-            this.mainLayout.RowCount = 2;
-            this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.mainLayout.Controls.Add(this.dgvPlans, 0, 0);
-            this.mainLayout.Controls.Add(this.footerPanel, 0, 1);
-            this.mainLayout.TabIndex = 0;
+            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.ColumnCount = 1;
+            mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            mainLayout.Controls.Add(dgvPlans, 0, 0);
+            mainLayout.Controls.Add(footerPanel, 0, 1);
+            mainLayout.Dock = DockStyle.Fill;
+            mainLayout.Location = new Point(16, 16);
+            mainLayout.Name = "mainLayout";
+            mainLayout.RowCount = 2;
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            mainLayout.Size = new Size(1018, 638);
+            mainLayout.TabIndex = 0;
             // 
             // dgvPlans
             // 
-            this.dgvPlans.Name = "dgvPlans";
-            this.dgvPlans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPlans.TabIndex = 0;
-            this.dgvPlans.SelectionChanged += new System.EventHandler(this.dgvPlans_SelectionChanged);
-            this.dgvPlans.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlans_CellDoubleClick);
+            dgvPlans.ColumnHeadersHeight = 34;
+            dgvPlans.Dock = DockStyle.Fill;
+            dgvPlans.Location = new Point(3, 3);
+            dgvPlans.Name = "dgvPlans";
+            dgvPlans.RowHeadersWidth = 62;
+            dgvPlans.Size = new Size(1012, 582);
+            dgvPlans.TabIndex = 0;
+            dgvPlans.CellDoubleClick += dgvPlans_CellDoubleClick;
+            dgvPlans.SelectionChanged += dgvPlans_SelectionChanged;
             // 
             // footerPanel
             // 
-            this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(243, 246, 251);
-            this.footerPanel.Controls.Add(this.btnEdit);
-            this.footerPanel.Controls.Add(this.btnToggle);
-            this.footerPanel.Controls.Add(this.lblNote);
-            this.footerPanel.TabIndex = 1;
+            footerPanel.BackColor = Color.FromArgb(243, 246, 251);
+            footerPanel.Controls.Add(btnEdit);
+            footerPanel.Controls.Add(btnToggle);
+            footerPanel.Controls.Add(lblNote);
+            footerPanel.Dock = DockStyle.Fill;
+            footerPanel.Location = new Point(3, 591);
+            footerPanel.Name = "footerPanel";
+            footerPanel.Size = new Size(1012, 44);
+            footerPanel.TabIndex = 1;
             // 
             // btnEdit
             // 
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 34);
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.Location = new System.Drawing.Point(0, 8);
-            this.btnEdit.TabIndex = 0;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            btnEdit.BackColor = Color.FromArgb(30, 111, 240);
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Location = new Point(0, 8);
+            btnEdit.Margin = new Padding(0, 0, 8, 0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(100, 34);
+            btnEdit.TabIndex = 0;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnToggle
             // 
-            this.btnToggle.Name = "btnToggle";
-            this.btnToggle.Text = "Deactivate";
-            this.btnToggle.Size = new System.Drawing.Size(120, 34);
-            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToggle.BackColor = System.Drawing.Color.White;
-            this.btnToggle.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
-            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnToggle.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnToggle.UseVisualStyleBackColor = false;
-            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(214, 221, 232);
-            this.btnToggle.Location = new System.Drawing.Point(110, 8);
-            this.btnToggle.TabIndex = 1;
-            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);
+            btnToggle.BackColor = Color.White;
+            btnToggle.Cursor = Cursors.Hand;
+            btnToggle.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
+            btnToggle.FlatStyle = FlatStyle.Flat;
+            btnToggle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnToggle.ForeColor = Color.FromArgb(31, 41, 55);
+            btnToggle.Location = new Point(110, 8);
+            btnToggle.Margin = new Padding(0, 0, 8, 0);
+            btnToggle.Name = "btnToggle";
+            btnToggle.Size = new Size(120, 34);
+            btnToggle.TabIndex = 1;
+            btnToggle.Text = "Deactivate";
+            btnToggle.UseVisualStyleBackColor = false;
+            btnToggle.Click += btnToggle_Click;
             // 
             // lblNote
             // 
-            this.lblNote.Name = "lblNote";
-            this.lblNote.AutoSize = true;
-            this.lblNote.Text = "Plans used by existing memberships are deactivated rather than deleted, so history stays intact.";
-            this.lblNote.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblNote.Font = new System.Drawing.Font("Segoe UI", 9.0F);
-            this.lblNote.Location = new System.Drawing.Point(250, 16);
-            this.lblNote.TabIndex = 2;
+            lblNote.AutoSize = true;
+            lblNote.Font = new Font("Segoe UI", 9F);
+            lblNote.ForeColor = Color.FromArgb(107, 114, 128);
+            lblNote.Location = new Point(250, 16);
+            lblNote.Name = "lblNote";
+            lblNote.Size = new Size(763, 25);
+            lblNote.TabIndex = 2;
+            lblNote.Text = "Plans used by existing memberships are deactivated rather than deleted, so history stays intact.";
             // 
             // btnAdd
             // 
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Text = "+ Add Plan";
-            this.btnAdd.Size = new System.Drawing.Size(120, 34);
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            btnAdd.BackColor = Color.FromArgb(30, 111, 240);
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(0, 4);
+            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(120, 34);
+            btnAdd.TabIndex = 1;
+            btnAdd.Text = "+ Add Plan";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // PlansForm
             // 
-            this.PageTitle = "Membership Plans";
-            this.ClientSize = new System.Drawing.Size(1280, 760);
-            this.contentPanel.Controls.Add(this.mainLayout);
-            this.actionsFlow.Controls.Add(this.btnAdd);
-            this.footerPanel.ResumeLayout(false);
-            this.footerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlans)).EndInit();
-            this.mainLayout.ResumeLayout(false);
-            this.mainLayout.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "PlansForm";
+            PageTitle = "Membership Plans";
+            Text = "GYMORA - Membership Plans";
+            contentPanel.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
+            mainLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvPlans).EndInit();
+            footerPanel.ResumeLayout(false);
+            footerPanel.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

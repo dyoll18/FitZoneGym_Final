@@ -90,5 +90,10 @@ namespace FitZoneGym.Forms
         {
 
         }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

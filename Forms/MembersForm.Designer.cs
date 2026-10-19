@@ -52,7 +52,7 @@ namespace FitZoneGym.Forms
             // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(772, 48);
+            titleLabel.Size = new Size(816, 48);
             titleLabel.Text = "Members";
             titleLabel.Click += titleLabel_Click;
             // 
@@ -231,7 +231,7 @@ namespace FitZoneGym.Forms
             btnAdd.Location = new Point(850, 10);
             btnAdd.Margin = new Padding(0, 0, 8, 0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(168, 36);
+            btnAdd.Size = new Size(182, 36);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Member";
             btnAdd.UseVisualStyleBackColor = false;
@@ -243,7 +243,7 @@ namespace FitZoneGym.Forms
             ClientSize = new Size(1280, 760);
             Name = "MembersForm";
             PageTitle = "Members";
-            Text = "FITZONE GYM - Members";
+            Text = "GYMORA - Members";
             contentPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();

@@ -55,5 +55,15 @@ namespace FitZoneGym.Forms
             using (f)
                 if (f.ShowDialog(this) == DialogResult.OK) LoadStaff();
         }
+
+        private void headerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

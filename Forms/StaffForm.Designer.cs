@@ -18,227 +18,267 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            this.tabs = new System.Windows.Forms.TabControl();
-            this.tabAccounts = new System.Windows.Forms.TabPage();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
-            this.pnlStaffBottom = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.tabPermissions = new System.Windows.Forms.TabPage();
-            this.clbPerms = new System.Windows.Forms.CheckedListBox();
-            this.pnlPermBottom = new System.Windows.Forms.Panel();
-            this.btnSavePerms = new System.Windows.Forms.Button();
-            this.pnlPermTop = new System.Windows.Forms.Panel();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.cboRole = new System.Windows.Forms.ComboBox();
-            this.lblPermNote = new System.Windows.Forms.Label();
-            this.tabLog = new System.Windows.Forms.TabPage();
-            this.dgvLog = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.tabs.SuspendLayout();
-            this.tabAccounts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
-            this.pnlStaffBottom.SuspendLayout();
-            this.tabPermissions.SuspendLayout();
-            this.pnlPermBottom.SuspendLayout();
-            this.pnlPermTop.SuspendLayout();
-            this.tabLog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
-            this.SuspendLayout();
+            tabs = new TabControl();
+            tabAccounts = new TabPage();
+            dgvStaff = new DataGridView();
+            pnlStaffBottom = new Panel();
+            btnEdit = new Button();
+            tabPermissions = new TabPage();
+            clbPerms = new CheckedListBox();
+            pnlPermBottom = new Panel();
+            btnSavePerms = new Button();
+            pnlPermTop = new Panel();
+            lblRole = new Label();
+            cboRole = new ComboBox();
+            lblPermNote = new Label();
+            tabLog = new TabPage();
+            dgvLog = new DataGridView();
+            btnAdd = new Button();
+            contentPanel.SuspendLayout();
+            headerPanel.SuspendLayout();
+            tabs.SuspendLayout();
+            tabAccounts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvStaff).BeginInit();
+            pnlStaffBottom.SuspendLayout();
+            tabPermissions.SuspendLayout();
+            pnlPermBottom.SuspendLayout();
+            pnlPermTop.SuspendLayout();
+            tabLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLog).BeginInit();
+            SuspendLayout();
+            // 
+            // contentPanel
+            // 
+            contentPanel.Controls.Add(tabs);
+            contentPanel.Size = new Size(1050, 670);
+            // 
+            // headerPanel
+            // 
+            headerPanel.Size = new Size(1050, 56);
+            headerPanel.Paint += headerPanel_Paint;
+            // 
+            // titleLabel
+            // 
+            titleLabel.Size = new Size(794, 48);
+            titleLabel.Text = "Users & Staff";
             // 
             // tabs
             // 
-            this.tabs.Name = "tabs";
-            this.tabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabs.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.tabs.TabPages.Add(this.tabAccounts);
-            this.tabs.TabIndex = 0;
+            tabs.Controls.Add(tabAccounts);
+            tabs.Dock = DockStyle.Fill;
+            tabs.Font = new Font("Segoe UI", 9.5F);
+            tabs.Location = new Point(16, 16);
+            tabs.Name = "tabs";
+            tabs.SelectedIndex = 0;
+            tabs.Size = new Size(1018, 638);
+            tabs.TabIndex = 0;
             // 
             // tabAccounts
             // 
-            this.tabAccounts.Name = "tabAccounts";
-            this.tabAccounts.Text = "Staff Accounts";
-            this.tabAccounts.BackColor = System.Drawing.Color.White;
-            this.tabAccounts.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.tabAccounts.UseVisualStyleBackColor = false;
-            this.tabAccounts.Controls.Add(this.dgvStaff);
-            this.tabAccounts.Controls.Add(this.pnlStaffBottom);
-            this.tabAccounts.TabIndex = 0;
+            tabAccounts.BackColor = Color.White;
+            tabAccounts.Controls.Add(dgvStaff);
+            tabAccounts.Controls.Add(pnlStaffBottom);
+            tabAccounts.Location = new Point(4, 34);
+            tabAccounts.Name = "tabAccounts";
+            tabAccounts.Padding = new Padding(10);
+            tabAccounts.Size = new Size(1010, 600);
+            tabAccounts.TabIndex = 0;
+            tabAccounts.Text = "Staff Accounts";
             // 
             // dgvStaff
             // 
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvStaff.TabIndex = 0;
-            this.dgvStaff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellDoubleClick);
+            dgvStaff.ColumnHeadersHeight = 34;
+            dgvStaff.Dock = DockStyle.Fill;
+            dgvStaff.Location = new Point(10, 10);
+            dgvStaff.Name = "dgvStaff";
+            dgvStaff.RowHeadersWidth = 62;
+            dgvStaff.Size = new Size(990, 532);
+            dgvStaff.TabIndex = 0;
+            dgvStaff.CellContentClick += dgvStaff_CellContentClick;
+            dgvStaff.CellDoubleClick += dgvStaff_CellDoubleClick;
             // 
             // pnlStaffBottom
             // 
-            this.pnlStaffBottom.Name = "pnlStaffBottom";
-            this.pnlStaffBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlStaffBottom.Height = 48;
-            this.pnlStaffBottom.BackColor = System.Drawing.Color.White;
-            this.pnlStaffBottom.Controls.Add(this.btnEdit);
-            this.pnlStaffBottom.TabIndex = 1;
+            pnlStaffBottom.BackColor = Color.White;
+            pnlStaffBottom.Controls.Add(btnEdit);
+            pnlStaffBottom.Dock = DockStyle.Bottom;
+            pnlStaffBottom.Location = new Point(10, 542);
+            pnlStaffBottom.Name = "pnlStaffBottom";
+            pnlStaffBottom.Size = new Size(990, 48);
+            pnlStaffBottom.TabIndex = 1;
             // 
             // btnEdit
             // 
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Text = "Edit / Reset Password";
-            this.btnEdit.Size = new System.Drawing.Size(180, 34);
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnEdit.Location = new System.Drawing.Point(0, 8);
-            this.btnEdit.TabIndex = 0;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            btnEdit.BackColor = Color.FromArgb(30, 111, 240);
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Location = new Point(0, 8);
+            btnEdit.Margin = new Padding(0, 0, 8, 0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(180, 34);
+            btnEdit.TabIndex = 0;
+            btnEdit.Text = "Edit / Reset Password";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // tabPermissions
             // 
-            this.tabPermissions.Name = "tabPermissions";
-            this.tabPermissions.Text = "Roles & Permissions";
-            this.tabPermissions.BackColor = System.Drawing.Color.White;
-            this.tabPermissions.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.tabPermissions.UseVisualStyleBackColor = false;
-            this.tabPermissions.Controls.Add(this.clbPerms);
-            this.tabPermissions.Controls.Add(this.pnlPermBottom);
-            this.tabPermissions.Controls.Add(this.pnlPermTop);
-            this.tabPermissions.TabIndex = 1;
+            tabPermissions.BackColor = Color.White;
+            tabPermissions.Controls.Add(clbPerms);
+            tabPermissions.Controls.Add(pnlPermBottom);
+            tabPermissions.Controls.Add(pnlPermTop);
+            tabPermissions.Location = new Point(0, 0);
+            tabPermissions.Name = "tabPermissions";
+            tabPermissions.Padding = new Padding(10);
+            tabPermissions.Size = new Size(200, 100);
+            tabPermissions.TabIndex = 1;
+            tabPermissions.Text = "Roles & Permissions";
             // 
             // clbPerms
             // 
-            this.clbPerms.Name = "clbPerms";
-            this.clbPerms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clbPerms.CheckOnClick = true;
-            this.clbPerms.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbPerms.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.clbPerms.FormattingEnabled = true;
-            this.clbPerms.TabIndex = 0;
+            clbPerms.BorderStyle = BorderStyle.None;
+            clbPerms.CheckOnClick = true;
+            clbPerms.Dock = DockStyle.Fill;
+            clbPerms.Font = new Font("Segoe UI", 9.5F);
+            clbPerms.FormattingEnabled = true;
+            clbPerms.Location = new Point(10, 66);
+            clbPerms.Name = "clbPerms";
+            clbPerms.Size = new Size(180, -24);
+            clbPerms.TabIndex = 0;
             // 
             // pnlPermBottom
             // 
-            this.pnlPermBottom.Name = "pnlPermBottom";
-            this.pnlPermBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlPermBottom.Height = 48;
-            this.pnlPermBottom.BackColor = System.Drawing.Color.White;
-            this.pnlPermBottom.Controls.Add(this.btnSavePerms);
-            this.pnlPermBottom.TabIndex = 1;
+            pnlPermBottom.BackColor = Color.White;
+            pnlPermBottom.Controls.Add(btnSavePerms);
+            pnlPermBottom.Dock = DockStyle.Bottom;
+            pnlPermBottom.Location = new Point(10, 42);
+            pnlPermBottom.Name = "pnlPermBottom";
+            pnlPermBottom.Size = new Size(180, 48);
+            pnlPermBottom.TabIndex = 1;
             // 
             // btnSavePerms
             // 
-            this.btnSavePerms.Name = "btnSavePerms";
-            this.btnSavePerms.Text = "Save Permissions";
-            this.btnSavePerms.Size = new System.Drawing.Size(160, 34);
-            this.btnSavePerms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavePerms.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnSavePerms.ForeColor = System.Drawing.Color.White;
-            this.btnSavePerms.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnSavePerms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSavePerms.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnSavePerms.UseVisualStyleBackColor = false;
-            this.btnSavePerms.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnSavePerms.Location = new System.Drawing.Point(0, 8);
-            this.btnSavePerms.TabIndex = 0;
-            
+            btnSavePerms.BackColor = Color.FromArgb(30, 111, 240);
+            btnSavePerms.Cursor = Cursors.Hand;
+            btnSavePerms.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnSavePerms.FlatStyle = FlatStyle.Flat;
+            btnSavePerms.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnSavePerms.ForeColor = Color.White;
+            btnSavePerms.Location = new Point(0, 8);
+            btnSavePerms.Margin = new Padding(0, 0, 8, 0);
+            btnSavePerms.Name = "btnSavePerms";
+            btnSavePerms.Size = new Size(160, 34);
+            btnSavePerms.TabIndex = 0;
+            btnSavePerms.Text = "Save Permissions";
+            btnSavePerms.UseVisualStyleBackColor = false;
             // 
             // pnlPermTop
             // 
-            this.pnlPermTop.Name = "pnlPermTop";
-            this.pnlPermTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPermTop.Height = 56;
-            this.pnlPermTop.BackColor = System.Drawing.Color.White;
-            this.pnlPermTop.Controls.Add(this.lblRole);
-            this.pnlPermTop.Controls.Add(this.cboRole);
-            this.pnlPermTop.Controls.Add(this.lblPermNote);
-            this.pnlPermTop.TabIndex = 2;
+            pnlPermTop.BackColor = Color.White;
+            pnlPermTop.Controls.Add(lblRole);
+            pnlPermTop.Controls.Add(cboRole);
+            pnlPermTop.Controls.Add(lblPermNote);
+            pnlPermTop.Dock = DockStyle.Top;
+            pnlPermTop.Location = new Point(10, 10);
+            pnlPermTop.Name = "pnlPermTop";
+            pnlPermTop.Size = new Size(180, 56);
+            pnlPermTop.TabIndex = 2;
             // 
             // lblRole
             // 
-            this.lblRole.Name = "lblRole";
-            this.lblRole.AutoSize = true;
-            this.lblRole.Text = "Role";
-            this.lblRole.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblRole.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblRole.Location = new System.Drawing.Point(0, 0);
-            this.lblRole.TabIndex = 0;
+            lblRole.AutoSize = true;
+            lblRole.Font = new Font("Segoe UI", 8.5F);
+            lblRole.ForeColor = Color.FromArgb(107, 114, 128);
+            lblRole.Location = new Point(0, 0);
+            lblRole.Name = "lblRole";
+            lblRole.Size = new Size(43, 23);
+            lblRole.TabIndex = 0;
+            lblRole.Text = "Role";
             // 
             // cboRole
             // 
-            this.cboRole.Name = "cboRole";
-            this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboRole.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.cboRole.Size = new System.Drawing.Size(180, 25);
-            this.cboRole.Location = new System.Drawing.Point(0, 20);
-            this.cboRole.Items.AddRange(new object[] { "Staff", "Cashier" });
-            this.cboRole.TabIndex = 1;
-            
+            cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRole.FlatStyle = FlatStyle.Flat;
+            cboRole.Font = new Font("Segoe UI", 9.5F);
+            cboRole.Items.AddRange(new object[] { "Staff", "Cashier" });
+            cboRole.Location = new Point(0, 20);
+            cboRole.Name = "cboRole";
+            cboRole.Size = new Size(180, 33);
+            cboRole.TabIndex = 1;
+            // 
             // lblPermNote
             // 
-            this.lblPermNote.Name = "lblPermNote";
-            this.lblPermNote.AutoSize = true;
-            this.lblPermNote.Text = "Administrators always have every permission. Managing staff, settings, backup and restore are administrator-only.";
-            this.lblPermNote.ForeColor = System.Drawing.Color.FromArgb(107, 114, 128);
-            this.lblPermNote.Font = new System.Drawing.Font("Segoe UI", 9.0F);
-            this.lblPermNote.Location = new System.Drawing.Point(200, 26);
-            this.lblPermNote.TabIndex = 2;
+            lblPermNote.AutoSize = true;
+            lblPermNote.Font = new Font("Segoe UI", 9F);
+            lblPermNote.ForeColor = Color.FromArgb(107, 114, 128);
+            lblPermNote.Location = new Point(200, 26);
+            lblPermNote.Name = "lblPermNote";
+            lblPermNote.Size = new Size(914, 25);
+            lblPermNote.TabIndex = 2;
+            lblPermNote.Text = "Administrators always have every permission. Managing staff, settings, backup and restore are administrator-only.";
             // 
             // tabLog
             // 
-            this.tabLog.Name = "tabLog";
-            this.tabLog.Text = "Activity Logs";
-            this.tabLog.BackColor = System.Drawing.Color.White;
-            this.tabLog.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.tabLog.UseVisualStyleBackColor = false;
-            this.tabLog.Controls.Add(this.dgvLog);
-            this.tabLog.TabIndex = 2;
+            tabLog.BackColor = Color.White;
+            tabLog.Controls.Add(dgvLog);
+            tabLog.Location = new Point(0, 0);
+            tabLog.Name = "tabLog";
+            tabLog.Padding = new Padding(10);
+            tabLog.Size = new Size(200, 100);
+            tabLog.TabIndex = 2;
+            tabLog.Text = "Activity Logs";
             // 
             // dgvLog
             // 
-            this.dgvLog.Name = "dgvLog";
-            this.dgvLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLog.TabIndex = 0;
+            dgvLog.ColumnHeadersHeight = 34;
+            dgvLog.Dock = DockStyle.Fill;
+            dgvLog.Location = new Point(10, 10);
+            dgvLog.Name = "dgvLog";
+            dgvLog.RowHeadersWidth = 62;
+            dgvLog.Size = new Size(180, 80);
+            dgvLog.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Text = "+ Add Staff";
-            this.btnAdd.Size = new System.Drawing.Size(120, 34);
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(30, 111, 240);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            btnAdd.BackColor = Color.FromArgb(30, 111, 240);
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(0, 4);
+            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(120, 34);
+            btnAdd.TabIndex = 1;
+            btnAdd.Text = "+ Add Staff";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // StaffForm
             // 
-            this.PageTitle = "Users & Staff";
-            this.ClientSize = new System.Drawing.Size(1280, 760);
-            this.contentPanel.Controls.Add(this.tabs);
-            this.actionsFlow.Controls.Add(this.btnAdd);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
-            this.tabLog.ResumeLayout(false);
-            this.pnlPermTop.ResumeLayout(false);
-            this.pnlPermTop.PerformLayout();
-            this.pnlPermBottom.ResumeLayout(false);
-            this.pnlPermBottom.PerformLayout();
-            this.tabPermissions.ResumeLayout(false);
-            this.pnlStaffBottom.ResumeLayout(false);
-            this.pnlStaffBottom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
-            this.tabAccounts.ResumeLayout(false);
-            this.tabs.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            ClientSize = new Size(1280, 760);
+            Name = "StaffForm";
+            PageTitle = "Users & Staff";
+            Text = "GYMORA - Users & Staff";
+            contentPanel.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
+            tabs.ResumeLayout(false);
+            tabAccounts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvStaff).EndInit();
+            pnlStaffBottom.ResumeLayout(false);
+            tabPermissions.ResumeLayout(false);
+            pnlPermBottom.ResumeLayout(false);
+            pnlPermTop.ResumeLayout(false);
+            pnlPermTop.PerformLayout();
+            tabLog.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvLog).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
