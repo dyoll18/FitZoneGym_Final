@@ -110,12 +110,12 @@ namespace FitZoneGym.Forms
             // txtUser
             // 
             txtUser.BackColor = SystemColors.WindowFrame;
-            txtUser.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUser.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUser.ForeColor = Color.White;
             txtUser.Location = new Point(498, 202);
             txtUser.Name = "txtUser";
             txtUser.RightToLeft = RightToLeft.No;
-            txtUser.Size = new Size(507, 39);
+            txtUser.Size = new Size(507, 34);
             txtUser.TabIndex = 4;
             txtUser.TextChanged += txtUser_TextChanged;
             // 
@@ -133,11 +133,11 @@ namespace FitZoneGym.Forms
             // txtPass
             // 
             txtPass.BackColor = SystemColors.WindowFrame;
-            txtPass.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPass.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPass.ForeColor = Color.White;
             txtPass.Location = new Point(498, 280);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(403, 39);
+            txtPass.Size = new Size(403, 34);
             txtPass.TabIndex = 6;
             txtPass.UseSystemPasswordChar = true;
             // 
@@ -146,7 +146,7 @@ namespace FitZoneGym.Forms
             chkShow.AutoSize = true;
             chkShow.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkShow.ForeColor = Color.White;
-            chkShow.Location = new Point(919, 290);
+            chkShow.Location = new Point(919, 285);
             chkShow.Name = "chkShow";
             chkShow.Size = new Size(86, 32);
             chkShow.TabIndex = 7;
@@ -170,7 +170,7 @@ namespace FitZoneGym.Forms
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
             btnLogin.FlatStyle = FlatStyle.Popup;
-            btnLogin.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(498, 412);
             btnLogin.Margin = new Padding(0, 0, 8, 0);
@@ -187,7 +187,7 @@ namespace FitZoneGym.Forms
             btnCancel.Cursor = Cursors.Hand;
             btnCancel.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
             btnCancel.FlatStyle = FlatStyle.Popup;
-            btnCancel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
             btnCancel.Location = new Point(498, 486);
             btnCancel.Margin = new Padding(0, 0, 8, 0);

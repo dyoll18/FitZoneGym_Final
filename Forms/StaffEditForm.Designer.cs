@@ -91,7 +91,7 @@ namespace FitZoneGym.Forms
             cboRole.Items.AddRange(new object[] { "Administrator", "Staff", "Cashier" });
             cboRole.Location = new Point(160, 96);
             cboRole.Name = "cboRole";
-            cboRole.Size = new Size(220, 33);
+            cboRole.Size = new Size(260, 33);
             cboRole.TabIndex = 5;
             // 
             // lblPass
@@ -99,7 +99,7 @@ namespace FitZoneGym.Forms
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Segoe UI", 9.5F);
             lblPass.ForeColor = Color.FromArgb(31, 41, 55);
-            lblPass.Location = new Point(20, 100);
+            lblPass.Location = new Point(20, 138);
             lblPass.Name = "lblPass";
             lblPass.Size = new Size(104, 25);
             lblPass.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace FitZoneGym.Forms
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
             txtPass.Font = new Font("Segoe UI", 9.5F);
-            txtPass.Location = new Point(160, 96);
+            txtPass.Location = new Point(160, 134);
             txtPass.Name = "txtPass";
             txtPass.Size = new Size(260, 33);
             txtPass.TabIndex = 7;
@@ -120,7 +120,7 @@ namespace FitZoneGym.Forms
             lblHint.AutoSize = true;
             lblHint.Font = new Font("Segoe UI", 9F);
             lblHint.ForeColor = Color.FromArgb(107, 114, 128);
-            lblHint.Location = new Point(160, 130);
+            lblHint.Location = new Point(160, 170);
             lblHint.Name = "lblHint";
             lblHint.Size = new Size(354, 25);
             lblHint.TabIndex = 8;
@@ -132,7 +132,7 @@ namespace FitZoneGym.Forms
             chkActive.Checked = true;
             chkActive.CheckState = CheckState.Checked;
             chkActive.Font = new Font("Segoe UI", 9.5F);
-            chkActive.Location = new Point(160, 158);
+            chkActive.Location = new Point(160, 200);
             chkActive.Name = "chkActive";
             chkActive.Size = new Size(179, 29);
             chkActive.TabIndex = 9;
@@ -146,7 +146,7 @@ namespace FitZoneGym.Forms
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(160, 205);
+            btnSave.Location = new Point(160, 248);
             btnSave.Margin = new Padding(0, 0, 8, 0);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(110, 34);
@@ -164,7 +164,7 @@ namespace FitZoneGym.Forms
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnCancel.ForeColor = Color.FromArgb(31, 41, 55);
-            btnCancel.Location = new Point(310, 205);
+            btnCancel.Location = new Point(310, 248);
             btnCancel.Margin = new Padding(0, 0, 8, 0);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(110, 34);
@@ -179,11 +179,13 @@ namespace FitZoneGym.Forms
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             CancelButton = btnCancel;
-            ClientSize = new Size(528, 271);
+            ClientSize = new Size(528, 310);
             Controls.Add(lblUser);
             Controls.Add(txtUser);
             Controls.Add(lblName);
             Controls.Add(txtName);
+            Controls.Add(lblRole);
+            Controls.Add(cboRole);
             Controls.Add(lblPass);
             Controls.Add(txtPass);
             Controls.Add(lblHint);

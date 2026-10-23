@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Ncp/Le8DcE=",
+  "dgSpecHash": "ef3IEuSrs5U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\FitZoneGym.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite\\8.0.10\\microsoft.data.sqlite.8.0.10.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.10\\microsoft.data.sqlite.core.8.0.10.nupkg.sha512",

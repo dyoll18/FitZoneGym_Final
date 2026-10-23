@@ -12,6 +12,7 @@ namespace FitZoneGym.Forms
         {
             InitializeComponent();
             Text = "Add Staff";
+            cboRole.SelectedItem = "Staff";   // default for new accounts
         }
 
         /// <summary>Edit mode.</summary>
@@ -23,13 +24,15 @@ namespace FitZoneGym.Forms
             txtUser.ReadOnly = true;
             txtName.Text = fullName;
             chkActive.Checked = active;
+            cboRole.SelectedItem = role;      // keep the account's current role (Administrator / Staff / Cashier)
             lblPass.Text = "New password";
             lblHint.Text = "Leave the password blank to keep the current one.";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            const string role = "Staff";
+            string role = cboRole.SelectedItem as string;
+            if (string.IsNullOrEmpty(role)) { Ui.Info("Select a role."); return; }
             bool ok = Ui.Run(() =>
             {
                 if (_userId == 0) StaffService.Add(txtUser.Text, txtName.Text, role, txtPass.Text, chkActive.Checked);

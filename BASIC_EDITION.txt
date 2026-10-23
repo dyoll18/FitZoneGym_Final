@@ -1,3 +1,3 @@
 Basic edition modules: Login, Dashboard, Members, Membership Plans, Registration & Renewal, Payments, Reports Generation, User Management. Advanced freeze, reactivation, prorated billing, invoices, settings, and backup forms are excluded.
 
-Staff Accounts screen includes account management only. Role/permission editor and activity log tabs are hidden/removed from the interface. New staff accounts use the default Staff role.
+Staff Accounts screen: account management with a Role dropdown (Administrator, Staff, Cashier).
