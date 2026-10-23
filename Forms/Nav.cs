@@ -35,7 +35,7 @@ namespace FitZoneGym.Forms
             first.WindowState = FormWindowState.Normal;
             first.StartPosition = FormStartPosition.CenterScreen;
             first.FormBorderStyle = FormBorderStyle.Sizable;
-            first.Size = new Size(1280, 760);
+            first.Size = new Size(1340, 850);
 
             Context = new ApplicationContext(first);
             Application.Run(Context);

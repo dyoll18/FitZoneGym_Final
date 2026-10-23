@@ -95,5 +95,10 @@ namespace FitZoneGym.Forms
         {
 
         }
+
+        private void lblMessage_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

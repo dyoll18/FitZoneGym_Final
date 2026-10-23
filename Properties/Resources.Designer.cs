@@ -63,6 +63,16 @@ namespace FitZoneGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abstract_background_animation_flying_arrow_video {
+            get {
+                object obj = ResourceManager.GetObject("abstract-background-animation-flying-arrow-video", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap orange_rough_grunge_abstract_texture_in_black_background_vector {
             get {
                 object obj = ResourceManager.GetObject("orange-rough-grunge-abstract-texture-in-black-background-vector", resourceCulture);
