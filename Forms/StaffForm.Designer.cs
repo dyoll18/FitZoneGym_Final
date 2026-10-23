@@ -36,6 +36,7 @@ namespace FitZoneGym.Forms
             btnAdd = new Button();
             contentPanel.SuspendLayout();
             headerPanel.SuspendLayout();
+            actionsFlow.SuspendLayout();
             tabs.SuspendLayout();
             tabAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaff).BeginInit();
@@ -50,16 +51,17 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(tabs);
-            contentPanel.Size = new Size(1050, 670);
+            // 
+            // actionsFlow
+            // 
+            actionsFlow.Controls.Add(btnAdd);
             // 
             // headerPanel
             // 
-            headerPanel.Size = new Size(1050, 56);
             headerPanel.Paint += headerPanel_Paint;
             // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(794, 48);
             titleLabel.Text = "Users & Staff";
             // 
             // tabs
@@ -249,10 +251,9 @@ namespace FitZoneGym.Forms
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(0, 4);
-            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(120, 34);
+            btnAdd.Size = new Size(150, 36);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Staff";
             btnAdd.UseVisualStyleBackColor = false;
@@ -268,6 +269,8 @@ namespace FitZoneGym.Forms
             contentPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();
+            actionsFlow.ResumeLayout(false);
+            actionsFlow.PerformLayout();
             tabs.ResumeLayout(false);
             tabAccounts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvStaff).EndInit();

@@ -41,15 +41,12 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
-            contentPanel.Size = new Size(1050, 670);
             // 
             // headerPanel
             // 
-            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(772, 48);
             titleLabel.Text = "Reports";
             titleLabel.Click += titleLabel_Click;
             // 

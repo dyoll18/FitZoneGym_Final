@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\FitZoneGym.csproj": {}
+    "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\FitZoneGym.csproj": {
+    "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\FitZoneGym.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj",
         "projectName": "FitZoneGym",
-        "projectPath": "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\FitZoneGym.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

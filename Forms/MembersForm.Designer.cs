@@ -47,12 +47,12 @@ namespace FitZoneGym.Forms
             // 
             headerPanel.Controls.Add(btnAdd);
             headerPanel.Size = new Size(1050, 56);
-            headerPanel.Controls.SetChildIndex(btnAdd, 0);
             headerPanel.Controls.SetChildIndex(titleLabel, 0);
+            headerPanel.Controls.SetChildIndex(btnAdd, 0);
             // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(816, 48);
+            titleLabel.Size = new Size(1014, 48);
             titleLabel.Text = "Members";
             titleLabel.Click += titleLabel_Click;
             // 
@@ -141,7 +141,7 @@ namespace FitZoneGym.Forms
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(540, 9);
+            btnSearch.Location = new Point(540, 6);
             btnSearch.Margin = new Padding(0, 0, 8, 0);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 39);
@@ -221,17 +221,16 @@ namespace FitZoneGym.Forms
             // 
             // btnAdd
             // 
-            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAdd.BackColor = Color.FromArgb(30, 111, 240);
             btnAdd.Cursor = Cursors.Hand;
             btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(850, 10);
-            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Location = new Point(789, 9);
+            btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(182, 36);
+            btnAdd.Size = new Size(205, 39);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Member";
             btnAdd.UseVisualStyleBackColor = false;

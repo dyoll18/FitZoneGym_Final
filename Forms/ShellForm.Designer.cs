@@ -30,6 +30,7 @@ namespace FitZoneGym.Forms
             logoLabel = new Label();
             rightPanel.SuspendLayout();
             headerPanel.SuspendLayout();
+            actionsFlow.SuspendLayout();
             userStrip.SuspendLayout();
             sidebarPanel.SuspendLayout();
             SuspendLayout();
@@ -71,12 +72,11 @@ namespace FitZoneGym.Forms
             // 
             // titleLabel
             // 
-            titleLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            titleLabel.Dock = DockStyle.Fill;
             titleLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             titleLabel.ForeColor = Color.FromArgb(15, 35, 66);
             titleLabel.Location = new Point(18, 4);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(750, 48);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Title";
             titleLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -84,12 +84,12 @@ namespace FitZoneGym.Forms
             // actionsFlow
             // 
             actionsFlow.AutoSize = true;
-            actionsFlow.BackColor = Color.White;
+            actionsFlow.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            actionsFlow.BackColor = Color.Transparent;
             actionsFlow.Dock = DockStyle.Right;
-            actionsFlow.Location = new Point(1032, 4);
+            actionsFlow.FlowDirection = FlowDirection.LeftToRight;
             actionsFlow.Name = "actionsFlow";
-            actionsFlow.Padding = new Padding(0, 4, 0, 0);
-            actionsFlow.Size = new Size(0, 48);
+            actionsFlow.Padding = new Padding(0, 6, 0, 0);
             actionsFlow.TabIndex = 1;
             actionsFlow.WrapContents = false;
             // 
@@ -184,6 +184,8 @@ namespace FitZoneGym.Forms
             rightPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();
+            actionsFlow.ResumeLayout(false);
+            actionsFlow.PerformLayout();
             userStrip.ResumeLayout(false);
             sidebarPanel.ResumeLayout(false);
             ResumeLayout(false);

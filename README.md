@@ -36,3 +36,14 @@ These are demo credentials; change them before using real data.
 
 ## Basic edition modules
 This edition includes Dashboard, Members, Membership Plans, Registration & Renewal, Payments, Reports Generation (CSV export), and User Management (accounts, roles/permissions, activity log). Advanced modules such as freeze management, reactivation, prorated billing, invoices, settings, and backup screens are excluded from navigation and the project files.
+
+## UI editing rules (para hindi nawawala ang controls)
+
+Lahat ng screen (Members, Plans, Staff, Reports, ...) ay nag-inherit sa `ShellForm`.
+
+1. **Header buttons** (Add Member / Add Plan / Add Staff, atbp.) ay dapat nasa `actionsFlow`
+   (Dock Right, auto-size). Huwag lagyan ng Location / Anchor - flow layout ang bahala.
+2. **Title** ay `titleLabel` (Dock Fill). Huwag i-set ang Size ng `titleLabel`, `headerPanel`, `contentPanel` sa derived forms.
+3. **Bawat control** na ginawa sa designer ay dapat may parent (`Controls.Add`). Kapag wala, mawawala ito sa runtime at kapag nag-save ang designer.
+4. Gamitin ang Dock / TableLayoutPanel / FlowLayoutPanel para sa layout, hindi absolute Location, para hindi mapuputol sa ibang DPI/laki ng window.
+5. Ang `Visible` ng Add button ay kinokontrol din ng permission sa code (`Perm.RegisterMembers`, `Perm.ManagePlans`) - Administrator ay nakikita lahat.

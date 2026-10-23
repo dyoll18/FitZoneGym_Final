@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FLA3TCpvCj8=",
+  "dgSpecHash": "9Ncp/Le8DcE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\FitZoneGym_Final(2)\\FitZoneGym_Designer\\FitZoneGym.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Downloads\\FITZONE_fixed\\FitZoneGym.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite\\8.0.10\\microsoft.data.sqlite.8.0.10.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.10\\microsoft.data.sqlite.core.8.0.10.nupkg.sha512",

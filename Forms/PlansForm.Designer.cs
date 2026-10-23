@@ -27,6 +27,7 @@ namespace FitZoneGym.Forms
             btnAdd = new Button();
             contentPanel.SuspendLayout();
             headerPanel.SuspendLayout();
+            actionsFlow.SuspendLayout();
             mainLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPlans).BeginInit();
             footerPanel.SuspendLayout();
@@ -35,15 +36,16 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
-            contentPanel.Size = new Size(1050, 670);
+            // 
+            // actionsFlow
+            // 
+            actionsFlow.Controls.Add(btnAdd);
             // 
             // headerPanel
             // 
-            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
-            titleLabel.Size = new Size(750, 48);
             titleLabel.Text = "Membership Plans";
             // 
             // mainLayout
@@ -139,10 +141,9 @@ namespace FitZoneGym.Forms
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(0, 4);
-            btnAdd.Margin = new Padding(0, 0, 8, 0);
+            btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(120, 34);
+            btnAdd.Size = new Size(150, 36);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Plan";
             btnAdd.UseVisualStyleBackColor = false;
@@ -158,6 +159,8 @@ namespace FitZoneGym.Forms
             contentPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();
+            actionsFlow.ResumeLayout(false);
+            actionsFlow.PerformLayout();
             mainLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPlans).EndInit();
             footerPanel.ResumeLayout(false);
