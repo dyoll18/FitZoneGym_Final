@@ -38,7 +38,7 @@ namespace FitZoneGym.Controls
             g.DrawString("Total Members", small, new SolidBrush(Ui.Muted), new RectangleF(rect.X, rect.Y + rect.Height / 2f + 8, rect.Width, 20), sf);
 
             // legend
-            int lx = rect.Right + 20, ly = rect.Y + 20;
+            int lx = rect.Right + 6, ly = rect.Y + 67;
             foreach (var s in Slices)
             {
                 using (var br = new SolidBrush(s.Color)) g.FillEllipse(br, lx, ly + 3, 10, 10);
