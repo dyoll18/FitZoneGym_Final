@@ -60,13 +60,17 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
             // 
             // headerPanel
             // 
+            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
+            titleLabel.Size = new Size(1014, 48);
             titleLabel.Text = "Dashboard";
+            titleLabel.Click += titleLabel_Click;
             // 
             // mainLayout
             // 
@@ -271,10 +275,12 @@ namespace FitZoneGym.Forms
             // 
             donutChart.BackColor = Color.White;
             donutChart.Dock = DockStyle.Fill;
+            donutChart.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             donutChart.Location = new Point(14, 44);
             donutChart.Name = "donutChart";
             donutChart.Size = new Size(346, 219);
             donutChart.TabIndex = 0;
+            donutChart.Click += donutChart_Click;
             // 
             // lblChartTitle
             // 

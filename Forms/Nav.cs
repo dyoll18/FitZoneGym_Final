@@ -6,6 +6,7 @@ namespace FitZoneGym.Forms
     {
         public string Key { get; set; }
         public string Text { get; set; }
+        public string Glyph { get; set; } = "";
         public Func<bool> Visible { get; set; }
         public Func<Form> Create { get; set; }
     }
@@ -19,13 +20,13 @@ namespace FitZoneGym.Forms
         // Basic edition: only the five core screens are available in navigation.
         public static readonly List<NavItem> Items = new List<NavItem>
         {
-            new NavItem { Key = "dash", Text = "Dashboard", Visible = () => true, Create = () => new DashboardForm() },
-            new NavItem { Key = "members", Text = "Members", Visible = () => Session.Current.Can(Perm.ViewMembers), Create = () => new MembersForm() },
-            new NavItem { Key = "plans", Text = "Membership Plans", Visible = () => Session.Current.Can(Perm.ManagePlans) || Session.Current.Can(Perm.ViewMembers), Create = () => new PlansForm() },
-            new NavItem { Key = "reg", Text = "Registration & Renewal", Visible = () => Session.Current.Can(Perm.RegisterMembers), Create = () => new RegistrationForm() },
-            new NavItem { Key = "pay", Text = "Payments", Visible = () => Session.Current.Can(Perm.RecordPayments), Create = () => new PaymentsForm() },
-            new NavItem { Key = "reports", Text = "Reports Generation", Visible = () => Session.Current.Can(Perm.ViewReports), Create = () => new ReportsForm() },
-            new NavItem { Key = "staff", Text = "User Management", Visible = () => Session.Current.Can(Perm.ManageStaff), Create = () => new StaffForm() },
+            new NavItem { Key = "dash", Glyph = "\uE80F", Text = "Dashboard", Visible = () => true, Create = () => new DashboardForm() },
+            new NavItem { Key = "members", Glyph = "\uE716", Text = "Members", Visible = () => Session.Current.Can(Perm.ViewMembers), Create = () => new MembersForm() },
+            new NavItem { Key = "plans", Glyph = "\uE8EC", Text = "Membership Plans", Visible = () => Session.Current.Can(Perm.ManagePlans) || Session.Current.Can(Perm.ViewMembers), Create = () => new PlansForm() },
+            new NavItem { Key = "reg", Glyph = "\uE8FA", Text = "Registration & Renewal", Visible = () => Session.Current.Can(Perm.RegisterMembers), Create = () => new RegistrationForm() },
+            new NavItem { Key = "pay", Glyph = "\uE7BF", Text = "Payments", Visible = () => Session.Current.Can(Perm.RecordPayments), Create = () => new PaymentsForm() },
+            new NavItem { Key = "reports", Glyph = "\uE9D9", Text = "Reports Generation", Visible = () => Session.Current.Can(Perm.ViewReports), Create = () => new ReportsForm() },
+            new NavItem { Key = "staff", Glyph = "\uE77B", Text = "User Management", Visible = () => Session.Current.Can(Perm.ManageStaff), Create = () => new StaffForm() },
         };
 
         /// <summary>Runs the main window loop until the user logs out or closes the application.</summary>

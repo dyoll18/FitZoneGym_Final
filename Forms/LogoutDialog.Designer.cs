@@ -89,7 +89,7 @@ namespace FitZoneGym.Forms
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.abstract_background_animation_flying_arrow_video;
             CancelButton = btnNo;
-            ClientSize = new Size(443, 270);
+            ClientSize = new Size(426, 241);
             Controls.Add(lblTitle);
             Controls.Add(lblMessage);
             Controls.Add(btnYes);

@@ -11,6 +11,7 @@ namespace FitZoneGym.Forms
         public StaffEditForm()
         {
             InitializeComponent();
+            if (!Ui.IsDesignTime) Theme.Apply(this);
             Text = "Add Staff";
             cboRole.SelectedItem = "Staff";   // default for new accounts
         }

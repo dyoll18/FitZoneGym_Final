@@ -8,6 +8,9 @@
     <Compile Update="Controls\MemberPicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Controls\NavButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Forms\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>

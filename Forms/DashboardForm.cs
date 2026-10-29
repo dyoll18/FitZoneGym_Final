@@ -15,6 +15,28 @@ namespace FitZoneGym.Forms
             InitializeComponent();
             Ui.StyleGrid(dgvExpiring);
             Ui.StyleGrid(dgvActivity);
+
+            if (Ui.IsDesignTime) return;
+            StyleStat(pnlTotal, lblTotalValue, lblTotalCaption, Ui.Accent);
+            StyleStat(pnlActive, lblActiveValue, lblActiveCaption, Ui.Green);
+            StyleStat(pnlFrozen, lblFrozenValue, lblFrozenCaption, Ui.Orange);
+            StyleStat(pnlExpired, lblExpiredValue, lblExpiredCaption, Ui.Red);
+        }
+
+        /// <summary>FitFlow-style stat card: dark surface, white number, muted caption and a coloured accent bar.</summary>
+        private static void StyleStat(Panel card, Label value, Label caption, Color accent)
+        {
+            card.BackColor = Ui.Surface;
+            card.Padding = new Padding(22, 14, 10, 10);
+            value.ForeColor = Ui.Text;
+            caption.ForeColor = Ui.Muted;
+            caption.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+            card.Paint += (s, e) =>
+            {
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                using (var br = new SolidBrush(accent))
+                    e.Graphics.FillRectangle(br, 0, 20, 5, Math.Max(10, card.Height - 40));
+            };
         }
 
         protected override void OnLoad(EventArgs e)
@@ -72,6 +94,16 @@ namespace FitZoneGym.Forms
         private void lnkViewAll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Nav.Go(this, "members");
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void donutChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

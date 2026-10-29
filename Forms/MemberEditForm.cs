@@ -16,6 +16,7 @@ namespace FitZoneGym.Forms
         public MemberEditForm(string memberId)
         {
             InitializeComponent();
+            if (!Ui.IsDesignTime) Theme.Apply(this);
             _memberId = memberId;
             cboGender.SelectedIndex = 0;
             cboStatus.SelectedIndex = 0;

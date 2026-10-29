@@ -9,16 +9,21 @@ namespace FitZoneGym
     /// <summary>Theme, control factories and common dialogs so every screen looks and behaves the same.</summary>
     public static class Ui
     {
-        public static readonly Color Navy = Color.FromArgb(15, 35, 66);
-        public static readonly Color NavyLight = Color.FromArgb(27, 58, 102);
-        public static readonly Color Blue = Color.FromArgb(30, 111, 240);
-        public static readonly Color Bg = Color.FromArgb(243, 246, 251);
-        public static readonly Color Text = Color.FromArgb(31, 41, 55);
-        public static readonly Color Muted = Color.FromArgb(107, 114, 128);
-        public static readonly Color Green = Color.FromArgb(22, 163, 74);
-        public static readonly Color Orange = Color.FromArgb(245, 158, 11);
-        public static readonly Color Red = Color.FromArgb(220, 38, 38);
-        public static readonly Color Border = Color.FromArgb(214, 221, 232);
+        // ---- FitFlow dark theme palette ------------------------------------------------------
+        public static readonly Color Navy = Color.FromArgb(31, 32, 42);        // sidebar / table header
+        public static readonly Color NavyLight = Color.FromArgb(46, 47, 60);   // hover
+        public static readonly Color Blue = Color.FromArgb(255, 106, 0);       // primary accent (FitFlow orange)
+        public static readonly Color Accent = Blue;
+        public static readonly Color AccentHover = Color.FromArgb(255, 136, 56);
+        public static readonly Color Bg = Color.FromArgb(24, 25, 33);          // page background
+        public static readonly Color Surface = Color.FromArgb(35, 36, 47);     // cards
+        public static readonly Color InputBg = Color.FromArgb(46, 47, 60);       // text boxes / secondary buttons
+        public static readonly Color Text = Color.FromArgb(244, 244, 248);
+        public static readonly Color Muted = Color.FromArgb(152, 155, 172);
+        public static readonly Color Green = Color.FromArgb(34, 197, 94);
+        public static readonly Color Orange = Color.FromArgb(250, 176, 5);     // amber (used for "Frozen"/"Pending")
+        public static readonly Color Red = Color.FromArgb(239, 68, 68);
+        public static readonly Color Border = Color.FromArgb(58, 60, 76);
 
         public static Font Base => new Font("Segoe UI", 9.5f);
         public static Font Bold(float size = 9.5f) => new Font("Segoe UI", size, FontStyle.Bold);
@@ -50,30 +55,31 @@ namespace FitZoneGym
                 Height = 34,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = back,
-                ForeColor = back == Color.White ? Text : Color.White,
+                ForeColor = back == InputBg ? Text : Color.White,
                 Font = Bold(9.5f),
                 Cursor = Cursors.Hand,
                 Margin = new Padding(0, 0, 8, 0),
                 UseVisualStyleBackColor = false,
             };
-            b.FlatAppearance.BorderColor = back == Color.White ? Border : back;
+            b.FlatAppearance.BorderColor = back == InputBg ? Border : back;
+            b.FlatAppearance.MouseOverBackColor = back == Blue ? AccentHover : back == InputBg ? NavyLight : back;
             if (onClick != null) b.Click += onClick;
             return b;
         }
 
         public static Button Primary(string text, EventHandler click, int width = 120) => Button(text, Blue, click, width);
-        public static Button Secondary(string text, EventHandler click, int width = 120) => Button(text, Color.White, click, width);
+        public static Button Secondary(string text, EventHandler click, int width = 120) => Button(text, InputBg, click, width);
         public static Button Success(string text, EventHandler click, int width = 120) => Button(text, Green, click, width);
         public static Button Danger(string text, EventHandler click, int width = 120) => Button(text, Red, click, width);
 
         public static TextBox Input(int width = 220)
         {
-            return new TextBox { Width = width, Font = Base, BorderStyle = BorderStyle.FixedSingle, Margin = new Padding(0, 3, 8, 3) };
+            return new TextBox { Width = width, Font = Base, BorderStyle = BorderStyle.FixedSingle, BackColor = InputBg, ForeColor = Text, Margin = new Padding(0, 3, 8, 3) };
         }
 
         public static ComboBox Combo(int width = 220, params string[] items)
         {
-            var c = new ComboBox { Width = width, Font = Base, DropDownStyle = ComboBoxStyle.DropDownList, FlatStyle = FlatStyle.Flat, Margin = new Padding(0, 3, 8, 3) };
+            var c = new ComboBox { Width = width, Font = Base, DropDownStyle = ComboBoxStyle.DropDownList, FlatStyle = FlatStyle.Flat, BackColor = InputBg, ForeColor = Text, Margin = new Padding(0, 3, 8, 3) };
             if (items.Length > 0) { c.Items.AddRange(items); c.SelectedIndex = 0; }
             return c;
         }
@@ -83,18 +89,18 @@ namespace FitZoneGym
             return new DateTimePicker
             {
                 Width = width, Font = Base, Format = DateTimePickerFormat.Short,
-                Value = value ?? DateTime.Today, Margin = new Padding(0, 3, 8, 3),
+                Value = value ?? DateTime.Today, CalendarMonthBackground = InputBg, CalendarForeColor = Text, CalendarTitleBackColor = Accent, CalendarTitleForeColor = Color.White, CalendarTrailingForeColor = Muted, Margin = new Padding(0, 3, 8, 3),
             };
         }
 
         public static NumericUpDown Number(decimal min, decimal max, decimal value, int decimals = 0, int width = 120)
         {
-            return new NumericUpDown { Minimum = min, Maximum = max, Value = value, DecimalPlaces = decimals, Width = width, Font = Base, ThousandsSeparator = true, Margin = new Padding(0, 3, 8, 3) };
+            return new NumericUpDown { Minimum = min, Maximum = max, Value = value, DecimalPlaces = decimals, Width = width, Font = Base, ThousandsSeparator = true, BackColor = InputBg, ForeColor = Text, BorderStyle = BorderStyle.FixedSingle, Margin = new Padding(0, 3, 8, 3) };
         }
 
         public static Panel Card(int padding = 14)
         {
-            return new Panel { BackColor = Color.White, Padding = new Padding(padding), Dock = DockStyle.Fill, Margin = new Padding(0, 0, 10, 10) };
+            return new Panel { BackColor = Surface, Padding = new Padding(padding), Dock = DockStyle.Fill, Margin = new Padding(0, 0, 10, 10) };
         }
 
         public static FlowLayoutPanel Row(params Control[] controls)
@@ -141,25 +147,47 @@ namespace FitZoneGym
             g.RowHeadersVisible = false;
             g.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             g.MultiSelect = false;
-            g.BackgroundColor = Color.White;
-            g.BorderStyle = BorderStyle.None;
             g.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            g.GridColor = Color.FromArgb(230, 234, 242);
             g.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             g.EnableHeadersVisualStyles = false;
             g.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            g.ColumnHeadersHeight = 34;
-            g.Font = Base;
-            g.ColumnHeadersDefaultCellStyle.BackColor = Navy;
-            g.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            g.ColumnHeadersDefaultCellStyle.Font = Bold(9f);
-            g.ColumnHeadersDefaultCellStyle.SelectionBackColor = Navy;
-            g.DefaultCellStyle.SelectionBackColor = Color.FromArgb(219, 234, 254);
-            g.DefaultCellStyle.SelectionForeColor = Text;
-            g.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(247, 249, 253);
-            g.RowTemplate.Height = 30;
+            g.ColumnHeadersHeight = 38;
+            g.RowTemplate.Height = 34;
+            ThemeGrid(g);
             g.CellFormatting -= StatusColors;
             g.CellFormatting += StatusColors;
+        }
+
+        /// <summary>Colours only (no behaviour) - safe to call again on any DataGridView.</summary>
+        public static void ThemeGrid(DataGridView g)
+        {
+            g.BackgroundColor = Surface;
+            g.BorderStyle = BorderStyle.None;
+            g.GridColor = Color.FromArgb(48, 50, 64);
+            g.Font = Base;
+            g.ForeColor = Text;
+            g.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            g.ColumnHeadersDefaultCellStyle.BackColor = Surface;
+            g.ColumnHeadersDefaultCellStyle.ForeColor = Muted;
+            g.ColumnHeadersDefaultCellStyle.Font = Bold(9f);
+            g.ColumnHeadersDefaultCellStyle.SelectionBackColor = Surface;
+            g.ColumnHeadersDefaultCellStyle.SelectionForeColor = Muted;
+            g.ColumnHeadersDefaultCellStyle.Padding = new Padding(6, 0, 0, 0);
+            g.DefaultCellStyle.BackColor = Surface;
+            g.DefaultCellStyle.ForeColor = Text;
+            g.DefaultCellStyle.Padding = new Padding(6, 0, 0, 0);
+            g.DefaultCellStyle.SelectionBackColor = Color.FromArgb(70, 255, 106, 0).Blend(Surface);
+            g.DefaultCellStyle.SelectionForeColor = Color.White;
+            g.AlternatingRowsDefaultCellStyle.BackColor = Surface;
+            g.AlternatingRowsDefaultCellStyle.SelectionBackColor = g.DefaultCellStyle.SelectionBackColor;
+            g.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.White;
+        }
+
+        /// <summary>Composites a semi-transparent colour over a solid background.</summary>
+        public static Color Blend(this Color top, Color under)
+        {
+            float a = top.A / 255f;
+            return Color.FromArgb((int)(top.R * a + under.R * (1 - a)), (int)(top.G * a + under.G * (1 - a)), (int)(top.B * a + under.B * (1 - a)));
         }
 
         private static void StatusColors(object sender, DataGridViewCellFormattingEventArgs e)
@@ -232,14 +260,15 @@ namespace FitZoneGym
             using var f = new Form
             {
                 Text = title, StartPosition = FormStartPosition.CenterParent, FormBorderStyle = FormBorderStyle.FixedDialog,
-                MaximizeBox = false, MinimizeBox = false, ClientSize = new Size(420, 170), Font = Base, BackColor = Color.White,
+                MaximizeBox = false, MinimizeBox = false, ClientSize = new Size(420, 170), Font = Base, BackColor = Bg, ForeColor = Text,
             };
-            var lbl = new Label { Text = message, Left = 16, Top = 14, Width = 388, Height = 36 };
-            var txt = new TextBox { Left = 16, Top = 54, Width = 388, Multiline = true, Height = 56, BorderStyle = BorderStyle.FixedSingle };
+            var lbl = new Label { Text = message, Left = 16, Top = 14, Width = 388, Height = 36, ForeColor = Text };
+            var txt = new TextBox { Left = 16, Top = 54, Width = 388, Multiline = true, Height = 56, BorderStyle = BorderStyle.FixedSingle, BackColor = InputBg, ForeColor = Text };
             var ok = Primary("OK", null, 90); ok.Left = 224; ok.Top = 122; ok.DialogResult = DialogResult.OK;
             var cancel = Secondary("Cancel", null, 90); cancel.Left = 320; cancel.Top = 122; cancel.DialogResult = DialogResult.Cancel;
             f.Controls.AddRange(new Control[] { lbl, txt, ok, cancel });
             f.AcceptButton = ok; f.CancelButton = cancel;
+            Theme.Apply(f);
             while (true)
             {
                 if (f.ShowDialog() != DialogResult.OK) return null;

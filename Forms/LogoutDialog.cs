@@ -6,6 +6,7 @@ namespace FitZoneGym.Forms
         public LogoutDialog()
         {
             InitializeComponent();
+            if (!Ui.IsDesignTime) Theme.Apply(this);
         }
     }
 }
