@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitZoneGym")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4491bca26157eb79f2c6c19803eac032fe215e6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce882c1024be6fa86e567d196eafc01e268b1863")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitZoneGym")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitZoneGym")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
