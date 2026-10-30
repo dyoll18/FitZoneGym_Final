@@ -20,27 +20,27 @@ namespace FitZoneGym.Forms
         {
             mainLayout = new TableLayoutPanel();
             cardsLayout = new TableLayoutPanel();
-            pnlTotal = new Panel();
+            pnlTotal = new FitZoneGym.Controls.ThemedPanel();
             lblTotalValue = new Label();
             lblTotalCaption = new Label();
-            pnlActive = new Panel();
+            pnlActive = new FitZoneGym.Controls.ThemedPanel();
             lblActiveValue = new Label();
             lblActiveCaption = new Label();
-            pnlFrozen = new Panel();
+            pnlFrozen = new FitZoneGym.Controls.ThemedPanel();
             lblFrozenValue = new Label();
             lblFrozenCaption = new Label();
-            pnlExpired = new Panel();
+            pnlExpired = new FitZoneGym.Controls.ThemedPanel();
             lblExpiredValue = new Label();
             lblExpiredCaption = new Label();
-            cardChart = new Panel();
+            cardChart = new FitZoneGym.Controls.ThemedPanel();
             donutChart = new FitZoneGym.Controls.DonutChart();
             lblChartTitle = new Label();
-            cardExpiring = new Panel();
-            dgvExpiring = new DataGridView();
+            cardExpiring = new FitZoneGym.Controls.ThemedPanel();
+            dgvExpiring = new FitZoneGym.Controls.ThemedGrid();
             lnkViewAll = new LinkLabel();
             lblExpiringTitle = new Label();
-            cardActivity = new Panel();
-            dgvActivity = new DataGridView();
+            cardActivity = new FitZoneGym.Controls.ThemedPanel();
+            dgvActivity = new FitZoneGym.Controls.ThemedGrid();
             lblActivityTitle = new Label();
             contentPanel.SuspendLayout();
             headerPanel.SuspendLayout();
@@ -60,17 +60,21 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(mainLayout);
+            contentPanel.Size = new Size(1050, 670);
             // 
             // headerPanel
             // 
+            headerPanel.Size = new Size(1050, 56);
             // 
             // titleLabel
             // 
+            titleLabel.Size = new Size(1014, 48);
             titleLabel.Text = "Dashboard";
+            titleLabel.Click += titleLabel_Click;
             // 
             // mainLayout
             // 
-            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.BackColor = Color.FromArgb(24, 25, 33);
             mainLayout.ColumnCount = 2;
             mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
             mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62F));
@@ -90,7 +94,7 @@ namespace FitZoneGym.Forms
             // 
             // cardsLayout
             // 
-            cardsLayout.BackColor = Color.FromArgb(243, 246, 251);
+            cardsLayout.BackColor = Color.FromArgb(24, 25, 33);
             cardsLayout.ColumnCount = 4;
             mainLayout.SetColumnSpan(cardsLayout, 2);
             cardsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -112,22 +116,24 @@ namespace FitZoneGym.Forms
             // 
             // pnlTotal
             // 
-            pnlTotal.BackColor = Color.FromArgb(30, 111, 240);
+            pnlTotal.CornerRadius = 14;
+            pnlTotal.AccentBar = Color.FromArgb(255, 106, 0);
+            pnlTotal.BackColor = Color.FromArgb(35, 36, 47);
             pnlTotal.Controls.Add(lblTotalValue);
             pnlTotal.Controls.Add(lblTotalCaption);
             pnlTotal.Dock = DockStyle.Fill;
             pnlTotal.Location = new Point(0, 0);
             pnlTotal.Margin = new Padding(0, 0, 12, 0);
             pnlTotal.Name = "pnlTotal";
-            pnlTotal.Padding = new Padding(16, 12, 8, 8);
+            pnlTotal.Padding = new Padding(22, 14, 10, 10);
             pnlTotal.Size = new Size(242, 100);
             pnlTotal.TabIndex = 0;
             // 
             // lblTotalValue
             // 
+            lblTotalValue.ForeColor = Color.FromArgb(244, 244, 248);
             lblTotalValue.Dock = DockStyle.Fill;
             lblTotalValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalValue.ForeColor = Color.White;
             lblTotalValue.Location = new Point(16, 36);
             lblTotalValue.Name = "lblTotalValue";
             lblTotalValue.Size = new Size(218, 56);
@@ -137,9 +143,9 @@ namespace FitZoneGym.Forms
             // 
             // lblTotalCaption
             // 
+            lblTotalCaption.ForeColor = Color.FromArgb(152, 155, 172);
             lblTotalCaption.Dock = DockStyle.Top;
-            lblTotalCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblTotalCaption.ForeColor = Color.White;
+            lblTotalCaption.Font = new Font("Segoe UI", 10F);
             lblTotalCaption.Location = new Point(16, 12);
             lblTotalCaption.Name = "lblTotalCaption";
             lblTotalCaption.Size = new Size(218, 24);
@@ -148,22 +154,24 @@ namespace FitZoneGym.Forms
             // 
             // pnlActive
             // 
-            pnlActive.BackColor = Color.FromArgb(22, 163, 74);
+            pnlActive.CornerRadius = 14;
+            pnlActive.AccentBar = Color.FromArgb(34, 197, 94);
+            pnlActive.BackColor = Color.FromArgb(35, 36, 47);
             pnlActive.Controls.Add(lblActiveValue);
             pnlActive.Controls.Add(lblActiveCaption);
             pnlActive.Dock = DockStyle.Fill;
             pnlActive.Location = new Point(254, 0);
             pnlActive.Margin = new Padding(0, 0, 12, 0);
             pnlActive.Name = "pnlActive";
-            pnlActive.Padding = new Padding(16, 12, 8, 8);
+            pnlActive.Padding = new Padding(22, 14, 10, 10);
             pnlActive.Size = new Size(242, 100);
             pnlActive.TabIndex = 1;
             // 
             // lblActiveValue
             // 
+            lblActiveValue.ForeColor = Color.FromArgb(244, 244, 248);
             lblActiveValue.Dock = DockStyle.Fill;
             lblActiveValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblActiveValue.ForeColor = Color.White;
             lblActiveValue.Location = new Point(16, 36);
             lblActiveValue.Name = "lblActiveValue";
             lblActiveValue.Size = new Size(218, 56);
@@ -173,9 +181,9 @@ namespace FitZoneGym.Forms
             // 
             // lblActiveCaption
             // 
+            lblActiveCaption.ForeColor = Color.FromArgb(152, 155, 172);
             lblActiveCaption.Dock = DockStyle.Top;
-            lblActiveCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblActiveCaption.ForeColor = Color.White;
+            lblActiveCaption.Font = new Font("Segoe UI", 10F);
             lblActiveCaption.Location = new Point(16, 12);
             lblActiveCaption.Name = "lblActiveCaption";
             lblActiveCaption.Size = new Size(218, 24);
@@ -184,22 +192,24 @@ namespace FitZoneGym.Forms
             // 
             // pnlFrozen
             // 
-            pnlFrozen.BackColor = Color.FromArgb(245, 158, 11);
+            pnlFrozen.CornerRadius = 14;
+            pnlFrozen.AccentBar = Color.FromArgb(250, 176, 5);
+            pnlFrozen.BackColor = Color.FromArgb(35, 36, 47);
             pnlFrozen.Controls.Add(lblFrozenValue);
             pnlFrozen.Controls.Add(lblFrozenCaption);
             pnlFrozen.Dock = DockStyle.Fill;
             pnlFrozen.Location = new Point(508, 0);
             pnlFrozen.Margin = new Padding(0, 0, 12, 0);
             pnlFrozen.Name = "pnlFrozen";
-            pnlFrozen.Padding = new Padding(16, 12, 8, 8);
+            pnlFrozen.Padding = new Padding(22, 14, 10, 10);
             pnlFrozen.Size = new Size(242, 100);
             pnlFrozen.TabIndex = 2;
             // 
             // lblFrozenValue
             // 
+            lblFrozenValue.ForeColor = Color.FromArgb(244, 244, 248);
             lblFrozenValue.Dock = DockStyle.Fill;
             lblFrozenValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFrozenValue.ForeColor = Color.White;
             lblFrozenValue.Location = new Point(16, 36);
             lblFrozenValue.Name = "lblFrozenValue";
             lblFrozenValue.Size = new Size(218, 56);
@@ -209,9 +219,9 @@ namespace FitZoneGym.Forms
             // 
             // lblFrozenCaption
             // 
+            lblFrozenCaption.ForeColor = Color.FromArgb(152, 155, 172);
             lblFrozenCaption.Dock = DockStyle.Top;
-            lblFrozenCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblFrozenCaption.ForeColor = Color.White;
+            lblFrozenCaption.Font = new Font("Segoe UI", 10F);
             lblFrozenCaption.Location = new Point(16, 12);
             lblFrozenCaption.Name = "lblFrozenCaption";
             lblFrozenCaption.Size = new Size(218, 24);
@@ -220,22 +230,24 @@ namespace FitZoneGym.Forms
             // 
             // pnlExpired
             // 
-            pnlExpired.BackColor = Color.FromArgb(220, 38, 38);
+            pnlExpired.CornerRadius = 14;
+            pnlExpired.AccentBar = Color.FromArgb(239, 68, 68);
+            pnlExpired.BackColor = Color.FromArgb(35, 36, 47);
             pnlExpired.Controls.Add(lblExpiredValue);
             pnlExpired.Controls.Add(lblExpiredCaption);
             pnlExpired.Dock = DockStyle.Fill;
             pnlExpired.Location = new Point(762, 0);
             pnlExpired.Margin = new Padding(0, 0, 12, 0);
             pnlExpired.Name = "pnlExpired";
-            pnlExpired.Padding = new Padding(16, 12, 8, 8);
+            pnlExpired.Padding = new Padding(22, 14, 10, 10);
             pnlExpired.Size = new Size(244, 100);
             pnlExpired.TabIndex = 3;
             // 
             // lblExpiredValue
             // 
+            lblExpiredValue.ForeColor = Color.FromArgb(244, 244, 248);
             lblExpiredValue.Dock = DockStyle.Fill;
             lblExpiredValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblExpiredValue.ForeColor = Color.White;
             lblExpiredValue.Location = new Point(16, 36);
             lblExpiredValue.Name = "lblExpiredValue";
             lblExpiredValue.Size = new Size(220, 56);
@@ -245,9 +257,9 @@ namespace FitZoneGym.Forms
             // 
             // lblExpiredCaption
             // 
+            lblExpiredCaption.ForeColor = Color.FromArgb(152, 155, 172);
             lblExpiredCaption.Dock = DockStyle.Top;
-            lblExpiredCaption.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblExpiredCaption.ForeColor = Color.White;
+            lblExpiredCaption.Font = new Font("Segoe UI", 10F);
             lblExpiredCaption.Location = new Point(16, 12);
             lblExpiredCaption.Name = "lblExpiredCaption";
             lblExpiredCaption.Size = new Size(220, 24);
@@ -256,7 +268,8 @@ namespace FitZoneGym.Forms
             // 
             // cardChart
             // 
-            cardChart.BackColor = Color.White;
+            cardChart.CornerRadius = 14;
+            cardChart.BackColor = Color.FromArgb(35, 36, 47);
             cardChart.Controls.Add(donutChart);
             cardChart.Controls.Add(lblChartTitle);
             cardChart.Dock = DockStyle.Fill;
@@ -269,18 +282,20 @@ namespace FitZoneGym.Forms
             // 
             // donutChart
             // 
-            donutChart.BackColor = Color.White;
+            donutChart.BackColor = Color.FromArgb(35, 36, 47);
             donutChart.Dock = DockStyle.Fill;
+            donutChart.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             donutChart.Location = new Point(14, 44);
             donutChart.Name = "donutChart";
             donutChart.Size = new Size(346, 219);
             donutChart.TabIndex = 0;
+            donutChart.Click += donutChart_Click;
             // 
             // lblChartTitle
             // 
+            lblChartTitle.ForeColor = Color.FromArgb(244, 244, 248);
             lblChartTitle.Dock = DockStyle.Top;
             lblChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblChartTitle.ForeColor = Color.FromArgb(15, 35, 66);
             lblChartTitle.Location = new Point(14, 14);
             lblChartTitle.Name = "lblChartTitle";
             lblChartTitle.Size = new Size(346, 30);
@@ -289,7 +304,8 @@ namespace FitZoneGym.Forms
             // 
             // cardExpiring
             // 
-            cardExpiring.BackColor = Color.White;
+            cardExpiring.CornerRadius = 14;
+            cardExpiring.BackColor = Color.FromArgb(35, 36, 47);
             cardExpiring.Controls.Add(dgvExpiring);
             cardExpiring.Controls.Add(lnkViewAll);
             cardExpiring.Controls.Add(lblExpiringTitle);
@@ -303,7 +319,6 @@ namespace FitZoneGym.Forms
             // 
             // dgvExpiring
             // 
-            dgvExpiring.ColumnHeadersHeight = 34;
             dgvExpiring.Dock = DockStyle.Fill;
             dgvExpiring.Location = new Point(14, 44);
             dgvExpiring.Name = "dgvExpiring";
@@ -313,6 +328,10 @@ namespace FitZoneGym.Forms
             // 
             // lnkViewAll
             // 
+            lnkViewAll.ForeColor = Color.FromArgb(244, 244, 248);
+            lnkViewAll.LinkColor = Color.FromArgb(255, 106, 0);
+            lnkViewAll.ActiveLinkColor = Color.FromArgb(255, 136, 56);
+            lnkViewAll.VisitedLinkColor = Color.FromArgb(255, 106, 0);
             lnkViewAll.Dock = DockStyle.Bottom;
             lnkViewAll.Location = new Point(14, 241);
             lnkViewAll.Name = "lnkViewAll";
@@ -325,9 +344,9 @@ namespace FitZoneGym.Forms
             // 
             // lblExpiringTitle
             // 
+            lblExpiringTitle.ForeColor = Color.FromArgb(244, 244, 248);
             lblExpiringTitle.Dock = DockStyle.Top;
             lblExpiringTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblExpiringTitle.ForeColor = Color.FromArgb(15, 35, 66);
             lblExpiringTitle.Location = new Point(14, 14);
             lblExpiringTitle.Name = "lblExpiringTitle";
             lblExpiringTitle.Size = new Size(592, 30);
@@ -336,7 +355,8 @@ namespace FitZoneGym.Forms
             // 
             // cardActivity
             // 
-            cardActivity.BackColor = Color.White;
+            cardActivity.CornerRadius = 14;
+            cardActivity.BackColor = Color.FromArgb(35, 36, 47);
             mainLayout.SetColumnSpan(cardActivity, 2);
             cardActivity.Controls.Add(dgvActivity);
             cardActivity.Controls.Add(lblActivityTitle);
@@ -350,7 +370,6 @@ namespace FitZoneGym.Forms
             // 
             // dgvActivity
             // 
-            dgvActivity.ColumnHeadersHeight = 34;
             dgvActivity.Dock = DockStyle.Fill;
             dgvActivity.Location = new Point(14, 44);
             dgvActivity.Name = "dgvActivity";
@@ -360,9 +379,9 @@ namespace FitZoneGym.Forms
             // 
             // lblActivityTitle
             // 
+            lblActivityTitle.ForeColor = Color.FromArgb(244, 244, 248);
             lblActivityTitle.Dock = DockStyle.Top;
             lblActivityTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblActivityTitle.ForeColor = Color.FromArgb(15, 35, 66);
             lblActivityTitle.Location = new Point(14, 14);
             lblActivityTitle.Name = "lblActivityTitle";
             lblActivityTitle.Size = new Size(978, 30);
@@ -397,27 +416,27 @@ namespace FitZoneGym.Forms
 
         private System.Windows.Forms.TableLayoutPanel mainLayout;
         private System.Windows.Forms.TableLayoutPanel cardsLayout;
-        private System.Windows.Forms.Panel pnlTotal;
+        private FitZoneGym.Controls.ThemedPanel pnlTotal;
         private System.Windows.Forms.Label lblTotalValue;
         private System.Windows.Forms.Label lblTotalCaption;
-        private System.Windows.Forms.Panel pnlActive;
+        private FitZoneGym.Controls.ThemedPanel pnlActive;
         private System.Windows.Forms.Label lblActiveValue;
         private System.Windows.Forms.Label lblActiveCaption;
-        private System.Windows.Forms.Panel pnlFrozen;
+        private FitZoneGym.Controls.ThemedPanel pnlFrozen;
         private System.Windows.Forms.Label lblFrozenValue;
         private System.Windows.Forms.Label lblFrozenCaption;
-        private System.Windows.Forms.Panel pnlExpired;
+        private FitZoneGym.Controls.ThemedPanel pnlExpired;
         private System.Windows.Forms.Label lblExpiredValue;
         private System.Windows.Forms.Label lblExpiredCaption;
-        private System.Windows.Forms.Panel cardChart;
+        private FitZoneGym.Controls.ThemedPanel cardChart;
         private FitZoneGym.Controls.DonutChart donutChart;
         private System.Windows.Forms.Label lblChartTitle;
-        private System.Windows.Forms.Panel cardExpiring;
-        private System.Windows.Forms.DataGridView dgvExpiring;
+        private FitZoneGym.Controls.ThemedPanel cardExpiring;
+        private FitZoneGym.Controls.ThemedGrid dgvExpiring;
         private System.Windows.Forms.LinkLabel lnkViewAll;
         private System.Windows.Forms.Label lblExpiringTitle;
-        private System.Windows.Forms.Panel cardActivity;
-        private System.Windows.Forms.DataGridView dgvActivity;
+        private FitZoneGym.Controls.ThemedPanel cardActivity;
+        private FitZoneGym.Controls.ThemedGrid dgvActivity;
         private System.Windows.Forms.Label lblActivityTitle;
     }
 }

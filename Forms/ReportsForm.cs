@@ -42,5 +42,10 @@ namespace FitZoneGym.Forms
         {
 
         }
+
+        private void contentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

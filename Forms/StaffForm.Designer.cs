@@ -18,25 +18,30 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
-            tabs = new TabControl();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            tabs = new FitZoneGym.Controls.ThemedTabControl();
             tabAccounts = new TabPage();
-            dgvStaff = new DataGridView();
+            dgvStaff = new FitZoneGym.Controls.ThemedGrid();
             pnlStaffBottom = new Panel();
-            btnEdit = new Button();
+            btnEdit = new FitZoneGym.Controls.ThemedButton();
             tabPermissions = new TabPage();
             clbPerms = new CheckedListBox();
             pnlPermBottom = new Panel();
-            btnSavePerms = new Button();
+            btnSavePerms = new FitZoneGym.Controls.ThemedButton();
             pnlPermTop = new Panel();
             lblRole = new Label();
             cboRole = new ComboBox();
             lblPermNote = new Label();
             tabLog = new TabPage();
-            dgvLog = new DataGridView();
-            btnAdd = new Button();
+            dgvLog = new FitZoneGym.Controls.ThemedGrid();
+            btnAdd = new FitZoneGym.Controls.ThemedButton();
             contentPanel.SuspendLayout();
             headerPanel.SuspendLayout();
-            actionsFlow.SuspendLayout();
             tabs.SuspendLayout();
             tabAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaff).BeginInit();
@@ -51,72 +56,120 @@ namespace FitZoneGym.Forms
             // contentPanel
             // 
             contentPanel.Controls.Add(tabs);
-            // 
-            // actionsFlow
-            // 
-            actionsFlow.Controls.Add(btnAdd);
+            contentPanel.ForeColor = Color.White;
+            contentPanel.Size = new Size(1030, 636);
             // 
             // headerPanel
             // 
+            headerPanel.Size = new Size(1030, 56);
             headerPanel.Paint += headerPanel_Paint;
             // 
             // titleLabel
             // 
+            titleLabel.Size = new Size(844, 48);
             titleLabel.Text = "Users & Staff";
             // 
             // tabs
             // 
             tabs.Controls.Add(tabAccounts);
             tabs.Dock = DockStyle.Fill;
+            tabs.DrawMode = TabDrawMode.OwnerDrawFixed;
             tabs.Font = new Font("Segoe UI", 9.5F);
+            tabs.ItemSize = new Size(170, 38);
             tabs.Location = new Point(16, 16);
             tabs.Name = "tabs";
+            tabs.Padding = new Point(14, 6);
             tabs.SelectedIndex = 0;
-            tabs.Size = new Size(1018, 638);
+            tabs.Size = new Size(998, 604);
+            tabs.SizeMode = TabSizeMode.Fixed;
             tabs.TabIndex = 0;
             // 
             // tabAccounts
             // 
-            tabAccounts.BackColor = Color.White;
+            tabAccounts.BackColor = Color.FromArgb(24, 25, 33);
+            tabAccounts.BackgroundImageLayout = ImageLayout.None;
             tabAccounts.Controls.Add(dgvStaff);
             tabAccounts.Controls.Add(pnlStaffBottom);
-            tabAccounts.Location = new Point(4, 34);
+            tabAccounts.ForeColor = Color.FromArgb(244, 244, 248);
+            tabAccounts.Location = new Point(4, 42);
             tabAccounts.Name = "tabAccounts";
             tabAccounts.Padding = new Padding(10);
-            tabAccounts.Size = new Size(1010, 600);
+            tabAccounts.Size = new Size(990, 558);
             tabAccounts.TabIndex = 0;
             tabAccounts.Text = "Staff Accounts";
+            tabAccounts.Click += tabAccounts_Click;
             // 
             // dgvStaff
             // 
-            dgvStaff.ColumnHeadersHeight = 34;
+            dgvStaff.AllowUserToAddRows = false;
+            dgvStaff.AllowUserToDeleteRows = false;
+            dgvStaff.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(95, 55, 34);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvStaff.BackgroundColor = Color.FromArgb(35, 36, 47);
+            dgvStaff.BorderStyle = BorderStyle.None;
+            dgvStaff.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvStaff.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(152, 155, 172);
+            dataGridViewCellStyle2.Padding = new Padding(6, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(152, 155, 172);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvStaff.ColumnHeadersHeight = 38;
+            dgvStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(244, 244, 248);
+            dataGridViewCellStyle3.Padding = new Padding(6, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(95, 55, 34);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
             dgvStaff.Dock = DockStyle.Fill;
+            dgvStaff.EnableHeadersVisualStyles = false;
+            dgvStaff.Font = new Font("Segoe UI", 9.5F);
+            dgvStaff.GridColor = Color.FromArgb(48, 50, 64);
             dgvStaff.Location = new Point(10, 10);
+            dgvStaff.MultiSelect = false;
             dgvStaff.Name = "dgvStaff";
+            dgvStaff.ReadOnly = true;
+            dgvStaff.RowHeadersVisible = false;
             dgvStaff.RowHeadersWidth = 62;
-            dgvStaff.Size = new Size(990, 532);
+            dgvStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvStaff.Size = new Size(970, 490);
             dgvStaff.TabIndex = 0;
             dgvStaff.CellContentClick += dgvStaff_CellContentClick;
             dgvStaff.CellDoubleClick += dgvStaff_CellDoubleClick;
             // 
             // pnlStaffBottom
             // 
-            pnlStaffBottom.BackColor = Color.White;
+            pnlStaffBottom.BackColor = Color.FromArgb(35, 36, 47);
             pnlStaffBottom.Controls.Add(btnEdit);
             pnlStaffBottom.Dock = DockStyle.Bottom;
-            pnlStaffBottom.Location = new Point(10, 542);
+            pnlStaffBottom.Location = new Point(10, 500);
             pnlStaffBottom.Name = "pnlStaffBottom";
-            pnlStaffBottom.Size = new Size(990, 48);
+            pnlStaffBottom.Size = new Size(970, 48);
             pnlStaffBottom.TabIndex = 1;
             // 
             // btnEdit
             // 
-            btnEdit.BackColor = Color.FromArgb(30, 111, 240);
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnEdit.BackColor = Color.FromArgb(255, 106, 0);
+            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(255, 106, 0);
+            btnEdit.FlatAppearance.BorderSize = 0;
+            btnEdit.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 106, 0);
+            btnEdit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 136, 56);
             btnEdit.FlatStyle = FlatStyle.Flat;
             btnEdit.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnEdit.ForeColor = Color.White;
+            btnEdit.Kind = FitZoneGym.Controls.ButtonKind.Primary;
             btnEdit.Location = new Point(0, 8);
             btnEdit.Margin = new Padding(0, 0, 8, 0);
             btnEdit.Name = "btnEdit";
@@ -128,10 +181,11 @@ namespace FitZoneGym.Forms
             // 
             // tabPermissions
             // 
-            tabPermissions.BackColor = Color.White;
+            tabPermissions.BackColor = Color.FromArgb(24, 25, 33);
             tabPermissions.Controls.Add(clbPerms);
             tabPermissions.Controls.Add(pnlPermBottom);
             tabPermissions.Controls.Add(pnlPermTop);
+            tabPermissions.ForeColor = Color.FromArgb(244, 244, 248);
             tabPermissions.Location = new Point(0, 0);
             tabPermissions.Name = "tabPermissions";
             tabPermissions.Padding = new Padding(10);
@@ -153,7 +207,7 @@ namespace FitZoneGym.Forms
             // 
             // pnlPermBottom
             // 
-            pnlPermBottom.BackColor = Color.White;
+            pnlPermBottom.BackColor = Color.FromArgb(35, 36, 47);
             pnlPermBottom.Controls.Add(btnSavePerms);
             pnlPermBottom.Dock = DockStyle.Bottom;
             pnlPermBottom.Location = new Point(10, 42);
@@ -163,12 +217,15 @@ namespace FitZoneGym.Forms
             // 
             // btnSavePerms
             // 
-            btnSavePerms.BackColor = Color.FromArgb(30, 111, 240);
-            btnSavePerms.Cursor = Cursors.Hand;
-            btnSavePerms.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnSavePerms.BackColor = Color.FromArgb(255, 106, 0);
+            btnSavePerms.FlatAppearance.BorderColor = Color.FromArgb(255, 106, 0);
+            btnSavePerms.FlatAppearance.BorderSize = 0;
+            btnSavePerms.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 106, 0);
+            btnSavePerms.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 136, 56);
             btnSavePerms.FlatStyle = FlatStyle.Flat;
             btnSavePerms.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnSavePerms.ForeColor = Color.White;
+            btnSavePerms.Kind = FitZoneGym.Controls.ButtonKind.Primary;
             btnSavePerms.Location = new Point(0, 8);
             btnSavePerms.Margin = new Padding(0, 0, 8, 0);
             btnSavePerms.Name = "btnSavePerms";
@@ -179,7 +236,7 @@ namespace FitZoneGym.Forms
             // 
             // pnlPermTop
             // 
-            pnlPermTop.BackColor = Color.White;
+            pnlPermTop.BackColor = Color.FromArgb(35, 36, 47);
             pnlPermTop.Controls.Add(lblRole);
             pnlPermTop.Controls.Add(cboRole);
             pnlPermTop.Controls.Add(lblPermNote);
@@ -193,7 +250,7 @@ namespace FitZoneGym.Forms
             // 
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Segoe UI", 8.5F);
-            lblRole.ForeColor = Color.FromArgb(107, 114, 128);
+            lblRole.ForeColor = Color.FromArgb(152, 155, 172);
             lblRole.Location = new Point(0, 0);
             lblRole.Name = "lblRole";
             lblRole.Size = new Size(43, 23);
@@ -202,9 +259,11 @@ namespace FitZoneGym.Forms
             // 
             // cboRole
             // 
+            cboRole.BackColor = Color.FromArgb(46, 47, 60);
             cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cboRole.FlatStyle = FlatStyle.Flat;
             cboRole.Font = new Font("Segoe UI", 9.5F);
+            cboRole.ForeColor = Color.FromArgb(244, 244, 248);
             cboRole.Items.AddRange(new object[] { "Staff", "Cashier" });
             cboRole.Location = new Point(0, 20);
             cboRole.Name = "cboRole";
@@ -215,7 +274,7 @@ namespace FitZoneGym.Forms
             // 
             lblPermNote.AutoSize = true;
             lblPermNote.Font = new Font("Segoe UI", 9F);
-            lblPermNote.ForeColor = Color.FromArgb(107, 114, 128);
+            lblPermNote.ForeColor = Color.FromArgb(152, 155, 172);
             lblPermNote.Location = new Point(200, 26);
             lblPermNote.Name = "lblPermNote";
             lblPermNote.Size = new Size(914, 25);
@@ -224,8 +283,9 @@ namespace FitZoneGym.Forms
             // 
             // tabLog
             // 
-            tabLog.BackColor = Color.White;
+            tabLog.BackColor = Color.FromArgb(24, 25, 33);
             tabLog.Controls.Add(dgvLog);
+            tabLog.ForeColor = Color.FromArgb(244, 244, 248);
             tabLog.Location = new Point(0, 0);
             tabLog.Name = "tabLog";
             tabLog.Padding = new Padding(10);
@@ -235,22 +295,64 @@ namespace FitZoneGym.Forms
             // 
             // dgvLog
             // 
-            dgvLog.ColumnHeadersHeight = 34;
+            dgvLog.AllowUserToAddRows = false;
+            dgvLog.AllowUserToDeleteRows = false;
+            dgvLog.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(95, 55, 34);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dgvLog.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvLog.BackgroundColor = Color.FromArgb(35, 36, 47);
+            dgvLog.BorderStyle = BorderStyle.None;
+            dgvLog.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvLog.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(152, 155, 172);
+            dataGridViewCellStyle5.Padding = new Padding(6, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(152, 155, 172);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvLog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvLog.ColumnHeadersHeight = 38;
+            dgvLog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(35, 36, 47);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(244, 244, 248);
+            dataGridViewCellStyle6.Padding = new Padding(6, 0, 0, 0);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(95, 55, 34);
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvLog.DefaultCellStyle = dataGridViewCellStyle6;
             dgvLog.Dock = DockStyle.Fill;
+            dgvLog.EnableHeadersVisualStyles = false;
+            dgvLog.Font = new Font("Segoe UI", 9.5F);
+            dgvLog.GridColor = Color.FromArgb(48, 50, 64);
             dgvLog.Location = new Point(10, 10);
+            dgvLog.MultiSelect = false;
             dgvLog.Name = "dgvLog";
+            dgvLog.ReadOnly = true;
+            dgvLog.RowHeadersVisible = false;
             dgvLog.RowHeadersWidth = 62;
+            dgvLog.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvLog.Size = new Size(180, 80);
             dgvLog.TabIndex = 0;
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.FromArgb(30, 111, 240);
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
+            btnAdd.BackColor = Color.FromArgb(255, 106, 0);
+            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(255, 106, 0);
+            btnAdd.FlatAppearance.BorderSize = 0;
+            btnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 106, 0);
+            btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 136, 56);
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             btnAdd.ForeColor = Color.White;
+            btnAdd.Kind = FitZoneGym.Controls.ButtonKind.Primary;
+            btnAdd.Location = new Point(0, 6);
             btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(150, 36);
@@ -269,8 +371,6 @@ namespace FitZoneGym.Forms
             contentPanel.ResumeLayout(false);
             headerPanel.ResumeLayout(false);
             headerPanel.PerformLayout();
-            actionsFlow.ResumeLayout(false);
-            actionsFlow.PerformLayout();
             tabs.ResumeLayout(false);
             tabAccounts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvStaff).EndInit();
@@ -286,21 +386,21 @@ namespace FitZoneGym.Forms
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabs;
+        private FitZoneGym.Controls.ThemedTabControl tabs;
         private System.Windows.Forms.TabPage tabAccounts;
-        private System.Windows.Forms.DataGridView dgvStaff;
+        private FitZoneGym.Controls.ThemedGrid dgvStaff;
         private System.Windows.Forms.Panel pnlStaffBottom;
-        private System.Windows.Forms.Button btnEdit;
+        private FitZoneGym.Controls.ThemedButton btnEdit;
         private System.Windows.Forms.TabPage tabPermissions;
         private System.Windows.Forms.CheckedListBox clbPerms;
         private System.Windows.Forms.Panel pnlPermBottom;
-        private System.Windows.Forms.Button btnSavePerms;
+        private FitZoneGym.Controls.ThemedButton btnSavePerms;
         private System.Windows.Forms.Panel pnlPermTop;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.ComboBox cboRole;
         private System.Windows.Forms.Label lblPermNote;
         private System.Windows.Forms.TabPage tabLog;
-        private System.Windows.Forms.DataGridView dgvLog;
-        private System.Windows.Forms.Button btnAdd;
+        private FitZoneGym.Controls.ThemedGrid dgvLog;
+        private FitZoneGym.Controls.ThemedButton btnAdd;
     }
 }

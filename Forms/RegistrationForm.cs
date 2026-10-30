@@ -40,9 +40,9 @@ namespace FitZoneGym.Forms
 
         private void ModeChanged()
         {
-            rbNew.BackColor = rbNew.Checked ? Ui.Blue : Color.White;
+            rbNew.BackColor = rbNew.Checked ? Ui.Accent : Ui.InputBg;
             rbNew.ForeColor = rbNew.Checked ? Color.White : Ui.Text;
-            rbRenew.BackColor = rbRenew.Checked ? Ui.Blue : Color.White;
+            rbRenew.BackColor = rbRenew.Checked ? Ui.Accent : Ui.InputBg;
             rbRenew.ForeColor = rbRenew.Checked ? Color.White : Ui.Text;
             btnGo.Text = IsRenew ? "Process Renewal" : "Register Membership";
             lblDateCaption.Text = IsRenew ? "Renewal date" : "Start date";
