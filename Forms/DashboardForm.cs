@@ -15,6 +15,7 @@ namespace FitZoneGym.Forms
             InitializeComponent();
             Ui.StyleGrid(dgvExpiring);
             Ui.StyleGrid(dgvActivity);
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -72,6 +73,16 @@ namespace FitZoneGym.Forms
         private void lnkViewAll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Nav.Go(this, "members");
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void donutChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

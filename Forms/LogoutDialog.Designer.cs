@@ -20,13 +20,13 @@ namespace FitZoneGym.Forms
         {
             lblTitle = new Label();
             lblMessage = new Label();
-            btnYes = new Button();
-            btnNo = new Button();
+            btnYes = new FitZoneGym.Controls.ThemedButton();
+            btnNo = new FitZoneGym.Controls.ThemedButton();
             SuspendLayout();
             // 
             // lblTitle
             // 
-            lblTitle.BackColor = Color.Black;
+            lblTitle.BackColor = Color.FromArgb(35, 36, 47);
             lblTitle.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(23, 32);
@@ -39,7 +39,7 @@ namespace FitZoneGym.Forms
             // lblMessage
             // 
             lblMessage.Font = new Font("Segoe UI", 9.5F);
-            lblMessage.ForeColor = Color.Transparent;
+            lblMessage.ForeColor = Color.FromArgb(244, 244, 248);
             lblMessage.Location = new Point(23, 101);
             lblMessage.Name = "lblMessage";
             lblMessage.Size = new Size(380, 28);
@@ -49,13 +49,16 @@ namespace FitZoneGym.Forms
             // 
             // btnYes
             // 
-            btnYes.BackColor = Color.FromArgb(255, 128, 0);
-            btnYes.Cursor = Cursors.Hand;
+            btnYes.BackColor = Color.FromArgb(255, 106, 0);
             btnYes.DialogResult = DialogResult.Yes;
-            btnYes.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
-            btnYes.FlatStyle = FlatStyle.Popup;
+            btnYes.FlatAppearance.BorderColor = Color.FromArgb(255, 106, 0);
+            btnYes.FlatAppearance.BorderSize = 0;
+            btnYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 106, 0);
+            btnYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 136, 56);
+            btnYes.FlatStyle = FlatStyle.Flat;
             btnYes.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnYes.ForeColor = Color.White;
+            btnYes.Kind = FitZoneGym.Controls.ButtonKind.Primary;
             btnYes.Location = new Point(60, 156);
             btnYes.Margin = new Padding(0, 0, 8, 0);
             btnYes.Name = "btnYes";
@@ -66,13 +69,14 @@ namespace FitZoneGym.Forms
             // 
             // btnNo
             // 
-            btnNo.BackColor = SystemColors.WindowFrame;
-            btnNo.Cursor = Cursors.Hand;
+            btnNo.BackColor = Color.FromArgb(46, 47, 60);
             btnNo.DialogResult = DialogResult.No;
-            btnNo.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
-            btnNo.FlatStyle = FlatStyle.Popup;
+            btnNo.FlatAppearance.BorderColor = Color.FromArgb(58, 60, 76);
+            btnNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 47, 60);
+            btnNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(46, 47, 60);
+            btnNo.FlatStyle = FlatStyle.Flat;
             btnNo.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNo.ForeColor = Color.White;
+            btnNo.ForeColor = Color.FromArgb(244, 244, 248);
             btnNo.Location = new Point(236, 156);
             btnNo.Margin = new Padding(0, 0, 8, 0);
             btnNo.Name = "btnNo";
@@ -86,15 +90,15 @@ namespace FitZoneGym.Forms
             AcceptButton = btnYes;
             AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.Black;
-            BackgroundImage = Properties.Resources.abstract_background_animation_flying_arrow_video;
+            BackColor = Color.FromArgb(24, 25, 33);
             CancelButton = btnNo;
-            ClientSize = new Size(443, 270);
+            ClientSize = new Size(424, 235);
             Controls.Add(lblTitle);
             Controls.Add(lblMessage);
             Controls.Add(btnYes);
             Controls.Add(btnNo);
             Font = new Font("Segoe UI", 9.5F);
+            ForeColor = Color.FromArgb(244, 244, 248);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -108,7 +112,7 @@ namespace FitZoneGym.Forms
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.Button btnYes;
-        private System.Windows.Forms.Button btnNo;
+        private FitZoneGym.Controls.ThemedButton btnYes;
+        private FitZoneGym.Controls.ThemedButton btnNo;
     }
 }

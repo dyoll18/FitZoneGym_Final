@@ -65,5 +65,10 @@ namespace FitZoneGym.Forms
         {
 
         }
+
+        private void tabAccounts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

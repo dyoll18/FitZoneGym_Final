@@ -8,7 +8,7 @@ namespace FitZoneGym.Controls
         [System.ComponentModel.Browsable(false), System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public (string Label, int Value, Color Color)[] Slices { get; set; } = Array.Empty<(string, int, Color)>();
 
-        public DonutChart() { DoubleBuffered = true; BackColor = Color.White; }
+        public DonutChart() { DoubleBuffered = true; BackColor = Ui.Surface; }
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -20,7 +20,7 @@ namespace FitZoneGym.Controls
             var rect = new Rectangle(10, (Height - size) / 2, size, size);
             int sum = Slices.Sum(s => s.Value);
             float start = -90f;
-            using (var track = new Pen(Color.FromArgb(230, 234, 242), 22))
+            using (var track = new Pen(Color.FromArgb(48, 50, 64), 22))
                 g.DrawEllipse(track, rect.X + 11, rect.Y + 11, rect.Width - 22, rect.Height - 22);
             if (sum > 0)
                 foreach (var s in Slices)
@@ -34,11 +34,11 @@ namespace FitZoneGym.Controls
             using var big = new Font("Segoe UI", 20f, FontStyle.Bold);
             using var small = new Font("Segoe UI", 8.5f);
             var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
-            g.DrawString(Total.ToString(), big, new SolidBrush(Ui.Navy), new RectangleF(rect.X, rect.Y + rect.Height / 2f - 20, rect.Width, 30), sf);
+            g.DrawString(Total.ToString(), big, new SolidBrush(Ui.Text), new RectangleF(rect.X, rect.Y + rect.Height / 2f - 20, rect.Width, 30), sf);
             g.DrawString("Total Members", small, new SolidBrush(Ui.Muted), new RectangleF(rect.X, rect.Y + rect.Height / 2f + 8, rect.Width, 20), sf);
 
             // legend
-            int lx = rect.Right + 20, ly = rect.Y + 20;
+            int lx = rect.Right + 6, ly = rect.Y + 67;
             foreach (var s in Slices)
             {
                 using (var br = new SolidBrush(s.Color)) g.FillEllipse(br, lx, ly + 3, 10, 10);

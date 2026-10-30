@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\FitZoneGym.csproj": {}
+    "C:\\Users\\Administrator\\Downloads\\fixed_gym2_fitflow (1)\\fixed_gym2\\FitZoneGym.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\FitZoneGym.csproj": {
+    "C:\\Users\\Administrator\\Downloads\\fixed_gym2_fitflow (1)\\fixed_gym2\\FitZoneGym.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\FitZoneGym.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\fixed_gym2_fitflow (1)\\fixed_gym2\\FitZoneGym.csproj",
         "projectName": "FitZoneGym",
-        "projectPath": "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\FitZoneGym.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\fixed_gym2_fitflow (1)\\fixed_gym2\\FitZoneGym.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Downloads\\fixed_gym\\fix bug button and new log in ui\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\fixed_gym2_fitflow (1)\\fixed_gym2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

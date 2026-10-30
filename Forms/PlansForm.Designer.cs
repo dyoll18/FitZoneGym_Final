@@ -19,12 +19,12 @@ namespace FitZoneGym.Forms
         private void InitializeComponent()
         {
             mainLayout = new TableLayoutPanel();
-            dgvPlans = new DataGridView();
+            dgvPlans = new FitZoneGym.Controls.ThemedGrid();
             footerPanel = new Panel();
-            btnEdit = new Button();
-            btnToggle = new Button();
+            btnEdit = new FitZoneGym.Controls.ThemedButton();
+            btnToggle = new FitZoneGym.Controls.ThemedButton();
             lblNote = new Label();
-            btnAdd = new Button();
+            btnAdd = new FitZoneGym.Controls.ThemedButton();
             contentPanel.SuspendLayout();
             headerPanel.SuspendLayout();
             actionsFlow.SuspendLayout();
@@ -50,7 +50,7 @@ namespace FitZoneGym.Forms
             // 
             // mainLayout
             // 
-            mainLayout.BackColor = Color.FromArgb(243, 246, 251);
+            mainLayout.BackColor = Color.FromArgb(24, 25, 33);
             mainLayout.ColumnCount = 1;
             mainLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             mainLayout.Controls.Add(dgvPlans, 0, 0);
@@ -66,7 +66,6 @@ namespace FitZoneGym.Forms
             // 
             // dgvPlans
             // 
-            dgvPlans.ColumnHeadersHeight = 34;
             dgvPlans.Dock = DockStyle.Fill;
             dgvPlans.Location = new Point(3, 3);
             dgvPlans.Name = "dgvPlans";
@@ -78,7 +77,7 @@ namespace FitZoneGym.Forms
             // 
             // footerPanel
             // 
-            footerPanel.BackColor = Color.FromArgb(243, 246, 251);
+            footerPanel.BackColor = Color.FromArgb(24, 25, 33);
             footerPanel.Controls.Add(btnEdit);
             footerPanel.Controls.Add(btnToggle);
             footerPanel.Controls.Add(lblNote);
@@ -90,43 +89,33 @@ namespace FitZoneGym.Forms
             // 
             // btnEdit
             // 
-            btnEdit.BackColor = Color.FromArgb(30, 111, 240);
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
-            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Kind = FitZoneGym.Controls.ButtonKind.Primary;
             btnEdit.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnEdit.ForeColor = Color.White;
             btnEdit.Location = new Point(0, 8);
             btnEdit.Margin = new Padding(0, 0, 8, 0);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(100, 34);
             btnEdit.TabIndex = 0;
             btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = false;
             btnEdit.Click += btnEdit_Click;
             // 
             // btnToggle
             // 
-            btnToggle.BackColor = Color.White;
-            btnToggle.Cursor = Cursors.Hand;
-            btnToggle.FlatAppearance.BorderColor = Color.FromArgb(214, 221, 232);
-            btnToggle.FlatStyle = FlatStyle.Flat;
+            btnToggle.Kind = FitZoneGym.Controls.ButtonKind.Secondary;
             btnToggle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnToggle.ForeColor = Color.FromArgb(31, 41, 55);
             btnToggle.Location = new Point(110, 8);
             btnToggle.Margin = new Padding(0, 0, 8, 0);
             btnToggle.Name = "btnToggle";
             btnToggle.Size = new Size(120, 34);
             btnToggle.TabIndex = 1;
             btnToggle.Text = "Deactivate";
-            btnToggle.UseVisualStyleBackColor = false;
             btnToggle.Click += btnToggle_Click;
             // 
             // lblNote
             // 
+            lblNote.ForeColor = Color.FromArgb(152, 155, 172);
             lblNote.AutoSize = true;
             lblNote.Font = new Font("Segoe UI", 9F);
-            lblNote.ForeColor = Color.FromArgb(107, 114, 128);
             lblNote.Location = new Point(250, 16);
             lblNote.Name = "lblNote";
             lblNote.Size = new Size(763, 25);
@@ -135,18 +124,13 @@ namespace FitZoneGym.Forms
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.FromArgb(30, 111, 240);
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.FlatAppearance.BorderColor = Color.FromArgb(30, 111, 240);
-            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Kind = FitZoneGym.Controls.ButtonKind.Primary;
             btnAdd.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnAdd.ForeColor = Color.White;
             btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(150, 36);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "+ Add Plan";
-            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // PlansForm
@@ -171,11 +155,11 @@ namespace FitZoneGym.Forms
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainLayout;
-        private System.Windows.Forms.DataGridView dgvPlans;
+        private FitZoneGym.Controls.ThemedGrid dgvPlans;
         private System.Windows.Forms.Panel footerPanel;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnToggle;
+        private FitZoneGym.Controls.ThemedButton btnEdit;
+        private FitZoneGym.Controls.ThemedButton btnToggle;
         private System.Windows.Forms.Label lblNote;
-        private System.Windows.Forms.Button btnAdd;
+        private FitZoneGym.Controls.ThemedButton btnAdd;
     }
 }
