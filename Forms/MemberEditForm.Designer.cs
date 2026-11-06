@@ -18,6 +18,9 @@ namespace FitZoneGym.Forms
         /// <summary>Designer generated: do not modify the contents of this method with the code editor.</summary>
         private void InitializeComponent()
         {
+            picPhoto = new PictureBox();
+            btnPhoto = new FitZoneGym.Controls.ThemedButton();
+            btnRemovePhoto = new FitZoneGym.Controls.ThemedButton();
             lblName = new Label();
             txtName = new TextBox();
             lblContact = new Label();
@@ -315,6 +318,39 @@ namespace FitZoneGym.Forms
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             // 
+            // picPhoto
+            // 
+            picPhoto.BackColor = Color.FromArgb(46, 47, 60);
+            picPhoto.BorderStyle = BorderStyle.FixedSingle;
+            picPhoto.Location = new Point(570, 20);
+            picPhoto.Name = "picPhoto";
+            picPhoto.Size = new Size(170, 170);
+            picPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+            picPhoto.TabIndex = 22;
+            picPhoto.TabStop = false;
+            // 
+            // btnPhoto
+            // 
+            btnPhoto.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnPhoto.Kind = FitZoneGym.Controls.ButtonKind.Primary;
+            btnPhoto.Location = new Point(570, 200);
+            btnPhoto.Name = "btnPhoto";
+            btnPhoto.Size = new Size(170, 34);
+            btnPhoto.TabIndex = 23;
+            btnPhoto.Text = "Choose Photo";
+            btnPhoto.Click += btnPhoto_Click;
+            // 
+            // btnRemovePhoto
+            // 
+            btnRemovePhoto.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            btnRemovePhoto.Kind = FitZoneGym.Controls.ButtonKind.Secondary;
+            btnRemovePhoto.Location = new Point(570, 242);
+            btnRemovePhoto.Name = "btnRemovePhoto";
+            btnRemovePhoto.Size = new Size(170, 34);
+            btnRemovePhoto.TabIndex = 24;
+            btnRemovePhoto.Text = "Remove Photo";
+            btnRemovePhoto.Click += btnRemovePhoto_Click;
+            // 
             // MemberEditForm
             // 
             AcceptButton = btnSave;
@@ -322,7 +358,10 @@ namespace FitZoneGym.Forms
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(24, 25, 33);
             CancelButton = btnCancel;
-            ClientSize = new Size(560, 536);
+            ClientSize = new Size(760, 536);
+            Controls.Add(picPhoto);
+            Controls.Add(btnPhoto);
+            Controls.Add(btnRemovePhoto);
             Controls.Add(lblName);
             Controls.Add(txtName);
             Controls.Add(lblContact);
@@ -359,6 +398,9 @@ namespace FitZoneGym.Forms
 
         #endregion
 
+        private System.Windows.Forms.PictureBox picPhoto;
+        private FitZoneGym.Controls.ThemedButton btnPhoto;
+        private FitZoneGym.Controls.ThemedButton btnRemovePhoto;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblContact;

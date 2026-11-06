@@ -330,11 +330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\fitzone_walkin_no print receipt\\final na toh promiseeee\\FitZoneGym.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\fitzone_final_picture_member\\final na toh promiseeee\\FitZoneGym.csproj",
       "projectName": "FitZoneGym",
-      "projectPath": "C:\\Users\\Administrator\\Downloads\\fitzone_walkin_no print receipt\\final na toh promiseeee\\FitZoneGym.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Downloads\\fitzone_final_picture_member\\final na toh promiseeee\\FitZoneGym.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Downloads\\fitzone_walkin_no print receipt\\final na toh promiseeee\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Downloads\\fitzone_final_picture_member\\final na toh promiseeee\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

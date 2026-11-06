@@ -98,7 +98,40 @@ ORDER BY m.MemberID";
                 RegistrationDate = Db.ToDate(r["RegistrationDate"]),
                 AccountStatus = Db.S(r["AccountStatus"]),
                 Notes = Db.S(r["Notes"]),
+                PhotoPath = Db.S(r["PhotoPath"]),
             };
+        }
+
+        public static readonly string[] PhotoExtensions = { ".jpg", ".jpeg", ".png", ".bmp", ".gif" };
+
+        public static string PhotoFolder
+        {
+            get
+            {
+                string dir = Path.Combine(Path.GetDirectoryName(Db.FilePath), "Photos");
+                Directory.CreateDirectory(dir);
+                return dir;
+            }
+        }
+
+        public static string PhotoFullPath(string storedName) =>
+            string.IsNullOrWhiteSpace(storedName) ? null : Path.Combine(PhotoFolder, storedName);
+
+        public static void ValidatePhoto(string sourcePath)
+        {
+            if (!File.Exists(sourcePath)) throw new ValidationException("The selected picture could not be found.");
+            if (!PhotoExtensions.Contains(Path.GetExtension(sourcePath).ToLowerInvariant()))
+                throw new ValidationException("Please choose a JPG, PNG, BMP or GIF picture.");
+            if (new FileInfo(sourcePath).Length > 5 * 1024 * 1024)
+                throw new ValidationException("The picture is too large (maximum 5 MB).");
+        }
+
+        public static string SavePhoto(string sourcePath)
+        {
+            ValidatePhoto(sourcePath);
+            string name = Guid.NewGuid().ToString("N") + Path.GetExtension(sourcePath).ToLowerInvariant();
+            File.Copy(sourcePath, Path.Combine(PhotoFolder, name));
+            return name;
         }
 
         public static string Add(Member m)
@@ -112,10 +145,10 @@ ORDER BY m.MemberID";
             int next = (max == null ? 0 : Convert.ToInt32(max)) + 1;
             m.MemberId = "M-" + next.ToString("000");
 
-            s.Exec(@"INSERT INTO Members(MemberID, FullName, ContactNumber, Email, Gender, BirthDate, Address, RegistrationDate, AccountStatus, Notes)
-                     VALUES (@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,'Active',@p8)",
+            s.Exec(@"INSERT INTO Members(MemberID, FullName, ContactNumber, Email, Gender, BirthDate, Address, RegistrationDate, AccountStatus, Notes, PhotoPath)
+                     VALUES (@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7,'Active',@p8,@p9)",
                 m.MemberId, m.FullName.Trim(), m.ContactNumber.Trim(), Nz(m.Email), Nz(m.Gender), m.BirthDate, Nz(m.Address),
-                m.RegistrationDate, Nz(m.Notes));
+                m.RegistrationDate, Nz(m.Notes), Nz(m.PhotoPath));
             Audit.Log(s, "Member added", m.MemberId + " " + m.FullName.Trim());
             s.Commit();
             return m.MemberId;
@@ -130,9 +163,9 @@ ORDER BY m.MemberID";
                 throw new ValidationException("Member " + m.MemberId + " no longer exists.");
             CheckDuplicate(s, m, m.MemberId);
             s.Exec(@"UPDATE Members SET FullName=@p1, ContactNumber=@p2, Email=@p3, Gender=@p4, BirthDate=@p5,
-                     Address=@p6, Notes=@p7, AccountStatus=@p8 WHERE MemberID=@p0",
+                     Address=@p6, Notes=@p7, AccountStatus=@p8, PhotoPath=@p9 WHERE MemberID=@p0",
                 m.MemberId, m.FullName.Trim(), m.ContactNumber.Trim(), Nz(m.Email), Nz(m.Gender), m.BirthDate,
-                Nz(m.Address), Nz(m.Notes), m.AccountStatus);
+                Nz(m.Address), Nz(m.Notes), m.AccountStatus, Nz(m.PhotoPath));
             Audit.Log(s, "Member updated", m.MemberId + " " + m.FullName.Trim());
             s.Commit();
         }

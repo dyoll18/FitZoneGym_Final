@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS Members (
     Gender           TEXT,
     BirthDate        TEXT,
     Address          TEXT,
+    PhotoPath        TEXT,
     RegistrationDate TEXT NOT NULL,
     AccountStatus    TEXT NOT NULL DEFAULT 'Active' CHECK (AccountStatus IN ('Active','Inactive')),
     Notes            TEXT
@@ -174,6 +175,8 @@ CREATE INDEX IF NOT EXISTS IX_Freeze_Membership ON FreezeRequests(MembershipID);
                 string t = stmt.Trim();
                 if (t.Length > 0) s.Exec(t);
             }
+            if (Convert.ToInt32(s.Scalar("SELECT COUNT(*) FROM pragma_table_info('Members') WHERE name = 'PhotoPath'")) == 0)
+                s.Exec("ALTER TABLE Members ADD COLUMN PhotoPath TEXT");
             Seed(s);
             s.Commit();
         }

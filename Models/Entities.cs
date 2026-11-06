@@ -17,6 +17,7 @@ namespace FitZoneGym
         public DateTime RegistrationDate { get; set; } = DateTime.Today;
         public string AccountStatus { get; set; } = "Active";
         public string Notes { get; set; }
+        public string PhotoPath { get; set; }
     }
 
     public class MembershipPlan

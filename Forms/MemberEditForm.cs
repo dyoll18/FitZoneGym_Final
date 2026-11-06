@@ -10,6 +10,8 @@ namespace FitZoneGym.Forms
         private readonly string _memberId;
         private readonly ErrorProvider _err = new ErrorProvider();
         private DataTable _plans;
+        private string _storedPhoto;
+        private string _newPhoto;
 
         public MemberEditForm() : this(null) { }
 
@@ -56,6 +58,46 @@ namespace FitZoneGym.Forms
             txtAddress.Text = m.Address;
             txtNotes.Text = m.Notes;
             cboStatus.SelectedItem = m.AccountStatus;
+            _storedPhoto = string.IsNullOrEmpty(m.PhotoPath) ? null : m.PhotoPath;
+            ShowPhoto(MemberService.PhotoFullPath(_storedPhoto));
+        }
+
+        private void ShowPhoto(string path)
+        {
+            var old = picPhoto.Image;
+            picPhoto.Image = null;
+            old?.Dispose();
+            if (string.IsNullOrEmpty(path) || !File.Exists(path)) return;
+            try
+            {
+                using var stream = new MemoryStream(File.ReadAllBytes(path));
+                using var img = Image.FromStream(stream);
+                picPhoto.Image = new Bitmap(img);
+            }
+            catch
+            {
+                Ui.Warn("The picture could not be displayed.");
+            }
+        }
+
+        private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            using var dlg = new OpenFileDialog
+            {
+                Title = "Choose member photo",
+                Filter = "Pictures|*.jpg;*.jpeg;*.png;*.bmp;*.gif",
+            };
+            if (dlg.ShowDialog(this) != DialogResult.OK) return;
+            if (!Ui.Run(() => MemberService.ValidatePhoto(dlg.FileName))) return;
+            _newPhoto = dlg.FileName;
+            ShowPhoto(_newPhoto);
+        }
+
+        private void btnRemovePhoto_Click(object sender, EventArgs e)
+        {
+            _newPhoto = null;
+            _storedPhoto = null;
+            ShowPhoto(null);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -77,10 +119,12 @@ namespace FitZoneGym.Forms
                 Notes = txtNotes.Text,
                 BirthDate = dtpBirth.Checked ? dtpBirth.Value.Date : (DateTime?)null,
                 AccountStatus = _memberId == null ? "Active" : Convert.ToString(cboStatus.SelectedItem),
+                PhotoPath = _storedPhoto,
             };
 
             bool saved = Ui.Run(() =>
             {
+                if (_newPhoto != null) m.PhotoPath = MemberService.SavePhoto(_newPhoto);
                 if (_memberId == null)
                 {
                     string id = MemberService.Add(m);

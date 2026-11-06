@@ -37,12 +37,6 @@ namespace FitZoneGym.Forms
                 _busy = false;
                 btnConfirm.Enabled = true;
             }
-            Ui.Info("Payment successful! Amount paid: " + lblAmount.Text.Replace("Amount due: ", ""));
-        }
-
-        private void WalkInPaymentForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
