@@ -5,7 +5,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 2 - Dashboard (main form).</summary>
+
     public partial class DashboardForm : ShellForm
     {
         protected override string NavKey { get { return "dash"; } }

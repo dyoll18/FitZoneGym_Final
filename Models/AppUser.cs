@@ -6,7 +6,6 @@ namespace FitZoneGym
     public class ValidationException : Exception { public ValidationException(string m) : base(m) { } }
     public class PermissionException : Exception { public PermissionException(string m) : base(m) { } }
 
-    /// <summary>A signed-in staff account with its permissions loaded.</summary>
     public class AppUser
     {
         private readonly HashSet<string> _perms = new HashSet<string>();
@@ -35,7 +34,6 @@ namespace FitZoneGym
         public bool Can(string permission) => IsAdmin || _perms.Contains(permission);
     }
 
-    /// <summary>Holds the currently signed-in user and enforces permissions in code (not just by hiding buttons).</summary>
     public static class Session
     {
         public static AppUser Current { get; set; }

@@ -53,5 +53,11 @@
     <Compile Update="Forms\StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\WalkInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\WalkInPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -7,9 +7,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>
-    /// Screen 3 - Member Management.
-    /// </summary>
+
     public partial class MembersForm : ShellForm
     {
         protected override string NavKey => "members";

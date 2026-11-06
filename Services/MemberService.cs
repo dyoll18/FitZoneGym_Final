@@ -6,7 +6,7 @@ namespace FitZoneGym.Services
 {
     public static class MemberService
     {
-        // ---- validation ---------------------------------------------------------------------
+
         public static void Validate(Member m)
         {
             if (string.IsNullOrWhiteSpace(m.FullName)) throw new ValidationException("Full name is required.");
@@ -28,7 +28,6 @@ namespace FitZoneGym.Services
             }
         }
 
-        // ---- queries ------------------------------------------------------------------------
         private const string ListSql = @"
 SELECT m.MemberID, m.FullName, m.ContactNumber, m.Email, m.AccountStatus,
        ms.MembershipID, p.PlanName, ms.StartDate, ms.ExpirationDate, ms.Status AS StoredStatus
@@ -41,7 +40,6 @@ WHERE (@p0 = '' OR m.FullName LIKE '%' || @p0 || '%' OR m.MemberID LIKE '%' || @
        OR m.ContactNumber LIKE '%' || @p0 || '%')
 ORDER BY m.MemberID";
 
-        /// <summary>Members with their latest membership and a derived MembershipStatus column.</summary>
         public static DataTable Search(string text = "", string statusFilter = "All")
         {
             Session.Require(Perm.ViewMembers);
@@ -66,7 +64,6 @@ ORDER BY m.MemberID";
             return t;
         }
 
-        /// <summary>Lookup used by registration / payments / reactivation screens (needs any member-facing permission).</summary>
         public static DataTable Lookup(string text)
         {
             var t = DbSession.Q(ListSql, (text ?? "").Trim());
@@ -104,7 +101,6 @@ ORDER BY m.MemberID";
             };
         }
 
-        // ---- commands -----------------------------------------------------------------------
         public static string Add(Member m)
         {
             Session.Require(Perm.RegisterMembers);
@@ -211,7 +207,7 @@ ORDER BY m.MemberID";
             }
             else
             {
-                // Existing memberships keep their invoices, so changing a fee never rewrites history.
+
                 s.Exec("UPDATE MembershipPlans SET PlanName=@p1, DurationMonths=@p2, Fee=@p3, Description=@p4 WHERE PlanID=@p0",
                     p.PlanId, p.PlanName.Trim(), p.DurationMonths, p.Fee, p.Description);
                 Audit.Log(s, "Plan updated", p.PlanName.Trim());
@@ -219,7 +215,6 @@ ORDER BY m.MemberID";
             s.Commit();
         }
 
-        /// <summary>Plans are deactivated, never deleted, because historical memberships reference them.</summary>
         public static void SetActive(int planId, bool active)
         {
             Session.Require(Perm.ManagePlans);

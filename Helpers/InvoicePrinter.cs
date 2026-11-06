@@ -5,7 +5,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym
 {
-    /// <summary>Builds a plain-text invoice/receipt and prints, previews or saves it.</summary>
+
     public static class InvoicePrinter
     {
         public static string BuildText(BillingService.InvoiceDetail d)

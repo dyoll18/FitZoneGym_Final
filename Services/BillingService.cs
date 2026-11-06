@@ -4,17 +4,13 @@ using FitZoneGym.Data;
 
 namespace FitZoneGym.Services
 {
-    /// <summary>Abstraction: forms call CalculateFee, the rounding/day-count rules stay hidden here.</summary>
+
     public abstract class BillingPolicy
     {
         public abstract decimal DailyRate(decimal monthlyFee);
         public abstract decimal CalculateFee(decimal monthlyFee, int chargeableDays);
     }
 
-    /// <summary>
-    /// Polymorphic policy: fixed 30-day month.  Daily rate = monthly fee / 30, rounded to 2 dp (half away from zero);
-    /// prorated fee = rounded daily rate x chargeable days. Chargeable days are counted inclusively.
-    /// </summary>
     public class FixedThirtyDayPolicy : BillingPolicy
     {
         public const int DaysInPeriod = 30;
@@ -39,7 +35,6 @@ namespace FitZoneGym.Services
             return (end.Date - start.Date).Days + 1;
         }
 
-        /// <summary>Checks the discount percentage and whether the current user may grant it.</summary>
         public static void ValidateDiscount(decimal percent)
         {
             if (percent < 0m || percent > 100m) throw new ValidationException("Discount must be between 0% and 100%.");
@@ -71,7 +66,6 @@ namespace FitZoneGym.Services
             return r;
         }
 
-        // ---- invoices -----------------------------------------------------------------------
         public static string NextInvoiceNo(DbSession s, DateTime date)
         {
             string prefix = "INV-" + date.Year + "-";
@@ -80,7 +74,6 @@ namespace FitZoneGym.Services
             return prefix + ((max == null ? 0 : Convert.ToInt32(max)) + 1).ToString("000");
         }
 
-        /// <summary>Creates an invoice and its line items inside the caller's transaction.</summary>
         public static int CreateInvoice(DbSession s, string memberId, int? membershipId, string kind, DateTime? billStart, DateTime? billEnd,
                                         string description, decimal baseCharge, decimal discount, decimal additionalFees)
         {
@@ -105,7 +98,6 @@ namespace FitZoneGym.Services
             return (int)id;
         }
 
-        /// <summary>Saves a prorated charge as an invoice against the member's current membership.</summary>
         public static string CreateProratedInvoice(string memberId, decimal monthlyFee, DateTime start, DateTime end,
                                                    decimal discountPercent, decimal additionalFees, string planName)
         {
@@ -165,7 +157,7 @@ ORDER BY i.InvoiceID DESC", (search ?? "").Trim());
 
         public static void Void(int invoiceId, string reason)
         {
-            Session.Require(Perm.ManageSettings); // administrators only
+            Session.Require(Perm.ManageSettings);
             if (string.IsNullOrWhiteSpace(reason)) throw new ValidationException("A reason is required to void an invoice.");
             using var s = new DbSession(true);
             var inv = s.Row("SELECT InvoiceNo, Status FROM Invoices WHERE InvoiceID = @p0", invoiceId);
@@ -185,7 +177,6 @@ ORDER BY i.InvoiceID DESC", (search ?? "").Trim());
 
         public static decimal PaidAmount(DbSession s, int invoiceId) => Db.ToDec(s.Scalar("SELECT IFNULL(SUM(Amount),0) FROM Payments WHERE InvoiceID = @p0", invoiceId));
 
-        /// <summary>Open invoices (not paid, not voided) for a member, with current balance.</summary>
         public static DataTable OpenInvoices(string memberId)
         {
             Session.Require(Perm.RecordPayments);
@@ -210,7 +201,6 @@ FROM Invoices i WHERE i.MemberID = @p0 AND i.Status IN ('Unpaid','Partially Paid
                 throw new ValidationException("A reference number is required for " + p.Method + " payments.");
         }
 
-        /// <summary>Records one payment as its own transaction row and recalculates the invoice status. Returns the new balance.</summary>
         public static decimal Record(Payment p)
         {
             Session.Require(Perm.RecordPayments);
@@ -220,7 +210,6 @@ FROM Invoices i WHERE i.MemberID = @p0 AND i.Status IN ('Unpaid','Partially Paid
             return balance;
         }
 
-        /// <summary>Same as Record but joins the caller's transaction (used by registration with an initial payment).</summary>
         public static decimal ApplyPayment(DbSession s, Payment p)
         {
             var inv = s.Row("SELECT InvoiceNo, TotalDue, Status FROM Invoices WHERE InvoiceID = @p0", p.InvoiceId);

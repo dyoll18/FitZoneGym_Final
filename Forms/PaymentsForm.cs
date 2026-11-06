@@ -4,7 +4,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 10 - Payment Management.</summary>
+
     public partial class PaymentsForm : ShellForm
     {
         private DataTable _open = new DataTable();
@@ -83,7 +83,7 @@ namespace FitZoneGym.Forms
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            if (_busy) return;      // guards against double-clicks / duplicate submissions
+            if (_busy) return;
             var r = Current;
             if (r == null) { Ui.Warn("Select an invoice."); return; }
             var p = new Payment

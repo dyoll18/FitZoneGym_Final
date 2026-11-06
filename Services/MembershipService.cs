@@ -10,10 +10,9 @@ namespace FitZoneGym.Services
         public bool ExtendsFromPrevious;
     }
 
-    /// <summary>Registration, renewal, freeze, and reactivation rules.</summary>
     public static class MembershipService
     {
-        // ---- lookups ------------------------------------------------------------------------
+
         public static Membership Latest(DbSession s, string memberId)
         {
             var r = s.Row("SELECT * FROM Memberships WHERE MemberID = @p0 AND Status <> 'Cancelled' ORDER BY ExpirationDate DESC, MembershipID DESC LIMIT 1", memberId);
@@ -48,11 +47,6 @@ namespace FitZoneGym.Services
             return p;
         }
 
-        // ---- registration -------------------------------------------------------------------
-        /// <summary>
-        /// Creates the first membership for a member, its invoice, and (optionally) an initial payment as ONE transaction.
-        /// Returns the invoice number.
-        /// </summary>
         public static string Register(string memberId, int planId, DateTime startDate, decimal discountPercent,
                                       decimal initialPayment, string method, string reference)
         {
@@ -87,11 +81,6 @@ namespace FitZoneGym.Services
             return no;
         }
 
-        // ---- renewal ------------------------------------------------------------------------
-        /// <summary>
-        /// Gym policy: if the renewal date is on or before (previous expiration + grace period) the new term continues from the
-        /// day after the previous expiration (no lost days). Otherwise the new term starts on the renewal date.
-        /// </summary>
         public static RenewalPreview PreviewRenewal(string memberId, int planId, DateTime renewalDate)
         {
             using var s = new DbSession();
@@ -132,7 +121,6 @@ namespace FitZoneGym.Services
             DateTime start = continuous ? cur.ExpirationDate.Date.AddDays(1) : renewalDate.Date;
             DateTime newExp = Membership.CalcExpiration(start, plan.DurationMonths);
 
-            // One continuous membership row is extended; if there was a gap the row restarts on the new start date.
             s.Exec("UPDATE Memberships SET PlanID=@p1, ExpirationDate=@p2, StartDate=@p3 WHERE MembershipID=@p0",
                 cur.MembershipId, planId, newExp, continuous ? cur.StartDate : start);
 
@@ -161,7 +149,6 @@ FROM Renewals r JOIN Memberships ms ON ms.MembershipID = r.MembershipID
 JOIN MembershipPlans p ON p.PlanID = r.PlanID LEFT JOIN Invoices i ON i.InvoiceID = r.InvoiceID
 WHERE ms.MemberID = @p0 ORDER BY r.RenewalID DESC", memberId);
 
-        // ---- freeze -------------------------------------------------------------------------
         public static int RequestFreeze(int membershipId, DateTime start, DateTime end, string reason)
         {
             Session.Require(Perm.SubmitFreeze);
@@ -194,10 +181,6 @@ WHERE ms.MemberID = @p0 ORDER BY r.RenewalID DESC", memberId);
             return (int)id;
         }
 
-        /// <summary>
-        /// Approval takes effect immediately: the membership becomes Frozen and, when the policy grants a full extension,
-        /// the expiration date moves forward by the requested days (an early reactivation gives unused days back).
-        /// </summary>
         public static void ApproveFreeze(int freezeId, string notes)
         {
             Session.Require(Perm.ApproveFreeze);
@@ -232,7 +215,7 @@ WHERE ms.MemberID = @p0 ORDER BY r.RenewalID DESC", memberId);
             s.Exec("UPDATE FreezeRequests SET Status='Rejected', ApprovedBy=@p1, DecisionDate=@p2, Notes=@p3 WHERE FreezeID=@p0",
                 freezeId, Session.UserId, DateTime.Today, notes.Trim());
             Audit.Log(s, "Freeze rejected", "FreezeID " + freezeId);
-            s.Commit(); // membership dates are intentionally untouched
+            s.Commit();
         }
 
         public static DataTable FreezeList(string status)
@@ -245,7 +228,6 @@ FROM FreezeRequests f JOIN Memberships ms ON ms.MembershipID = f.MembershipID JO
 WHERE f.Status = @p0 ORDER BY f.FreezeID DESC", status);
         }
 
-        // ---- reactivation -------------------------------------------------------------------
         public class ReactivationInfo
         {
             public Membership Membership;
@@ -255,7 +237,6 @@ WHERE f.Status = @p0 ORDER BY f.FreezeID DESC", status);
             public decimal SuggestedFee;
         }
 
-        /// <summary>Returns the frozen membership and its approved freeze, or throws if the member is not eligible.</summary>
         public static ReactivationInfo FindReactivatable(string memberId)
         {
             using var s = new DbSession();
@@ -275,7 +256,6 @@ WHERE f.Status = @p0 ORDER BY f.FreezeID DESC", status);
             };
         }
 
-        /// <summary>New expiration = current expiration - unused extension days (days granted but not actually frozen).</summary>
         public static DateTime NewExpirationOnReactivation(ReactivationInfo info, DateTime reactivationDate)
         {
             int used = Math.Max(0, Math.Min(info.ExtensionDays, (reactivationDate.Date - info.FreezeStart.Date).Days));

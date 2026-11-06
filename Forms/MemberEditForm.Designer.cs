@@ -44,9 +44,9 @@ namespace FitZoneGym.Forms
             // 
             // lblName
             // 
-            lblName.ForeColor = Color.FromArgb(244, 244, 248);
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 9.5F);
+            lblName.ForeColor = Color.FromArgb(244, 244, 248);
             lblName.Location = new Point(20, 24);
             lblName.Name = "lblName";
             lblName.Size = new Size(107, 25);
@@ -56,9 +56,9 @@ namespace FitZoneGym.Forms
             // txtName
             // 
             txtName.BackColor = Color.FromArgb(46, 47, 60);
-            txtName.ForeColor = Color.FromArgb(244, 244, 248);
             txtName.BorderStyle = BorderStyle.FixedSingle;
             txtName.Font = new Font("Segoe UI", 9.5F);
+            txtName.ForeColor = Color.FromArgb(244, 244, 248);
             txtName.Location = new Point(170, 20);
             txtName.Name = "txtName";
             txtName.Size = new Size(360, 33);
@@ -66,10 +66,10 @@ namespace FitZoneGym.Forms
             // 
             // lblContact
             // 
-            lblContact.ForeColor = Color.FromArgb(244, 244, 248);
             lblContact.AutoSize = true;
             lblContact.Font = new Font("Segoe UI", 9.5F);
-            lblContact.Location = new Point(20, 62);
+            lblContact.ForeColor = Color.FromArgb(244, 244, 248);
+            lblContact.Location = new Point(20, 59);
             lblContact.Name = "lblContact";
             lblContact.Size = new Size(161, 25);
             lblContact.TabIndex = 2;
@@ -78,19 +78,19 @@ namespace FitZoneGym.Forms
             // txtContact
             // 
             txtContact.BackColor = Color.FromArgb(46, 47, 60);
-            txtContact.ForeColor = Color.FromArgb(244, 244, 248);
             txtContact.BorderStyle = BorderStyle.FixedSingle;
             txtContact.Font = new Font("Segoe UI", 9.5F);
-            txtContact.Location = new Point(170, 58);
+            txtContact.ForeColor = Color.FromArgb(244, 244, 248);
+            txtContact.Location = new Point(187, 57);
             txtContact.Name = "txtContact";
-            txtContact.Size = new Size(360, 33);
+            txtContact.Size = new Size(343, 33);
             txtContact.TabIndex = 3;
             // 
             // lblEmail
             // 
-            lblEmail.ForeColor = Color.FromArgb(244, 244, 248);
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 9.5F);
+            lblEmail.ForeColor = Color.FromArgb(244, 244, 248);
             lblEmail.Location = new Point(20, 100);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(58, 25);
@@ -100,9 +100,9 @@ namespace FitZoneGym.Forms
             // txtEmail
             // 
             txtEmail.BackColor = Color.FromArgb(46, 47, 60);
-            txtEmail.ForeColor = Color.FromArgb(244, 244, 248);
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Font = new Font("Segoe UI", 9.5F);
+            txtEmail.ForeColor = Color.FromArgb(244, 244, 248);
             txtEmail.Location = new Point(170, 96);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(360, 33);
@@ -110,9 +110,9 @@ namespace FitZoneGym.Forms
             // 
             // lblGender
             // 
-            lblGender.ForeColor = Color.FromArgb(244, 244, 248);
             lblGender.AutoSize = true;
             lblGender.Font = new Font("Segoe UI", 9.5F);
+            lblGender.ForeColor = Color.FromArgb(244, 244, 248);
             lblGender.Location = new Point(20, 138);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(74, 25);
@@ -122,10 +122,10 @@ namespace FitZoneGym.Forms
             // cboGender
             // 
             cboGender.BackColor = Color.FromArgb(46, 47, 60);
-            cboGender.ForeColor = Color.FromArgb(244, 244, 248);
             cboGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cboGender.FlatStyle = FlatStyle.Flat;
             cboGender.Font = new Font("Segoe UI", 9.5F);
+            cboGender.ForeColor = Color.FromArgb(244, 244, 248);
             cboGender.Items.AddRange(new object[] { "", "Male", "Female", "Other" });
             cboGender.Location = new Point(170, 134);
             cboGender.Name = "cboGender";
@@ -134,9 +134,9 @@ namespace FitZoneGym.Forms
             // 
             // lblBirth
             // 
-            lblBirth.ForeColor = Color.FromArgb(244, 244, 248);
             lblBirth.AutoSize = true;
             lblBirth.Font = new Font("Segoe UI", 9.5F);
+            lblBirth.ForeColor = Color.FromArgb(244, 244, 248);
             lblBirth.Location = new Point(20, 176);
             lblBirth.Name = "lblBirth";
             lblBirth.Size = new Size(118, 25);
@@ -145,8 +145,8 @@ namespace FitZoneGym.Forms
             // 
             // dtpBirth
             // 
-            dtpBirth.CalendarMonthBackground = Color.FromArgb(46, 47, 60);
             dtpBirth.CalendarForeColor = Color.FromArgb(244, 244, 248);
+            dtpBirth.CalendarMonthBackground = Color.FromArgb(46, 47, 60);
             dtpBirth.CalendarTitleBackColor = Color.FromArgb(255, 106, 0);
             dtpBirth.CalendarTitleForeColor = Color.White;
             dtpBirth.CalendarTrailingForeColor = Color.FromArgb(152, 155, 172);
@@ -161,9 +161,9 @@ namespace FitZoneGym.Forms
             // 
             // lblAddress
             // 
-            lblAddress.ForeColor = Color.FromArgb(244, 244, 248);
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 9.5F);
+            lblAddress.ForeColor = Color.FromArgb(244, 244, 248);
             lblAddress.Location = new Point(20, 214);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(79, 25);
@@ -173,9 +173,9 @@ namespace FitZoneGym.Forms
             // txtAddress
             // 
             txtAddress.BackColor = Color.FromArgb(46, 47, 60);
-            txtAddress.ForeColor = Color.FromArgb(244, 244, 248);
             txtAddress.BorderStyle = BorderStyle.FixedSingle;
             txtAddress.Font = new Font("Segoe UI", 9.5F);
+            txtAddress.ForeColor = Color.FromArgb(244, 244, 248);
             txtAddress.Location = new Point(170, 210);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
@@ -184,9 +184,9 @@ namespace FitZoneGym.Forms
             // 
             // lblNotes
             // 
-            lblNotes.ForeColor = Color.FromArgb(244, 244, 248);
             lblNotes.AutoSize = true;
             lblNotes.Font = new Font("Segoe UI", 9.5F);
+            lblNotes.ForeColor = Color.FromArgb(244, 244, 248);
             lblNotes.Location = new Point(20, 286);
             lblNotes.Name = "lblNotes";
             lblNotes.Size = new Size(61, 25);
@@ -196,9 +196,9 @@ namespace FitZoneGym.Forms
             // txtNotes
             // 
             txtNotes.BackColor = Color.FromArgb(46, 47, 60);
-            txtNotes.ForeColor = Color.FromArgb(244, 244, 248);
             txtNotes.BorderStyle = BorderStyle.FixedSingle;
             txtNotes.Font = new Font("Segoe UI", 9.5F);
+            txtNotes.ForeColor = Color.FromArgb(244, 244, 248);
             txtNotes.Location = new Point(170, 282);
             txtNotes.Multiline = true;
             txtNotes.Name = "txtNotes";
@@ -207,10 +207,10 @@ namespace FitZoneGym.Forms
             // 
             // lblStatus
             // 
-            lblStatus.ForeColor = Color.FromArgb(244, 244, 248);
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 9.5F);
-            lblStatus.Location = new Point(20, 362);
+            lblStatus.ForeColor = Color.FromArgb(244, 244, 248);
+            lblStatus.Location = new Point(21, 365);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(135, 25);
             lblStatus.TabIndex = 14;
@@ -219,22 +219,22 @@ namespace FitZoneGym.Forms
             // cboStatus
             // 
             cboStatus.BackColor = Color.FromArgb(46, 47, 60);
-            cboStatus.ForeColor = Color.FromArgb(244, 244, 248);
             cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cboStatus.FlatStyle = FlatStyle.Flat;
             cboStatus.Font = new Font("Segoe UI", 9.5F);
+            cboStatus.ForeColor = Color.FromArgb(244, 244, 248);
             cboStatus.Items.AddRange(new object[] { "Active", "Inactive" });
-            cboStatus.Location = new Point(170, 358);
+            cboStatus.Location = new Point(187, 365);
             cboStatus.Name = "cboStatus";
-            cboStatus.Size = new Size(160, 33);
+            cboStatus.Size = new Size(192, 33);
             cboStatus.TabIndex = 15;
             // 
             // lblPlan
             // 
-            lblPlan.ForeColor = Color.FromArgb(244, 244, 248);
             lblPlan.AutoSize = true;
             lblPlan.Font = new Font("Segoe UI", 9.5F);
-            lblPlan.Location = new Point(20, 362);
+            lblPlan.ForeColor = Color.FromArgb(244, 244, 248);
+            lblPlan.Location = new Point(21, 365);
             lblPlan.Name = "lblPlan";
             lblPlan.Size = new Size(160, 25);
             lblPlan.TabIndex = 16;
@@ -243,21 +243,21 @@ namespace FitZoneGym.Forms
             // cboPlan
             // 
             cboPlan.BackColor = Color.FromArgb(46, 47, 60);
-            cboPlan.ForeColor = Color.FromArgb(244, 244, 248);
             cboPlan.DropDownStyle = ComboBoxStyle.DropDownList;
             cboPlan.FlatStyle = FlatStyle.Flat;
             cboPlan.Font = new Font("Segoe UI", 9.5F);
-            cboPlan.Location = new Point(170, 358);
+            cboPlan.ForeColor = Color.FromArgb(244, 244, 248);
+            cboPlan.Location = new Point(187, 362);
             cboPlan.Name = "cboPlan";
-            cboPlan.Size = new Size(360, 33);
+            cboPlan.Size = new Size(343, 33);
             cboPlan.TabIndex = 17;
             // 
             // lblStart
             // 
-            lblStart.ForeColor = Color.FromArgb(244, 244, 248);
             lblStart.AutoSize = true;
             lblStart.Font = new Font("Segoe UI", 9.5F);
-            lblStart.Location = new Point(20, 400);
+            lblStart.ForeColor = Color.FromArgb(244, 244, 248);
+            lblStart.Location = new Point(21, 414);
             lblStart.Name = "lblStart";
             lblStart.Size = new Size(92, 25);
             lblStart.TabIndex = 18;
@@ -265,51 +265,64 @@ namespace FitZoneGym.Forms
             // 
             // dtpStart
             // 
-            dtpStart.CalendarMonthBackground = Color.FromArgb(46, 47, 60);
             dtpStart.CalendarForeColor = Color.FromArgb(244, 244, 248);
+            dtpStart.CalendarMonthBackground = Color.FromArgb(46, 47, 60);
             dtpStart.CalendarTitleBackColor = Color.FromArgb(255, 106, 0);
             dtpStart.CalendarTitleForeColor = Color.White;
             dtpStart.CalendarTrailingForeColor = Color.FromArgb(152, 155, 172);
             dtpStart.Font = new Font("Segoe UI", 9.5F);
             dtpStart.Format = DateTimePickerFormat.Short;
-            dtpStart.Location = new Point(170, 396);
+            dtpStart.Location = new Point(170, 408);
             dtpStart.Name = "dtpStart";
             dtpStart.Size = new Size(160, 33);
             dtpStart.TabIndex = 19;
             // 
             // btnSave
             // 
-            btnSave.Kind = FitZoneGym.Controls.ButtonKind.Primary;
+            btnSave.BackColor = Color.FromArgb(255, 106, 0);
+            btnSave.FlatAppearance.BorderColor = Color.FromArgb(255, 106, 0);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 106, 0);
+            btnSave.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 136, 56);
+            btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnSave.Location = new Point(290, 466);
+            btnSave.ForeColor = Color.White;
+            btnSave.Kind = FitZoneGym.Controls.ButtonKind.Primary;
+            btnSave.Location = new Point(259, 476);
             btnSave.Margin = new Padding(0, 0, 8, 0);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(120, 34);
             btnSave.TabIndex = 20;
             btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Kind = FitZoneGym.Controls.ButtonKind.Secondary;
+            btnCancel.BackColor = Color.FromArgb(46, 47, 60);
             btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.FlatAppearance.BorderColor = Color.FromArgb(58, 60, 76);
+            btnCancel.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 47, 60);
+            btnCancel.FlatAppearance.MouseOverBackColor = Color.FromArgb(46, 47, 60);
+            btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            btnCancel.Location = new Point(420, 466);
+            btnCancel.ForeColor = Color.FromArgb(244, 244, 248);
+            btnCancel.Location = new Point(410, 476);
             btnCancel.Margin = new Padding(0, 0, 8, 0);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(120, 34);
             btnCancel.TabIndex = 21;
             btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
             // 
             // MemberEditForm
             // 
-            BackColor = Color.FromArgb(24, 25, 33);
-            ForeColor = Color.FromArgb(244, 244, 248);
             AcceptButton = btnSave;
             AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.FromArgb(24, 25, 33);
             CancelButton = btnCancel;
-            ClientSize = new Size(560, 520);
+            ClientSize = new Size(560, 536);
             Controls.Add(lblName);
             Controls.Add(txtName);
             Controls.Add(lblContact);
@@ -324,7 +337,6 @@ namespace FitZoneGym.Forms
             Controls.Add(txtAddress);
             Controls.Add(lblNotes);
             Controls.Add(txtNotes);
-            Controls.Add(lblStatus);
             Controls.Add(cboStatus);
             Controls.Add(lblPlan);
             Controls.Add(cboPlan);
@@ -332,9 +344,10 @@ namespace FitZoneGym.Forms
             Controls.Add(dtpStart);
             Controls.Add(btnSave);
             Controls.Add(btnCancel);
+            Controls.Add(lblStatus);
             Font = new Font("Segoe UI", 9.5F);
+            ForeColor = Color.FromArgb(244, 244, 248);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = true;
             MinimizeBox = false;
             Name = "MemberEditForm";
             StartPosition = FormStartPosition.CenterParent;

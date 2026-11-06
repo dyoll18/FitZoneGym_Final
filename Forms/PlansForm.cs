@@ -4,7 +4,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 5 - Membership Plan Management.</summary>
+
     public partial class PlansForm : ShellForm
     {
         private bool _canManage;

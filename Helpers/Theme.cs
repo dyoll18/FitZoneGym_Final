@@ -2,13 +2,10 @@ using System.Drawing.Drawing2D;
 
 namespace FitZoneGym
 {
-    /// <summary>
-    /// FitFlow dark / orange look. <see cref="Apply"/> walks a form's controls and re-colours everything that the
-    /// Designer files still paint in the old navy/blue/white palette, so every screen (except Login) matches.
-    /// </summary>
+
     public static class Theme
     {
-        // Old palette literals still found in the Designer files.
+
         private static readonly Color OldText = Color.FromArgb(31, 41, 55);
         private static readonly Color OldNavy = Color.FromArgb(15, 35, 66);
         private static readonly Color OldBlue = Color.FromArgb(30, 111, 240);
@@ -115,7 +112,6 @@ namespace FitZoneGym
             if (c is PictureBox) return;
             if (c.GetType().FullName == "FitZoneGym.Controls.DonutChart") { c.BackColor = Ui.Surface; return; }
 
-            // Containers: panels, flow/table layouts, tab pages, group boxes, user controls.
             Color back = c.BackColor;
             if (!Same(back, Color.Transparent))
             {
@@ -127,7 +123,6 @@ namespace FitZoneGym
             if (c.GetType() == typeof(Panel) && c.Parent != null && IsCard(c)) Round(c, CardRadius);
         }
 
-        /// <summary>A "card" is a surface/accent coloured panel that sits directly on the page background.</summary>
         private static bool IsCard(Control p)
         {
             if (p.Name == "sidebarPanel" || p.Name == "headerPanel" || p.Name == "userStrip" || p.Name == "rightPanel" || p.Name == "contentPanel") return false;
@@ -162,7 +157,6 @@ namespace FitZoneGym
 
         private static Color Lighten(Color c) => Color.FromArgb(Math.Min(255, c.R + 28), Math.Min(255, c.G + 28), Math.Min(255, c.B + 28));
 
-        // ---- tabs ---------------------------------------------------------------------------
         private static void StyleTabs(TabControl tc)
         {
             tc.DrawMode = TabDrawMode.OwnerDrawFixed;
@@ -198,7 +192,6 @@ namespace FitZoneGym
                 selected ? Color.White : Ui.Muted, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
         }
 
-        // ---- rounded corners ----------------------------------------------------------------
         public static GraphicsPath RoundRect(Rectangle r, int radius)
         {
             int d = radius * 2;
@@ -212,7 +205,6 @@ namespace FitZoneGym
             return p;
         }
 
-        /// <summary>Clips a control to a rounded rectangle and keeps it rounded when resized.</summary>
         public static void Round(Control c, int radius)
         {
             if (!_rounded.TryGetValue(c, out _))

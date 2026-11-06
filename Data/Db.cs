@@ -4,7 +4,7 @@ using Microsoft.Data.Sqlite;
 
 namespace FitZoneGym.Data
 {
-    /// <summary>Database location and helpers.</summary>
+
     public static class Db
     {
         public static string FilePath
@@ -34,10 +34,6 @@ namespace FitZoneGym.Data
         public static int I(object v) => v == null || v == DBNull.Value ? 0 : Convert.ToInt32(v, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// A short-lived connection, optionally wrapped in a transaction.
-    /// All SQL is parameterised: use @p0, @p1 ... in the SQL text and pass values positionally.
-    /// </summary>
     public sealed class DbSession : IDisposable
     {
         private readonly SqliteConnection _conn;
@@ -80,7 +76,6 @@ namespace FitZoneGym.Data
             return cmd.ExecuteNonQuery();
         }
 
-        /// <summary>Runs an INSERT and returns the new row id.</summary>
         public long Insert(string sql, params object[] args)
         {
             Exec(sql, args);
@@ -119,7 +114,6 @@ namespace FitZoneGym.Data
             _conn.Dispose();
         }
 
-        // ---- one-shot conveniences -----------------------------------------------------------
         public static DataTable Q(string sql, params object[] args) { using var s = new DbSession(); return s.Query(sql, args); }
         public static DataRow R(string sql, params object[] args) { using var s = new DbSession(); return s.Row(sql, args); }
         public static object V(string sql, params object[] args) { using var s = new DbSession(); return s.Scalar(sql, args); }

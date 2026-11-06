@@ -3,7 +3,7 @@ using System.Drawing.Text;
 
 namespace FitZoneGym.Controls
 {
-    /// <summary>Sidebar item: icon glyph + label. Active item is a solid orange block like the FitFlow dashboard.</summary>
+
     public class NavButton : Button
     {
         private bool _hover;

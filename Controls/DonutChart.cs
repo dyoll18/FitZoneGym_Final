@@ -1,6 +1,6 @@
 namespace FitZoneGym.Controls
 {
-    /// <summary>Simple GDI+ donut chart (no external chart library needed).</summary>
+
     public class DonutChart : Control
     {
         [System.ComponentModel.Browsable(false), System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
@@ -37,7 +37,6 @@ namespace FitZoneGym.Controls
             g.DrawString(Total.ToString(), big, new SolidBrush(Ui.Text), new RectangleF(rect.X, rect.Y + rect.Height / 2f - 20, rect.Width, 30), sf);
             g.DrawString("Total Members", small, new SolidBrush(Ui.Muted), new RectangleF(rect.X, rect.Y + rect.Height / 2f + 8, rect.Width, 20), sf);
 
-            // legend
             int lx = rect.Right + 6, ly = rect.Y + 67;
             foreach (var s in Slices)
             {

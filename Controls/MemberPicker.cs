@@ -4,7 +4,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Controls
 {
-    /// <summary>Search box + results drop-down that lets the user pick one member by name, ID or contact number.</summary>
+
     public class MemberPicker : FlowLayoutPanel
     {
         private readonly TextBox _text = Ui.Input(220);
@@ -42,7 +42,6 @@ namespace FitZoneGym.Controls
             });
         }
 
-        /// <summary>Selects a member programmatically (used after a transaction to refresh the details).</summary>
         public void Reload(string memberId)
         {
             _text.Text = memberId;

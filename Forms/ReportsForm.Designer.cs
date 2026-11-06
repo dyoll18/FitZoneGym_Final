@@ -108,7 +108,7 @@ namespace FitZoneGym.Forms
             cboType.FlatStyle = FlatStyle.Flat;
             cboType.Font = new Font("Segoe UI", 9.5F);
             cboType.ForeColor = Color.FromArgb(244, 244, 248);
-            cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report" });
+            cboType.Items.AddRange(new object[] { "Revenue Report", "Payment Report", "Membership Report", "Renewal Report", "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report", "Walk-In Report" });
             cboType.Location = new Point(3, 34);
             cboType.Name = "cboType";
             cboType.Size = new Size(240, 33);

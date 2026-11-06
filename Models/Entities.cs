@@ -2,7 +2,7 @@ using FitZoneGym.Data;
 
 namespace FitZoneGym
 {
-    /// <summary>Membership state derived from dates and freeze records (kept separate from account status).</summary>
+
     public enum MembershipState { Pending, Active, Frozen, Expired, Inactive }
 
     public class Member
@@ -28,7 +28,6 @@ namespace FitZoneGym
         public string Description { get; set; }
         public bool IsActive { get; set; } = true;
 
-        /// <summary>Fee for one month of this plan (used as the base for prorating).</summary>
         public decimal MonthlyEquivalent => Math.Round(Fee / DurationMonths, 2, MidpointRounding.AwayFromZero);
         public override string ToString() => PlanName;
     }
@@ -53,10 +52,6 @@ namespace FitZoneGym
             return MembershipState.Active;
         }
 
-        /// <summary>
-        /// Gym policy: a membership starting on S for N months ends on S + N months - 1 day (inclusive end date).
-        /// Example: 2025-04-01 + 1 month => 2025-04-30.
-        /// </summary>
         public static DateTime CalcExpiration(DateTime start, int durationMonths) =>
             start.Date.AddMonths(durationMonths).AddDays(-1);
     }
@@ -68,11 +63,10 @@ namespace FitZoneGym
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Reason { get; set; }
-        /// <summary>Inclusive number of calendar days in the requested freeze.</summary>
+
         public int Days => (EndDate.Date - StartDate.Date).Days + 1;
     }
 
-    /// <summary>An invoice owns its arithmetic (encapsulation): total and balance are always derived.</summary>
     public class Invoice
     {
         public decimal BaseCharge { get; set; }

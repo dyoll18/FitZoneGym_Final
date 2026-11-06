@@ -2,7 +2,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 1 - Login.</summary>
+
     public partial class LoginForm : Form
     {
         private readonly System.Windows.Forms.Timer _lock = new System.Windows.Forms.Timer { Interval = 1000 };
@@ -98,7 +98,7 @@ namespace FitZoneGym.Forms
 
         private void lblMessage_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

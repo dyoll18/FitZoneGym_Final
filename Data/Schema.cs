@@ -1,6 +1,6 @@
 namespace FitZoneGym.Data
 {
-    /// <summary>Creates the SQLite schema and seeds default plans, users, permissions and settings.</summary>
+
     public static class Schema
     {
         private const string Sql = @"
@@ -143,6 +143,23 @@ CREATE TABLE IF NOT EXISTS ErrorLogs (
     Message   TEXT NOT NULL,
     UserID    INTEGER
 );
+CREATE TABLE IF NOT EXISTS WalkInVisits (
+    VisitID         INTEGER PRIMARY KEY AUTOINCREMENT,
+    ClientName      TEXT NOT NULL,
+    ContactNumber   TEXT,
+    TimeIn          TEXT NOT NULL,
+    TimeOut         TEXT,
+    HoursCharged    INTEGER,
+    RatePerHour     REAL NOT NULL,
+    Amount          REAL,
+    PaymentMethod   TEXT,
+    ReferenceNumber TEXT,
+    Status          TEXT NOT NULL DEFAULT 'Inside' CHECK (Status IN ('Inside','Completed','Voided')),
+    VoidReason      TEXT,
+    CheckedInBy     INTEGER REFERENCES Users(UserID),
+    CheckedOutBy    INTEGER REFERENCES Users(UserID)
+);
+CREATE INDEX IF NOT EXISTS IX_WalkIn_Status ON WalkInVisits(Status);
 CREATE INDEX IF NOT EXISTS IX_Memberships_Member ON Memberships(MemberID);
 CREATE INDEX IF NOT EXISTS IX_Payments_Invoice  ON Payments(InvoiceID);
 CREATE INDEX IF NOT EXISTS IX_Invoices_Member   ON Invoices(MemberID);
@@ -163,7 +180,7 @@ CREATE INDEX IF NOT EXISTS IX_Freeze_Membership ON FreezeRequests(MembershipID);
 
         private static void Seed(DbSession s)
         {
-            // Settings (INSERT OR IGNORE keeps any value the admin already changed).
+
             var defaults = new (string, string)[]
             {
                 ("GymName", "FITZONE GYM"),
@@ -177,11 +194,12 @@ CREATE INDEX IF NOT EXISTS IX_Freeze_Membership ON FreezeRequests(MembershipID);
                 ("ReactivationFee", "0"),
                 ("FullFreezeExtension", "true"),
                 ("RequireReferenceForNonCash", "true"),
+                ("WalkInRatePerHour", "50"),
+                ("WalkInGraceMinutes", "0"),
             };
             foreach (var (k, v) in defaults)
                 s.Exec("INSERT OR IGNORE INTO SystemSettings(SettingKey, SettingValue) VALUES (@p0, @p1)", k, v);
 
-            // Default role permissions (Administrator always has every permission in code).
             var perms = new Dictionary<string, string[]>
             {
                 ["Staff"] = new[] { Perm.ViewMembers, Perm.RegisterMembers, Perm.SubmitFreeze, Perm.Reactivate, Perm.ViewInvoices },
@@ -191,6 +209,13 @@ CREATE INDEX IF NOT EXISTS IX_Freeze_Membership ON FreezeRequests(MembershipID);
                 foreach (var kv in perms)
                     foreach (var p in kv.Value)
                         s.Exec("INSERT INTO RolesPermissions(RoleName, PermissionName) VALUES (@p0, @p1)", kv.Key, p);
+
+            if (s.Scalar("SELECT SettingValue FROM SystemSettings WHERE SettingKey = 'WalkInPermSeeded'") == null)
+            {
+                foreach (var role in new[] { "Staff", "Cashier" })
+                    s.Exec("INSERT OR IGNORE INTO RolesPermissions(RoleName, PermissionName) VALUES (@p0, @p1)", role, Perm.ManageWalkIns);
+                s.Exec("INSERT OR IGNORE INTO SystemSettings(SettingKey, SettingValue) VALUES ('WalkInPermSeeded', 'true')");
+            }
 
             if (Convert.ToInt32(s.Scalar("SELECT COUNT(*) FROM MembershipPlans")) == 0)
             {

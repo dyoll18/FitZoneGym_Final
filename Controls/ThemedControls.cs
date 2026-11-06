@@ -5,7 +5,6 @@ namespace FitZoneGym.Controls
 {
     public enum ButtonKind { Secondary, Primary, Success, Danger }
 
-    /// <summary>Rounded flat button in the FitFlow style. Pick the look with <see cref="Kind"/> in the Designer.</summary>
     public class ThemedButton : Button
     {
         private ButtonKind _kind = ButtonKind.Secondary;
@@ -58,7 +57,6 @@ namespace FitZoneGym.Controls
         }
     }
 
-    /// <summary>Panel with optional rounded corners and an optional coloured accent bar on its left edge.</summary>
     public class ThemedPanel : Panel
     {
         private int _radius;
@@ -102,13 +100,11 @@ namespace FitZoneGym.Controls
         }
     }
 
-    /// <summary>DataGridView that already has the FitFlow dark table look (also in the Designer).</summary>
     public class ThemedGrid : DataGridView
     {
         public ThemedGrid() { Ui.InitGrid(this); }
     }
 
-    /// <summary>Tab control with FitFlow pill-style tabs.</summary>
     public class ThemedTabControl : TabControl
     {
         public ThemedTabControl()
@@ -140,7 +136,7 @@ namespace FitZoneGym.Controls
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-            if (m.Msg == 0x000F && TabCount > 0 && IsHandleCreated)   // WM_PAINT
+            if (m.Msg == 0x000F && TabCount > 0 && IsHandleCreated)
             {
                 using (var g = Graphics.FromHwnd(Handle))
                 using (var br = new SolidBrush(Ui.Bg))
@@ -152,5 +148,5 @@ namespace FitZoneGym.Controls
             }
         }
     }
-    
+
 }

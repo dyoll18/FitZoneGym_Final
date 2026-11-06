@@ -6,22 +6,22 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym
 {
-    /// <summary>Theme, control factories and common dialogs so every screen looks and behaves the same.</summary>
+
     public static class Ui
     {
-        // ---- FitFlow dark theme palette ------------------------------------------------------
-        public static readonly Color Navy = Color.FromArgb(31, 32, 42);        // sidebar / table header
-        public static readonly Color NavyLight = Color.FromArgb(46, 47, 60);   // hover
-        public static readonly Color Blue = Color.FromArgb(255, 106, 0);       // primary accent (FitFlow orange)
+
+        public static readonly Color Navy = Color.FromArgb(31, 32, 42);
+        public static readonly Color NavyLight = Color.FromArgb(46, 47, 60);
+        public static readonly Color Blue = Color.FromArgb(255, 106, 0);
         public static readonly Color Accent = Blue;
         public static readonly Color AccentHover = Color.FromArgb(255, 136, 56);
-        public static readonly Color Bg = Color.FromArgb(24, 25, 33);          // page background
-        public static readonly Color Surface = Color.FromArgb(35, 36, 47);     // cards
-        public static readonly Color InputBg = Color.FromArgb(46, 47, 60);       // text boxes / secondary buttons
+        public static readonly Color Bg = Color.FromArgb(24, 25, 33);
+        public static readonly Color Surface = Color.FromArgb(35, 36, 47);
+        public static readonly Color InputBg = Color.FromArgb(46, 47, 60);
         public static readonly Color Text = Color.FromArgb(244, 244, 248);
         public static readonly Color Muted = Color.FromArgb(152, 155, 172);
         public static readonly Color Green = Color.FromArgb(34, 197, 94);
-        public static readonly Color Orange = Color.FromArgb(250, 176, 5);     // amber (used for "Frozen"/"Pending")
+        public static readonly Color Orange = Color.FromArgb(250, 176, 5);
         public static readonly Color Red = Color.FromArgb(239, 68, 68);
         public static readonly Color Border = Color.FromArgb(58, 60, 76);
 
@@ -32,7 +32,6 @@ namespace FitZoneGym
         public static string Date(DateTime d) => d.ToString("MMM d, yyyy", CultureInfo.InvariantCulture);
         public const string MoneyFormat = "₱#,##0.00";
 
-        // ---- control factories --------------------------------------------------------------
         public static Label Label(string text, float size = 9.5f, bool bold = false, Color? color = null)
         {
             return new Label
@@ -118,7 +117,6 @@ namespace FitZoneGym
             return f;
         }
 
-        /// <summary>A label + control pair stacked vertically, used in toolbars.</summary>
         public static FlowLayoutPanel Field(string caption, Control c)
         {
             var f = new FlowLayoutPanel { FlowDirection = FlowDirection.TopDown, AutoSize = true, WrapContents = false, Margin = new Padding(0, 0, 10, 4), BackColor = Color.Transparent };
@@ -136,10 +134,9 @@ namespace FitZoneGym
             return new Controls.ThemedGrid { Dock = DockStyle.Fill };
         }
 
-        /// <summary>Applies the standard FITZONE table look to a DataGridView created in the Designer.</summary>
         public static void StyleGrid(DataGridView g)
         {
-            if (g is Controls.ThemedGrid) return;   // already initialised by its constructor (and editable in the Designer)
+            if (g is Controls.ThemedGrid) return;
             InitGrid(g);
         }
 
@@ -163,7 +160,6 @@ namespace FitZoneGym
             g.CellFormatting += StatusColors;
         }
 
-        /// <summary>Colours only (no behaviour) - safe to call again on any DataGridView.</summary>
         public static void ThemeGrid(DataGridView g)
         {
             g.BackgroundColor = Surface;
@@ -188,7 +184,6 @@ namespace FitZoneGym
             g.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.White;
         }
 
-        /// <summary>Composites a semi-transparent colour over a solid background.</summary>
         public static Color Blend(this Color top, Color under)
         {
             float a = top.A / 255f;
@@ -209,7 +204,6 @@ namespace FitZoneGym
             }
         }
 
-        /// <summary>Binds data, hides technical id columns and formats money/date columns.</summary>
         public static void Bind(DataGridView g, DataTable table, string[] hide = null, string[] money = null, string[] dates = null)
         {
             if (dates != null) PrettyDates(table, dates);
@@ -239,14 +233,12 @@ namespace FitZoneGym
             }
         }
 
-        // ---- dialogs and safe execution -----------------------------------------------------
         public static void Info(string msg, string title = "FITZONE GYM") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         public static void Warn(string msg, string title = "Please check") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         public static void Error(string msg, string title = "Error") => MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         public static bool Confirm(string msg, string title = "Please confirm") =>
             MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
 
-        /// <summary>Runs an action and converts validation, permission and database errors into friendly messages. Returns true on success.</summary>
         public static bool Run(Action action)
         {
             try { action(); return true; }
@@ -282,7 +274,6 @@ namespace FitZoneGym
             }
         }
 
-        // ---- export -------------------------------------------------------------------------
         public static void ExportCsv(DataGridView g, string defaultName)
         {
             if (g.Rows.Count == 0) { Info("There is nothing to export."); return; }
@@ -307,7 +298,6 @@ namespace FitZoneGym
         }
     }
 
-    /// <summary>Two-column label/control layout used by dialogs and detail panels.</summary>
     public class FormPanel : TableLayoutPanel
     {
         public FormPanel(int labelWidth = 130)

@@ -4,10 +4,10 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 4 - Add / Edit Member.</summary>
+
     public partial class MemberEditForm : Form
     {
-        private readonly string _memberId;       // null when adding
+        private readonly string _memberId;
         private readonly ErrorProvider _err = new ErrorProvider();
         private DataTable _plans;
 

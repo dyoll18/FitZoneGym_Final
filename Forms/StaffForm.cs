@@ -4,7 +4,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Staff account management.</summary>
+
     public partial class StaffForm : ShellForm
     {
         protected override string NavKey { get { return "staff"; } }

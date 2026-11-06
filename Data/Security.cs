@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 
 namespace FitZoneGym.Data
 {
-    /// <summary>PBKDF2 password hashing. Passwords are never stored in plain text.</summary>
+
     public static class Security
     {
         public static string NewSalt() => Convert.ToBase64String(RandomNumberGenerator.GetBytes(16));

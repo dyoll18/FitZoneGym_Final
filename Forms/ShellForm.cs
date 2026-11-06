@@ -72,7 +72,6 @@ namespace FitZoneGym.Forms
             userStrip.Invalidate();
         }
 
-        // ---- sidebar logo -------------------------------------------------------------------
         private void LogoLabel_Paint(object sender, PaintEventArgs e)
         {
             var g = e.Graphics;
@@ -82,7 +81,6 @@ namespace FitZoneGym.Forms
             using (var br = new SolidBrush(Ui.Accent))
                 g.FillPath(br, path);
 
-            // little dumbbell glyph
             using (var white = new SolidBrush(Color.White))
             {
                 g.FillRectangle(white, icon.X + 8, icon.Y + 17, 22, 4);
@@ -94,7 +92,6 @@ namespace FitZoneGym.Forms
                 TextRenderer.DrawText(g, "GYMORA", f, new Point(68, 26), Color.White, TextFormatFlags.NoPadding);
         }
 
-        // ---- top bar: date on the left, user chip on the right ------------------------------
         private void UserStrip_Paint(object sender, PaintEventArgs e)
         {
             if (Ui.IsDesignTime) return;

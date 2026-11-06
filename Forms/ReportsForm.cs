@@ -2,7 +2,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 12 - Reports.</summary>
+
     public partial class ReportsForm : ShellForm
     {
         protected override string NavKey { get { return "reports"; } }
@@ -22,7 +22,7 @@ namespace FitZoneGym.Forms
             {
                 var r = ReportService.Generate((string)cboType.SelectedItem, dtpFrom.Value.Date, dtpTo.Value.Date);
                 string[] dates = { "Date", "Start", "Expiration", "Previous Expiry", "New Expiry", "Requested", "From", "To" };
-                string[] money = { "Amount", "Charged", "Paid", "Balance", "Total Due", "Fee", "Prorated", "Discount", "Fees", "Total" };
+                string[] money = { "Amount", "Charged", "Paid", "Balance", "Total Due", "Fee", "Prorated", "Discount", "Fees", "Total", "Rate" };
                 Ui.Bind(dgvReport, r.Data, null, money, dates);
                 lblSummary.Text = r.Summary + (r.Data.Rows.Count == 0 ? "   (no records in this period)" : "");
             });

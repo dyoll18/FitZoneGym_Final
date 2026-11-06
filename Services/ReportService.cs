@@ -9,16 +9,12 @@ namespace FitZoneGym.Services
         public string Summary;
     }
 
-    /// <summary>
-    /// Report definitions.  Revenue is defined as payments RECEIVED in the period (cash basis);
-    /// invoices that are unpaid are never counted as money received.
-    /// </summary>
     public static class ReportService
     {
         public static readonly string[] Types =
         {
             "Revenue Report", "Payment Report", "Membership Report", "Renewal Report",
-            "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report",
+            "Freeze Report", "Unpaid Balances", "Reactivation Report", "Prorated Billing Report", "Walk-In Report",
         };
 
         public static ReportResult Generate(string type, DateTime from, DateTime to)
@@ -106,6 +102,14 @@ SELECT i.InvoiceDate AS [Date], i.InvoiceNo AS Invoice, m.FullName AS Member, i.
 FROM Invoices i JOIN Members m ON m.MemberID = i.MemberID
 WHERE i.Kind = 'Prorated' AND i.InvoiceDate BETWEEN @p0 AND @p1 ORDER BY i.InvoiceID", f, t);
                     summary = "Prorated invoices: " + d.Rows.Count + "  |  Total billed: " + Money(Sum(d, "Total"));
+                    break;
+
+                case "Walk-In Report":
+                    d = DbSession.Q(@"
+SELECT SUBSTR(TimeIn,1,10) AS [Date], ClientName AS Client, SUBSTR(TimeIn,12,5) AS [Time In], SUBSTR(TimeOut,12,5) AS [Time Out],
+       HoursCharged AS Hours, RatePerHour AS Rate, Amount, PaymentMethod AS Method
+FROM WalkInVisits WHERE Status = 'Completed' AND SUBSTR(TimeIn,1,10) BETWEEN @p0 AND @p1 ORDER BY VisitID", f, t);
+                    summary = "Walk-in visits: " + d.Rows.Count + "  |  Hours billed: " + SumInt(d, "Hours") + "  |  Total collected: " + Money(Sum(d, "Amount"));
                     break;
 
                 default:

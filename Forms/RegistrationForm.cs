@@ -4,7 +4,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Screen 6 - Registration &amp; Renewal.</summary>
+
     public partial class RegistrationForm : ShellForm
     {
         private DataTable _plans = new DataTable();

@@ -2,20 +2,18 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Add / edit a staff account (dialog opened from the Users &amp; Staff screen).</summary>
+
     public partial class StaffEditForm : Form
     {
         private readonly int _userId;
 
-        /// <summary>Add mode.</summary>
         public StaffEditForm()
         {
             InitializeComponent();
             Text = "Add Staff";
-            cboRole.SelectedItem = "Staff";   // default for new accounts
+            cboRole.SelectedItem = "Staff";
         }
 
-        /// <summary>Edit mode.</summary>
         public StaffEditForm(int userId, string username, string fullName, string role, bool active) : this()
         {
             _userId = userId;
@@ -24,7 +22,7 @@ namespace FitZoneGym.Forms
             txtUser.ReadOnly = true;
             txtName.Text = fullName;
             chkActive.Checked = active;
-            cboRole.SelectedItem = role;      // keep the account's current role (Administrator / Staff / Cashier)
+            cboRole.SelectedItem = role;
             lblPass.Text = "New password";
             lblHint.Text = "Leave the password blank to keep the current one.";
         }

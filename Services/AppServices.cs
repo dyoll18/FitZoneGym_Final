@@ -3,7 +3,7 @@ using FitZoneGym.Data;
 
 namespace FitZoneGym.Services
 {
-    /// <summary>System settings (policies) stored in the SystemSettings table.</summary>
+
     public static class Settings
     {
         public static string Get(string key, string fallback = "")
@@ -26,7 +26,6 @@ namespace FitZoneGym.Services
                    "ON CONFLICT(SettingKey) DO UPDATE SET SettingValue = excluded.SettingValue", key, value);
     }
 
-    /// <summary>Audit trail and error logging.</summary>
     public static class Audit
     {
         public static void Log(string action, string details = "")
@@ -37,10 +36,9 @@ namespace FitZoneGym.Services
                     Session.UserId == 0 ? (object)null : Session.UserId, action,
                     DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture), details);
             }
-            catch { /* logging must never break the operation being logged */ }
+            catch {  }
         }
 
-        /// <summary>Same as Log but joins an existing transaction so the audit row commits atomically with the change.</summary>
         public static void Log(DbSession s, string action, string details = "") =>
             s.Exec("INSERT INTO AuditLogs(UserID, Action, Timestamp, Details) VALUES (@p0,@p1,@p2,@p3)",
                 Session.UserId == 0 ? (object)null : Session.UserId, action,
@@ -58,7 +56,6 @@ namespace FitZoneGym.Services
         }
     }
 
-    /// <summary>Login / logout.</summary>
     public static class AuthService
     {
         public static AppUser Login(string username, string password)

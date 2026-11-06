@@ -2,7 +2,7 @@ using FitZoneGym.Services;
 
 namespace FitZoneGym.Forms
 {
-    /// <summary>Add / edit a membership plan (dialog opened from the Plans screen).</summary>
+
     public partial class PlanEditForm : Form
     {
         private readonly MembershipPlan _plan;
